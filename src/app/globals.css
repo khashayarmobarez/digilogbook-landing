@@ -3,20 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff; /* Light mode background */
+  --foreground: #171717; /* Light mode foreground */
 }
 
-@media (prefers-color-scheme: dark) {
+[data-theme='dark'] {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a; /* Dark mode background */
+    --foreground: #ededed; /* Dark mode foreground */
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
   font-family: Arial, Helvetica, sans-serif;
 }
 
