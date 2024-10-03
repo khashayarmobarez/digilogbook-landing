@@ -1,7 +1,13 @@
+'use client';
+
+import { useContext } from 'react';
+import { ThemeContext } from '@/utils/ThemeContext';
 import Image from "next/image";
-import ThemeToggle from "@/components/themeToggle";
 
 export default function Home() {
+
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
@@ -97,7 +103,10 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
-      <ThemeToggle />
+      <div>
+        <p>Current theme: {theme}</p>
+        <button onClick={toggleTheme}>Toggle Theme</button>
+      </div>
     </div>
   );
 }
