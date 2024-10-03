@@ -15,7 +15,9 @@ export function ThemeProvider({ children }) {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    // comment out and replaced to disable dark mode
+    // const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   };

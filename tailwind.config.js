@@ -8,6 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primaryDarkHover: "var(--primary-dark-hover)",
+        accentNormal: "var(--accent-normal)",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
