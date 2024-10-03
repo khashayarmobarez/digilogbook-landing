@@ -103,10 +103,10 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
-      <div>
+      {/* <div>
         <p>Current theme: {theme}</p>
         <button onClick={toggleTheme}>Toggle Theme</button>
-      </div>
+      </div> */}
     </div>
   );
 }
