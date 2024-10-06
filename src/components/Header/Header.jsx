@@ -91,7 +91,7 @@ const Header = () => {
 
     return (
         <header className="w-full">
-            <nav className="bg-primaryDarkHover h-14 md:h-20 w-full flex justify-between items-center px-2 md:px-8">
+            <nav className="bg-primaryDarkHover h-14 md:h-20 w-full flex justify-between items-center px-4 md:px-8">
                 <div className="flex w-full h-full gap-x-12 items-center">
                     <Image src={Logo} alt='logo' width={logoSize} height={logoSize} />
                     {isDesktop && <NavItems />}

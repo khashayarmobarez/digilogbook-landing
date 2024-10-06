@@ -11,9 +11,10 @@ export default function Home() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <main className="">
-      
+    <main className="pb-10">
+
       <Introduction />
+
       
       {/* <div>
         <p>Current theme: {theme}</p>

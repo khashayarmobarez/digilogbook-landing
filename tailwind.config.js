@@ -4,6 +4,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    'node_modules/daisyui/dist/**/*.js',
   ],
   theme: {
     extend: {
@@ -12,8 +13,9 @@ module.exports = {
         accentNormal: "var(--accent-normal)",
         background: "var(--background)",
         foreground: "var(--foreground)",
+        neutralLight: "var(--neutral-light)",
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };
