@@ -5,6 +5,7 @@ import { useContext } from 'react';
 
 // comps
 import Introduction from '@/components/Landing/Introduction';
+import WhyDigi from "@/components/Landing/WhyDigi";
 
 export default function Home() {
 
@@ -15,7 +16,7 @@ export default function Home() {
 
       <Introduction />
 
-      
+      <WhyDigi />      
       {/* <div>
         <p>Current theme: {theme}</p>
         <button onClick={toggleTheme}>Toggle Theme</button>

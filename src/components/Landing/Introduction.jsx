@@ -1,15 +1,36 @@
 // Introduction.js
-
+import { useEffect, useState } from 'react';
 import bg from '@/../public/pics/testWebBackground.png';
 import digilogbookNoFeatherLogo from '@/Assets/Logos/DigiLogbookNoFeatherLogo.png';
 import Image from 'next/image';
+import 'animate.css';
 
 const Introduction = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Set a timer for 3 seconds to simulate loading
+        const timer = setTimeout(() => {
+            setLoading(false); // Update loading state
+        }, 500);
+
+        // Clear timer on component unmount
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="flex flex-col w-full items-center min-h-screen py-40 md:py-40">
+                <span className="loading loading-infinity loading-lg text-accentNormal"></span>
+            </div>
+        );
+    }
+
     return (
         <div className='introductionContainer'>
             <div className='scrollingBackground'></div>
             <div className='z-10 w-full flex flex-col justify-center items-center -mt-20'>
-                <div className="logoContainer">
+                <div className="logoContainer animate__animated animate__zoomInDown animate__slow">
                     <Image
                         src={digilogbookNoFeatherLogo}
                         alt="DigiLogBook Logo"
@@ -18,11 +39,11 @@ const Introduction = () => {
                         height={300}
                     />
                 </div>
-                <p className='text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl'>سامانه ثبت اطلاعات و پروازهای روزانه</p>
-                <p className='text-neutralLight text-sm w-4/5 mt-4 text-center md:text-xl md:w-3/6 md:mt-8'>
-                دیجی لاگ بوک به شما کمک می‌کند تا پیشرفت خود را به طور دقیق دنبال کنید و با مشاهده میزان ساعات پروازی خود و انواع تجهیزات پروازی استفاده شده و چالش‌هایی که با آنها روبرو شده‌اید ، می‌توانید ارزیابی دقیقی از توانایی‌ها و نیازهای آموزشی خود داشته باشد 
+                <p className='text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl animate__animated animate__zoomIn'>سامانه ثبت اطلاعات و پروازهای روزانه</p>
+                <p className='text-neutralLight text-sm w-4/5 mt-4 text-center md:text-xl md:w-3/6 md:mt-8 animate__animated animate__zoomIn'>
+                    دیجی لاگ بوک به شما کمک می‌کند تا پیشرفت خود را به طور دقیق دنبال کنید و با مشاهده میزان ساعات پروازی خود و انواع تجهیزات پروازی استفاده شده و چالش‌هایی که با آنها روبرو شده‌اید ، می‌توانید ارزیابی دقیقی از توانایی‌ها و نیازهای آموزشی خود داشته باشد 
                 </p>
-                <button className="btn btn-accent">Accent</button>
+                <button className="btn btn-outline btn-accentNormal text-neutralLight w-5/6 rounded-3xl mt-8 text-base md:w-1/4 animate__animated animate__backInUp">شروع کنید</button>
             </div>
             <style jsx>{`
                 .introductionContainer {

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Logo from "@/Assets/Logos/DigiLogBookMainLogo.svg";
 import { useMediaQuery } from "@mui/material";
+import 'animate.css';
 
 // assets
 import homeIcon from '@/Assets/Icons/home.svg';
@@ -47,28 +48,28 @@ const Header = () => {
     }, [navbarIsOpen]);
 
     const NavItems = () => (
-        <ul className="flex flex-col md:flex-row gap-y-6 md:gap-x-20 justify-center items-start text-sm">
-            <li className="text-white flex gap-x-2"
-            onClick={() => router.push('/')}>
+        <ul className="flex flex-col md:flex-row gap-y-6 md:gap-x-20 justify-center items-start text-sm ">
+            <li className="btn btn-ghost font-light text-white flex gap-x-2"
+            onClick={() => window.open('https://digilogbook.ir/signUpLogin', '_blank')}>
                 {!isDesktop && <Image alt="icon" src={homeIcon} />}
                 <p>صفحه اصلی</p>
             </li>
-            <li className="text-white flex gap-x-2"
+            <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://digilogbook.ir/blogs', '_blank')}>
                 {!isDesktop && <Image alt="icon" src={penIcon} />}
                 <p>بلاگ</p>
             </li>
-            <li className="text-white flex gap-x-2"
+            <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://digilogbook.ir/aboutUs', '_blank')}>
                 {!isDesktop && <Image alt="icon" src={usersIcon} />}
                 <p>درباره ما</p>
             </li>
-            {/* <li className="text-white flex gap-x-2"
+            {/* <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://digilogbook.ir/contactUs', '_blank')}>
                 {!isDesktop && <Image alt="icon" src={attentionIcon} />}
                 <p>راهنما</p>
             </li> */}
-            <li className="text-white flex gap-x-2"
+            <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://digilogbook.ir/contactUs', '_blank')}>
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
                 <p>تماس با ما</p>
@@ -78,11 +79,11 @@ const Header = () => {
 
     const AuthButtons = () => (
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-x-8">
-            <button className="btn w-32 h-12 bg-accentNormal rounded-3xl p-3"
+            <button className="btn w-32 h-12 bg-accentNormal rounded-3xl p-3 text-primaryDarkHover hover:text-neutralLight"
             onClick={() => window.open('https://digilogbook.ir/signUpLogin', '_blank')}>
                 شروع کنید
             </button>
-            <button className="btn btn-active btn-link text-accentNormal"
+            <button className="btn btn-ghost text-accentNormal rounded-2xl"
             onClick={() => window.open('https://digilogbook.ir/signUpLogin', '_blank')}>
                 ورود
             </button>

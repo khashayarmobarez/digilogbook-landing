@@ -7,8 +7,10 @@
   --foreground: #171717; */
   --primary-dark-hover: #1E2227;
   --primary-light: #EBEBEC;
+  --primary-light-hover: #E0E1E3;
   --accent-normal: #23BC7C;
   --neutral-light: #eeeeee;
+
 }
 
 /* dark mode is disabled for now, enable it in the ThemeContext */
@@ -57,3 +59,6 @@ body {
     text-wrap: balance;
   }
 }
+
+
+

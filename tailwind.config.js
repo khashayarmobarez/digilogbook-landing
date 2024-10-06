@@ -9,10 +9,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryDarkHover: "var(--primary-dark-hover)",
-        accentNormal: "var(--accent-normal)",
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primaryDarkHover: "var(--primary-dark-hover)",
+        primaryLight: "var(--primary-light)",
+        primaryLightHover: "var(--primary-light-hover)",
+        accentNormal: "var(--accent-normal)",
         neutralLight: "var(--neutral-light)",
       },
     },
