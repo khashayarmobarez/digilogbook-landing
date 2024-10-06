@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dev:3500": "next dev -p 3500"
+    "dev:otherPort": "next dev -p 3500"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -16,7 +16,8 @@
     "babel-eslint": "^10.1.0",
     "next": "14.2.14",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "sass": "^1.79.4"
   },
   "devDependencies": {
     "daisyui": "^4.12.11",
