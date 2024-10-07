@@ -18,6 +18,8 @@ module.exports = {
         neutralLight: "var(--neutral-light)",
         neutralDark: "var(--neutral-dark)",
         primaryNormalHover: "var(--primary-normal-hover)",
+        // --primary-normal
+        primaryNormal: 'var(--primary-normal)'
       },
     },
   },

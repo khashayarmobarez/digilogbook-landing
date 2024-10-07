@@ -2,8 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { ThemeProvider } from '@/utils/ThemeContext';
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import Header from "@/components/templates/Header/Header";
+import Footer from "@/components/templates/Footer/Footer";
 
 
 

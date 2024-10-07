@@ -4,8 +4,8 @@ import { ThemeContext } from '@/utils/ThemeContext';
 import { useContext } from 'react';
 
 // comps
-import Introduction from '@/components/Landing/Introduction';
-import WhyDigi from "@/components/Landing/WhyDigi";
+import Introduction from '@/components/templates/Landing/Introduction';
+import WhyDigi from "@/components/templates/Landing/WhyDigi";
 
 export default function Home() {
 
@@ -15,7 +15,6 @@ export default function Home() {
     <main className="pb-10">
 
       <Introduction />
-
       <WhyDigi />      
       {/* <div>
         <p>Current theme: {theme}</p>

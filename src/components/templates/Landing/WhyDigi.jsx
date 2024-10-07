@@ -1,5 +1,7 @@
 // why digilogbook
-import { useEffect, useState } from 'react';    
+import { useEffect, useState } from 'react';   
+
+import styles from '@/styles/WhyDigi.module.scss';
 
 const WhyDigi = () => {
 
@@ -25,9 +27,9 @@ const WhyDigi = () => {
     return (
         <div className='w-full flex flex-col items-center justify-around py-10 gap-y-20 md:py-36'>
 
-            <div className='w-[90%] min-h-10 flex flex-col gap-y-8 md:w-7/12 md:bg-primaryLightHover md:p-8'>
+            <div className={`w-[90%] min-h-10 flex flex-col gap-y-8 md:w-7/12 md:bg-primaryLightHover md:p-8 transition-all duration-700 ${scrollPosition > 350 ? '': 'translate-x-[200%]'}`}>
 
-                <p className='text-neutralDark font-bold text-xl md:text-3xl '>
+                <p className={`text-neutralDark font-bold text-xl md:text-3xl `}>
                     چرا باید <span className='text-accentNormal'>لاگ بوک</span> داشته باشیم ؟
                 </p>
 
@@ -48,19 +50,33 @@ const WhyDigi = () => {
                     چرا بسیاری از خلبانان خیلی زود از نوشتن <span className='text-accentNormal'>لاگ بوک</span> خود منصرف میشوند ؟
                 </p>
 
-                <ul className="animated-list">
+                <ul className="flex flex-col gap-y-6 min-h-[30rem]">
                     {listItems.map((text, index) => (
                         <li
                             key={index}
-                            className={`${scrollPosition >= 700 + (index * 100) ? 'activeItem' : 'invisible'} flex gap-x-4`}
+                            className={` ${styles.itemConstClass}
+                                ${(scrollPosition >= 650 + ((index + 1) * 100) && scrollPosition < 650 + ((index + 2) * 100)) ? 
+                                    styles.activeItem 
+                                    : 
+                                    scrollPosition >= 650 + ((index + 2) * 100) ?
+                                        styles.normalVisibleItem
+                                        :
+                                        styles.invisibleItem
+                                } flex gap-x-4`}
                         >
                             <span className="number">{index + 1}</span>
                             <p>{text}</p>
+                            <div/>
                         </li>
                     ))}
                 </ul>
 
             </div>
+
+            <p className='w-[90%] flex justify-center text-center bg-primaryNormalHover p-6 text-neutralLight rounded-3xl font-bold text-xl -mt-20 md:mt-0 md:text-3xl '>
+                با دیجی لاگ بوک شما میتوانید<br/> 
+                لاگ خود را راحت تر و سریع تر توسط تلفن همراه خود ثبت کنید و در هر زمان و مکان به آن دسترسی داشته باشید
+            </p>
 
         </div>
     );

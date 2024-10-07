@@ -12,7 +12,7 @@ const Introduction = () => {
         // Set a timer for 3 seconds to simulate loading
         const timer = setTimeout(() => {
             setLoading(false); // Update loading state
-        }, 500);
+        }, 100);
 
         // Clear timer on component unmount
         return () => clearTimeout(timer);
