@@ -16,6 +16,7 @@ export default function Home() {
 
       <Introduction />
       <WhyDigi />      
+      <aside/>
       {/* <div>
         <p>Current theme: {theme}</p>
         <button onClick={toggleTheme}>Toggle Theme</button>

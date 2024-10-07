@@ -27,7 +27,7 @@ const Introduction = () => {
     }
 
     return (
-        <div className='introductionContainer'>
+        <section className='introductionContainer'>
             <div className='scrollingBackground'></div>
             <div className='z-10 w-full flex flex-col justify-center items-center -mt-20'>
                 <div className="logoContainer animate__animated animate__zoomInDown animate__slow">
@@ -39,7 +39,7 @@ const Introduction = () => {
                         height={300}
                     />
                 </div>
-                <p className='text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl animate__animated animate__zoomIn'>سامانه ثبت اطلاعات و پروازهای روزانه</p>
+                <figcaption className='text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl animate__animated animate__zoomIn'>سامانه ثبت اطلاعات و پروازهای روزانه</figcaption>
                 <p className='text-neutralLight text-sm w-4/5 mt-4 text-center md:text-xl md:w-3/6 md:mt-8 animate__animated animate__zoomIn'>
                     دیجی لاگ بوک به شما کمک می‌کند تا پیشرفت خود را به طور دقیق دنبال کنید و با مشاهده میزان ساعات پروازی خود و انواع تجهیزات پروازی استفاده شده و چالش‌هایی که با آنها روبرو شده‌اید ، می‌توانید ارزیابی دقیقی از توانایی‌ها و نیازهای آموزشی خود داشته باشد 
                 </p>
@@ -103,7 +103,7 @@ const Introduction = () => {
                     }
                 }
             `}</style>
-        </div>
+        </section>
     );
 };
 
