@@ -7,6 +7,14 @@ import 'animate.css';
 
 const Introduction = () => {
     const [loading, setLoading] = useState(true);
+    const [showSecondAnimation, setShowSecondAnimation] = useState(false);
+
+    // use effect to set setShowSecondAnimation to true after 3 seconds
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowSecondAnimation(true);
+        }, 0);
+    }, []);
 
     useEffect(() => {
         // Set a timer for 3 seconds to simulate loading
@@ -30,7 +38,8 @@ const Introduction = () => {
         <section className='introductionContainer'>
             <div className='scrollingBackground'></div>
             <div className='z-10 w-full flex flex-col justify-center items-center -mt-20'>
-                <div className="logoContainer animate__animated animate__zoomInDown animate__slow">
+                {/* <div className="logoContainer animate__animated animate__zoomInDown animate__slow"> */}
+                <div className="logoContainer animate__animated animate__slideInUp">
                     <Image
                         src={digilogbookNoFeatherLogo}
                         alt="DigiLogBook Logo"
@@ -39,11 +48,13 @@ const Introduction = () => {
                         height={300}
                     />
                 </div>
-                <figcaption className='text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl animate__animated animate__zoomIn'>سامانه ثبت اطلاعات و پروازهای روزانه</figcaption>
-                <p className='text-neutralLight text-sm w-4/5 mt-4 text-center md:text-xl md:w-3/6 md:mt-8 animate__animated animate__zoomIn'>
-                    دیجی لاگ بوک به شما کمک می‌کند تا پیشرفت خود را به طور دقیق دنبال کنید و با مشاهده میزان ساعات پروازی خود و انواع تجهیزات پروازی استفاده شده و چالش‌هایی که با آنها روبرو شده‌اید ، می‌توانید ارزیابی دقیقی از توانایی‌ها و نیازهای آموزشی خود داشته باشد 
-                </p>
-                <button className="btn btn-outline btn-accentNormal text-neutralLight w-5/6 rounded-3xl mt-8 text-base md:w-1/4 animate__animated animate__backInUp">شروع کنید</button>
+                <div className={`w-full flex flex-col items-center ${showSecondAnimation ? 'animate__animated animate__slideInUp' : 'invisible'}`}>
+                    <figcaption className='text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl '>سامانه ثبت اطلاعات و پروازهای روزانه</figcaption>
+                    <p className='text-neutralLight text-sm w-4/5 mt-4 text-center md:text-xl md:w-3/6 md:mt-8'>
+                        دیجی لاگ بوک به شما کمک می‌کند تا پیشرفت خود را به طور دقیق دنبال کنید و با مشاهده میزان ساعات پروازی خود و انواع تجهیزات پروازی استفاده شده و چالش‌هایی که با آنها روبرو شده‌اید ، می‌توانید ارزیابی دقیقی از توانایی‌ها و نیازهای آموزشی خود داشته باشد 
+                    </p>
+                    <button className="btn btn-outline btn-accentNormal text-neutralLight w-5/6 rounded-3xl mt-8 text-base md:w-1/4">شروع کنید</button>
+                </div>
             </div>
             <style jsx>{`
                 .introductionContainer {
