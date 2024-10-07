@@ -79,7 +79,7 @@ const Header = () => {
 
     const AuthButtons = () => (
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-x-8">
-            <button className="btn w-32 h-12 bg-accentNormal rounded-3xl p-3 text-primaryDarkHover hover:text-neutralLight"
+            <button className="btn w-32 h-12 bg-accentNormal rounded-3xl p-3 text-primaryDarkHover hover:text-neutralLight hover:bg-primaryNormalHover"
             onClick={() => window.open('https://digilogbook.ir/signUpLogin', '_blank')}>
                 شروع کنید
             </button>
@@ -94,7 +94,8 @@ const Header = () => {
         <header className="w-full">
             <nav className="bg-primaryDarkHover h-14 md:h-20 w-full flex justify-between items-center px-4 md:px-8">
                 <div className="flex w-full h-full gap-x-12 items-center">
-                    <Image src={Logo} alt='logo' width={logoSize} height={logoSize} />
+                    <Image src={Logo} alt='logo' width={logoSize} height={logoSize} className="btn btn-ghost"
+                    onClick={() => router.push('/')} />
                     {isDesktop && <NavItems />}
                 </div>
 

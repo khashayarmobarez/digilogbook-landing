@@ -10,7 +10,8 @@
   --primary-light-hover: #E0E1E3;
   --accent-normal: #23BC7C;
   --neutral-light: #eeeeee;
-
+  --neutral-dark: #3e3e3e;
+  --primary-normal-hover: #2D333B;
 }
 
 /* dark mode is disabled for now, enable it in the ThemeContext */

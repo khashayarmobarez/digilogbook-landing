@@ -16,6 +16,8 @@ module.exports = {
         primaryLightHover: "var(--primary-light-hover)",
         accentNormal: "var(--accent-normal)",
         neutralLight: "var(--neutral-light)",
+        neutralDark: "var(--neutral-dark)",
+        primaryNormalHover: "var(--primary-normal-hover)",
       },
     },
   },
