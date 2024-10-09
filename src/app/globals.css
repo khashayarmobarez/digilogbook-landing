@@ -5,6 +5,7 @@
 :root {
   /* --background: #ffffff;
   --foreground: #171717; */
+  --primary-darker: #121417;
   --primary-dark-hover: #1E2227;
   --primary-light: #EBEBEC;
   --primary-light-hover: #E0E1E3;
@@ -13,6 +14,7 @@
   --neutral-dark: #3e3e3e;
   --primary-normal: #323941;
   --primary-normal-hover: #2D333B;
+  --primary-normal-active: #282E34;
 }
 
 /* dark mode is disabled for now, enable it in the ThemeContext */
@@ -125,6 +127,4 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-
 

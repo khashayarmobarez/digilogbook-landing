@@ -13,7 +13,7 @@ const Introduction = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowSecondAnimation(true);
-        }, 0);
+        }, 800);
     }, []);
 
     useEffect(() => {
@@ -48,7 +48,7 @@ const Introduction = () => {
                         height={300}
                     />
                 </div>
-                <div className={`w-full flex flex-col items-center ${showSecondAnimation ? 'animate__animated animate__slideInUp' : 'invisible'}`}>
+                <div className={`w-full flex flex-col items-center transition-all duration-1000  ${showSecondAnimation ? ' opacity-100' : 'opacity-0'}`}>
                     <figcaption className='text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl '>سامانه ثبت اطلاعات و پروازهای روزانه</figcaption>
                     <p className='text-neutralLight text-sm w-4/5 mt-4 text-center md:text-xl md:w-3/6 md:mt-8'>
                         دیجی لاگ بوک به شما کمک می‌کند تا پیشرفت خود را به طور دقیق دنبال کنید و با مشاهده میزان ساعات پروازی خود و انواع تجهیزات پروازی استفاده شده و چالش‌هایی که با آنها روبرو شده‌اید ، می‌توانید ارزیابی دقیقی از توانایی‌ها و نیازهای آموزشی خود داشته باشد 
