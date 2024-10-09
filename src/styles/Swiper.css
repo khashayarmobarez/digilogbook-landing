@@ -1,5 +1,45 @@
+.mySwiper {
+    width: 100%; /* Full width */
+    height: 45rem; /* Adjust the height based on your needs */
+    padding: 10px 10vw 10px 10px; /* Add some vertical padding */
+}
+
 .swiper-scrollbar {
-    background-color: rgba(0, 0, 0, 1);
+    margin-top: 20px;
+    background-color: var(--primary-light-active);
     border-radius: 10px;
     height: 8px; /* Adjust the height of the scrollbar */
+    max-width: 600px;
+    transform: translateX(50%);
+}
+
+.swiper-scrollbar-drag {
+    background-color: var(--primary-normal);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Hover state for the scrollbar handle */
+  .swiper-scrollbar-drag:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Active state for the scrollbar handle */
+  .swiper-scrollbar-drag:active {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    color: var(--primary-light); /* Set the arrow color */
+    font-size: 20px; /* Set the arrow size */
+    background-color: var(--primary-normal); /* Add background with opacity */
+    border-radius: 50%; /* Optional: add a shadow for style */
+    padding:40px;
+    margin: -4rem -1.5rem 0 -1.5rem ; /* Add some margin */
+    transform: scale(0.5);
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: #666; /* Change background on hover */
+    color: #fff; /* Change arrow color on hover */
 }

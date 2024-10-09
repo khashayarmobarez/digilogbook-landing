@@ -6,6 +6,8 @@ import Header from "@/components/templates/Header/Header";
 import Footer from "@/components/templates/Footer/Footer";
 
 
+
+
 // iran sans font 
 const iranSans = localFont({
   src: [
@@ -39,6 +41,8 @@ export const metadata = {
   description: "developed by pishtazane parbaz",
 };
 
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" 
@@ -47,15 +51,17 @@ export default function RootLayout({ children }) {
     >
       {/* ThemeProvider implemented so it can be used later if needed */}
       <ThemeProvider>
-        <body
-          className={`antialiased w-full flex flex-col`}
-        >
-        <Header />
-        <main>
-          {children}
-        </main>
-        <Footer />
-        </body>
+        {/* <QueryClientProvider client={queryClient}> */}
+          <body
+            className={`antialiased w-full flex flex-col`}
+          >
+          <Header />
+          <main>
+            {children}
+          </main>
+          <Footer />
+          </body>
+        {/* </QueryClientProvider> */}
       </ThemeProvider>
     </html>
   );

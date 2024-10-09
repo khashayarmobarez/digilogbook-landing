@@ -1,0 +1,1 @@
+export const Api_BASE_URL = 'https://api.digilogbook.ir/api';

@@ -1,3 +1,4 @@
+'use client'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,11 +12,23 @@ import 'swiper/css/pagination';
 import '@/styles/Swiper.css'
 
 // Import required modules
-import { Scrollbar } from 'swiper/modules';
+import { Scrollbar, Navigation  } from 'swiper/modules';
+import { useBlogs } from '@/utils/Api/useArticles';
+import BlogBox from '@/components/module/Landing/BlogBox';
 
 
 const ArticleSlider = () => {
-    return (
+
+    const pageNumber = 1;
+    const pageSize = 10;
+
+    const { data, error, isLoading } = useBlogs(pageSize, pageNumber);
+
+    if (isLoading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
+
+    
+    if(data) return (
         <div className='w-full py-10'>
             <Swiper
             spaceBetween={50}
@@ -23,30 +36,19 @@ const ArticleSlider = () => {
             scrollbar={{
                 hide: false,
                 draggable: true,
+                dragSize: 50,
             }}
-            modules={[Scrollbar]}
+            navigation={true}
+            modules={[Scrollbar, Navigation]}
             className="mySwiper"
             >
-                <SwiperSlide>
-                    <div className='w-[80%] h-[40rem] bg-primaryNormal rounded-3xl flex flex-col items-center justify-center'>
-                        first article
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='w-[80%] h-[40rem] bg-primaryNormal rounded-3xl flex flex-col items-center justify-center'>
-                        first article
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='w-[80%] h-[40rem] bg-primaryNormal rounded-3xl flex flex-col items-center justify-center'>
-                        first article
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='w-[80%] h-[40rem] bg-primaryNormal rounded-3xl flex flex-col items-center justify-center'>
-                        first article
-                    </div>
-                </SwiperSlide>
+                {
+                data?.data.map((blog) => ( 
+                    <SwiperSlide key={blog.id}>
+                        <BlogBox blog={blog} />
+                    </SwiperSlide>
+                ))
+                }
             </Swiper>
         </div>
     );

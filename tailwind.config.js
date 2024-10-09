@@ -14,6 +14,7 @@ module.exports = {
 			// --primary-dark-hover: #1E2227;
 			// --primary-light: #EBEBEC;
 			// --primary-light-hover: #E0E1E3;
+			// --primary-light-active: #BFC2C4;
 			// --accent-normal: #23BC7C;
 			// --neutral-light: #eeeeee;
 			// --neutral-dark: #3e3e3e;
@@ -26,6 +27,7 @@ module.exports = {
   			primaryDarkHover: 'var(--primary-dark-hover)',
   			primaryLight: 'var(--primary-light)',
   			primaryLightHover: 'var(--primary-light-hover)',
+			primaryLightActive: 'var(--primary-light-active)',
   			accentNormal: 'var(--accent-normal)',
   			neutralLight: 'var(--neutral-light)',
   			neutralDark: 'var(--neutral-dark)',

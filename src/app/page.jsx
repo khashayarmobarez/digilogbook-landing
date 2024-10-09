@@ -9,21 +9,30 @@ import WhyDigi from "@/components/templates/Landing/WhyDigi";
 import Options from "@/components/templates/Landing/Options";
 import ArticleSlider from "@/components/templates/Landing/ArticleSlider";
 
+// react query
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
+
 export default function Home() {
 
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <main className="pb-10">
+    <>
+      <QueryClientProvider client={queryClient}>
+        <main className="pb-10">
 
-      <Introduction />
-      <WhyDigi />      
-      <Options />
-      <ArticleSlider />
-      {/* <div>
-        <p>Current theme: {theme}</p>
-        <button onClick={toggleTheme}>Toggle Theme</button>
-      </div> */}
-    </main>
+          <Introduction />
+          <WhyDigi />      
+          <Options />
+          <ArticleSlider />
+          {/* <div>
+            <p>Current theme: {theme}</p>
+            <button onClick={toggleTheme}>Toggle Theme</button>
+          </div> */}
+        </main>
+      </QueryClientProvider>
+    </>
   );
 }
