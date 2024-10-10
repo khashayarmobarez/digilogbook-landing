@@ -17,6 +17,8 @@
   --primary-normal: #323941;
   --primary-normal-hover: #2D333B;
   --primary-normal-active: #282E34;
+  /* shadows */
+  --shadow-one: rgba(62, 62, 62, 1);
 }
 
 /* dark mode is disabled for now, enable it in the ThemeContext */

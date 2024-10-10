@@ -2,6 +2,9 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+// styles
+import arrowIcon from '@/Assets/Icons/arrowGreen.svg'
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -17,6 +20,7 @@ import { useBlogs } from '@/utils/Api/useArticles';
 import BlogBox from '@/components/module/Landing/BlogBox';
 import { fakeApi } from '@/utils/FakeApiBackup';
 import { useMediaQuery } from "@mui/material";
+import Image from 'next/image';
 
 
 const ArticleSlider = () => {
@@ -31,7 +35,7 @@ const ArticleSlider = () => {
 
     
     return (
-        <div className='w-full py-10'>
+        <div className='w-full py-10 flex flex-col items-center gap-y-8'>
             <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -60,6 +64,11 @@ const ArticleSlider = () => {
                     ))
                 }
             </Swiper>
+            <button className="btn w-48 btn-outline rounded-3xl text-base border-accentNormal text-accentNormal hover:bg-primaryNormal hover:text-accentNormal self-center
+            md:self-start md:mr-[10rem] md:-mt-16" >
+                <Image src={arrowIcon} alt='icon' ></Image>
+                مشاهده بیشتر
+            </button>   
         </div>
     );
 };

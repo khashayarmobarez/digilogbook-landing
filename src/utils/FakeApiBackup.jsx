@@ -160,3 +160,67 @@ export const fakeApi = {
     "totalPagesCount": 1,
     "isSuccess": true
 }
+
+
+
+
+export const brands = {
+    "data": [
+      {
+        "id": 1,
+        "name": "پرباز",
+        "image": {
+          "name": "پرباز",
+          "path": "https://digilogbook.ir/static/media/parbazLogo.b1e3b863d33c2e346b28ff9f322a428c.svg"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Gin Gliders",
+        "image": {
+          "name": "gin gliders",
+          "path": "https://via.placeholder.com/150/54176f"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Nova",
+        "image": {
+          "name": "nova",
+          "path": "https://via.placeholder.com/150/ff6f61"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Advance",
+        "image": {
+          "name": "advance",
+          "path": "https://via.placeholder.com/150/4CAF50"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Skywalk",
+        "image": {
+          "name": "skywalk",
+          "path": "https://via.placeholder.com/150/FFC107"
+        }
+      },
+      {
+        "id": 6,
+        "name": "Niviuk",
+        "image": {
+          "name": "niviuk",
+          "path": "https://via.placeholder.com/150/673AB7"
+        }
+      },
+      {
+        "id": 7,
+        "name": "BGD (Bruce Goldsmith Design)",
+        "image": {
+          "name": "bgd",
+          "path": "https://via.placeholder.com/150/E91E63"
+        }
+      },
+    ]
+  };

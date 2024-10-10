@@ -10,32 +10,22 @@ module.exports = {
   theme: {
   	extend: {
   		colors: {
-			// --primary-darker: #121417;
-			// --primary-dark-hover: #1E2227;
-			// --primary-light: #EBEBEC;
-			// --primary-light-hover: #E0E1E3;
-			// --primary-light-active: #BFC2C4;
-			// --accent-normal: #23BC7C;
-			// --neutral-light: #eeeeee;
-			// --neutral-light-active: #CACACA;
-			// --neutral-dark: #3e3e3e;
-			// --primary-normal: #323941;
-			// --primary-normal-hover: #2D333B;
-			// --primary-normal-active: #282E34;
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
-			primaryDarker: 'var(--primary-darker)',
+  			primaryDarker: 'var(--primary-darker)',
   			primaryDarkHover: 'var(--primary-dark-hover)',
   			primaryLight: 'var(--primary-light)',
   			primaryLightHover: 'var(--primary-light-hover)',
-			primaryLightActive: 'var(--primary-light-active)',
+  			primaryLightActive: 'var(--primary-light-active)',
   			accentNormal: 'var(--accent-normal)',
   			neutralLight: 'var(--neutral-light)',
   			neutralLightActive: 'var(--neutral-light-active)',
   			neutralDark: 'var(--neutral-dark)',
   			primaryNormalHover: 'var(--primary-normal-hover)',
   			primaryNormal: 'var(--primary-normal)',
-			primaryNormalActive: 'var(--primary-normal-active)',
+  			primaryNormalActive: 'var(--primary-normal-active)',
+			shadowOne: 'var(--shadow-one)',
+
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -79,6 +69,28 @@ module.exports = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			marquee: {
+  				from: {
+  					transform: 'translateX(0)'
+  				},
+  				to: {
+  					transform: 'translateX(calc(-100% - var(--gap)))'
+  				}
+  			},
+  			'marquee-vertical': {
+  				from: {
+  					transform: 'translateY(0)'
+  				},
+  				to: {
+  					transform: 'translateY(calc(-100% - var(--gap)))'
+  				}
+  			}
+  		},
+  		animation: {
+  			marquee: 'marquee var(--duration) infinite linear',
+  			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
   		}
   	}
   },
