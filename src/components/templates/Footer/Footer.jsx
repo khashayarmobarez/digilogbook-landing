@@ -1,6 +1,7 @@
 'use client'
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import Swal from 'sweetalert2';
 
 import phoneIcon from '@/Assets/Icons/phone.svg';
 import EmailIcon from "@/Assets/Icons/emailLight.svg";
@@ -25,6 +26,25 @@ const Footer = () => {
     const EmailInputHandler = (e) => {
         setInput(e.target.value);
     }
+    const handleEmailClick = (e) => {
+        e.preventDefault();
+        window.location.href = 'mailto:info@digilogbook.ir';
+    };
+
+    const handlePhoneClick = (e) => {
+        e.preventDefault();
+        window.location.href = 'tel:021-77788899';
+    };
+
+    const showEmptyAlert = () => {
+        Swal.fire({ 
+            icon: "error",
+            title: "اماده نیست!",
+            text: "تیم ما در حال توسعه این بخش است و به زودی اماده میشود",
+            confirmButtonText: 'مشکلی نیست'
+        });
+    }
+
     return (
         <footer className="footer bg-primaryDarkHover text-neutral-content p-6 flex flex-col-reverse md:flex-row md:items-center">
 
@@ -32,22 +52,24 @@ const Footer = () => {
                 <nav className="w-full flex flex-col">
                     <Link href={'/'} className="link link-hover">خانه</Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'/'} className="link link-hover">بلاگ</Link>
+                    <Link href={'https://digilogbook.ir/blogs'} className="link link-hover" passHref target="_blank">
+                        بلاگ
+                    </Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'/'} className="link link-hover">ارتباط با ما</Link>
+                    <Link href={'https://digilogbook.ir/aboutUs'} className="link link-hover" passHref target="_blank">درباره ما</Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'/'} className="link link-hover">تماس با ما</Link>
+                    <Link href={'https://digilogbook.ir/contactUs'} className="link link-hover" passHref target="_blank">تماس با ما</Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
                 </nav>
                 <nav className="flex justify-center gap-x-8 w-full items-center my-4 md:justify-between md:pl-[10vw]">
-                    <Link href={'/'} className="link link-hover flex gap-x-2 justify-center items-center">
+                    <a href="#" onClick={handleEmailClick} className="link link-hover flex gap-x-2 justify-center items-center">
                         <Image src={EmailIcon} alt="logo" width={20} height={20} />
                         <p className="mt-1">info@digilogbook.ir</p>
-                    </Link>
-                    <Link href={'/'} className="link link-hover flex gap-x-2 justify-center items-center">
+                    </a>
+                    <a href='#' onClick={handlePhoneClick} className="link link-hover flex gap-x-2 justify-center items-center">
                         <Image src={phoneIcon} alt="logo" width={20} height={20} />
                         <p className="mt-1">021-77788899</p>
-                    </Link>
+                    </a>
                 </nav>
             </div>
 
@@ -72,13 +94,13 @@ const Footer = () => {
                         <div className="h-16 md:h-20" />
                 }
                 <div className="flex gap-x-16 w-full justify-center">
-                    <Link href={'/'} className="link link-hover bg-primaryNormalActive shadow-xl rounded-full p-4 hover:bg-primaryNormalHover">
+                    <Link onClick={showEmptyAlert} href={'/'} className="link link-hover bg-primaryNormalActive shadow-xl rounded-full p-4 hover:bg-primaryNormalHover">
                         <InstagramIcon sx={{color: 'var(--accent-normal)'}} />
                     </Link>
-                    <Link href={'/'} className="link link-hover bg-primaryNormalActive shadow-xl rounded-full p-4 hover:bg-primaryNormalHover">
+                    <Link onClick={showEmptyAlert} href={'/'} className="link link-hover bg-primaryNormalActive shadow-xl rounded-full p-4 hover:bg-primaryNormalHover">
                         <TelegramIcon sx={{color: 'var(--accent-normal)'}} />
                     </Link>
-                    <Link href={'/'} className="link link-hover bg-primaryNormalActive shadow-xl rounded-full p-4 hover:bg-primaryNormalHover">
+                    <Link onClick={showEmptyAlert} href={'/'} className="link link-hover bg-primaryNormalActive shadow-xl rounded-full p-4 hover:bg-primaryNormalHover">
                         <XIcon sx={{color: 'var(--accent-normal)'}} />
                     </Link>
                 </div>

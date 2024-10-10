@@ -8,10 +8,35 @@ import InputWithButton from "@/components/module/Landing/Inputs/InputWithButton"
 import Image from "next/image";
 import EmailIcon from "@/Assets/Icons/email.svg";
 
+import Swal from 'sweetalert2';
+
+
+
 
 const ContactUsBox = () => {
 
     const [input, setInput] = useState('');
+
+    const showAlert = () => {
+        
+        if(input.length > 5) {
+            Swal.fire({
+              title: 'ثبت شد!',
+              text: 'ایمیل شما با موفقیت ثبت شد.',
+              icon: 'success',
+              confirmButtonText: 'باشه'
+            });
+            setInput('');
+        } else {
+            Swal.fire({
+              icon: "error",
+              title: "ایمیلتون را وارد نکردین",
+              text: "لطفا ایمیل خود را وارد کنید",
+              confirmButtonText: 'مشکلی نیست'
+            });
+        }
+      
+    };
 
     const EmailInputHandler = (e) => {
         setInput(e.target.value);
@@ -25,7 +50,7 @@ const ContactUsBox = () => {
                 <p className="">ما هرزنامه ارسال نمی کنیم، پس نگران نباشید</p>
                 <InputWithButton
                     id={'Email'}
-                    // onSubmit={sendCodeHandler}
+                    onSubmit={showAlert}
                     icon={EmailIcon}
                     buttonText={'ارسال'}
                     placeH={'ایمیل خود را وارد کنید'}
