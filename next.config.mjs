@@ -2,8 +2,22 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: ['file.digilogbook.ir', 'via.placeholder.com'],
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'file.digilogbook.ir',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'via.placeholder.com',
+          port: '',
+          pathname: '/**',
+        },
+      ],
     },
-}
-
-export default nextConfig;
+  };
+  
+  export default nextConfig;
+  
