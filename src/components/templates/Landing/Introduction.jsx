@@ -1,7 +1,7 @@
 // Introduction.js
 import { useEffect, useState } from 'react';
 import bg from '@/../public/pics/testWebBackground.png';
-import digilogbookNoFeatherLogo from '../../../Assets/pics/DigilogbookNoFeatherLogo.png';
+import digilogbookNoFeatherLogo from '@/Assets/Logos/DigilogbookNoFeatherLogo.png';
 import Image from 'next/image';
 import 'animate.css';
 
