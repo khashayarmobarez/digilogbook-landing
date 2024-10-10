@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 import '@/styles/Swiper.css'
 
 // Import required modules
-import { Scrollbar, Navigation  } from 'swiper/modules';
+import { Scrollbar, Navigation, Autoplay  } from 'swiper/modules';
 import { useBlogs } from '@/utils/Api/useArticles';
 import BlogBox from '@/components/module/Landing/BlogBox';
 import { fakeApi } from '@/utils/FakeApiBackup';
@@ -44,8 +44,14 @@ const ArticleSlider = () => {
                 draggable: true,
                 dragSize: 50 ,
             }}
+            autoplay={{
+                delay: 2000, // Time between slides (in ms)
+                disableOnInteraction: false, // Keeps autoplay running even when users interact
+                pauseOnMouseEnter: true, // Pauses autoplay when user hovers over the slider
+                reverseDirection: true
+            }}
             navigation={true}
-            modules={[Scrollbar, Navigation]}
+            modules={[Scrollbar, Navigation, Autoplay]}
             className="mySwiper"
             >
                 {

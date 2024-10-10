@@ -12,7 +12,7 @@ import BrandsMarquee from "@/components/templates/Landing/BrandsMarquee";
 
 // react query
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import ContactUsBox from "@/components/templates/Landing/ContactUsBox";
+import ContactUsBox from "@/components/module/Landing/ContactUsBox";
 
 const queryClient = new QueryClient();
 

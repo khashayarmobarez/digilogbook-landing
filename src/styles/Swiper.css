@@ -55,4 +55,8 @@
       max-width: 600px;
       transform: translateX(25%);
     }
+
+    .swiper-button-next, .swiper-button-prev {
+      margin: -4rem 0rem 0 0rem ; /* Add some margin */
+    }
 }

@@ -21,11 +21,11 @@ const InputWithButton = ({icon, buttonText, placeH, Type, onSubmit, value, onCha
                     onChange={onChange}
                     id={id}
                     placeholder={placeH}
-                    className={`w-[100%] text-xs font-medium pr-8 rounded-r-2xl rounded-l-none bg-primaryLight border border-primaryLightActive`}
+                    className={`w-[100%] text-xs font-medium pr-8 rounded-r-2xl rounded-l-none bg-primaryLight border border-primaryLightActive shadow-lg`}
                 />
                 <button disabled={isLoading} onClick={onSubmit} className={` ${isLoading && 'opacity-50'} 
-                w-24 h-12 flex items-center justify-center rounded-l-2xl px-2 text-sm whitespace-nowrap backdrop-blur-lg bg-primaryLightHover`}>
-                    <p className="bg-primaryLightHover">{buttonText}</p> 
+                w-24 h-12 flex items-center justify-center rounded-l-2xl px-2 text-sm whitespace-nowrap backdrop-blur-lg bg-primaryLight border border-primaryLightActive shadow-lg`}>
+                    <p className="">{buttonText}</p> 
                 </button>
             </div>           
     );
