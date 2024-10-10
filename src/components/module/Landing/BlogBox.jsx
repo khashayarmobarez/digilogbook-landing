@@ -3,6 +3,7 @@ import Image from "next/image";
 import watchIcon from '@/Assets/Icons/watch.svg'
 import calenderIcon from '@/Assets/Icons/calender.svg'
 import arrowIcon from '@/Assets/Icons/arrowGreen.svg'
+import Link from "next/link";
 
 
 
@@ -38,7 +39,7 @@ const BlogBox = ({blog}) => {
                     </div>
                     <div className='w-full flex items-center justify-center gap-x-1 text-accentNormal text-lg md:w-[40%]'>
                         <Image src={arrowIcon} alt="icon" />
-                        <p>خواندن مقاله</p>
+                        <Link href={`https://digilogbook.ir/blog/${id}`} className="link link-hover" passHref target="_blank">خواندن مقاله</Link>
                     </div>
                 </div>
             </div>
