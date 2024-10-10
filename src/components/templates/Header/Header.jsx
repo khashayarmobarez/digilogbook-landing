@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import Logo from "@/Assets/Logos/DigiLogBookMainLogo.svg";
+import Logo from "../../../Assets/Logos/DigiLogBookMainLogo.svg";
 import { useMediaQuery } from "@mui/material";
 import 'animate.css';
 
