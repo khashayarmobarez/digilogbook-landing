@@ -1,16 +1,15 @@
 .mySwiper {
     width: 100%; /* Full width */
-    height: 45rem; /* Adjust the height based on your needs */
+    height: 40rem; /* Adjust the height based on your needs */
     padding: 10px 10vw 10px 10px; /* Add some vertical padding */
 }
 
 .swiper-scrollbar {
-    margin-top: 20px;
     background-color: var(--primary-light-active);
     border-radius: 10px;
-    height: 8px; /* Adjust the height of the scrollbar */
-    max-width: 600px;
-    transform: translateX(50%);
+    height: 10px; /* Adjust the height of the scrollbar */
+    max-width: 300px;
+    transform: translateX(18%);
 }
 
 .swiper-scrollbar-drag {
@@ -42,4 +41,13 @@
 .swiper-button-next:hover, .swiper-button-prev:hover {
     background-color: #666; /* Change background on hover */
     color: #fff; /* Change arrow color on hover */
+}
+
+
+@media (min-width: 1024px) {
+    .swiper-scrollbar {
+      margin-top: 14px;
+      max-width: 600px;
+      transform: translateX(50%);
+    }
 }

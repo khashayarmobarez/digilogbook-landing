@@ -17,6 +17,7 @@ module.exports = {
 			// --primary-light-active: #BFC2C4;
 			// --accent-normal: #23BC7C;
 			// --neutral-light: #eeeeee;
+			// --neutral-light-active: #CACACA;
 			// --neutral-dark: #3e3e3e;
 			// --primary-normal: #323941;
 			// --primary-normal-hover: #2D333B;
@@ -30,6 +31,7 @@ module.exports = {
 			primaryLightActive: 'var(--primary-light-active)',
   			accentNormal: 'var(--accent-normal)',
   			neutralLight: 'var(--neutral-light)',
+  			neutralLightActive: 'var(--neutral-light-active)',
   			neutralDark: 'var(--neutral-dark)',
   			primaryNormalHover: 'var(--primary-normal-hover)',
   			primaryNormal: 'var(--primary-normal)',
