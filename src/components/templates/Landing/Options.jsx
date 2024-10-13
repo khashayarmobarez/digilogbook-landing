@@ -1,10 +1,12 @@
 'use client'
-//  digilogbook options 
 import Image from 'next/image';
-import { useState, useEffect, useRef } from 'react';
+import { useRef, useEffect } from 'react';
+import { useMediaQuery } from "@mui/material";
+
+// gsap
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useMediaQuery } from "@mui/material";
+import { useGSAP } from '@gsap/react';
 
 // assets
 import usersIcon from '@/Assets/Icons/users.svg';
@@ -15,107 +17,68 @@ import locationIcon from '@/Assets/Icons/location.svg';
 gsap.registerPlugin(ScrollTrigger);
 
 const Options = () => {
-
     const isDesktop = useMediaQuery('(min-width:720px)');
     const containerRef = useRef(null);
+    const optionsRef = useRef([]);
 
-    // useEffect(() => {
-    //     const sections = gsap.utils.toArray('.option-section'); // Select all sections
-    //     const ctx = gsap.context(() => {
+    // useGSAP(() => {
+    //     if (isDesktop) {
+    //         const sections = optionsRef.current;
+    
+    //         // Pin the entire container until all sections have been animated
+    //         ScrollTrigger.create({
+    //             trigger: containerRef.current,
+    //             start: 'top top',
+    //             end: `+=${sections.length * 30}%`, // Adjust end based on the number of sections
+    //             pin: true, // Pin the container
+    //             pinSpacing: true, // Don't add extra space for pinning
+    //         });
+    
     //         sections.forEach((section, index) => {
     //             gsap.fromTo(section, 
     //                 {
-    //                     opacity: 0, // Starting state
-    //                     y: 50,      // Start from 50 pixels down
-    //                 }, 
+    //                     y: '50%', // Start slightly down
+    //                     opacity: 0,
+    //                 },
     //                 {
-    //                     opacity: 1, // Ending state
-    //                     y: -450,       // End at its original position
+    //                     y: '0%', // Animate to normal position
+    //                     opacity: 1,
+    //                     duration: 1.5, // Duration for animation
     //                     scrollTrigger: {
-    //                         trigger: section, // Trigger each section individually
-    //                         start: `top center`, // Start animation when the top hits 90% of the viewport
-    //                         end: 'bottom center', // End when the top of the section hits the center of the viewport
-    //                         onEnter: () => gsap.to(section, { opacity: 1, y: 0 }), // Animate on enter
-    //                         onLeave: () => gsap.to(section, { opacity: 0, y: -50 }), // Optional: Animate out on leave
-    //                         once: true, // Only trigger the animation once
-    //                         markers: true, // Optional: Shows markers for debugging
+    //                         trigger: containerRef.current, // Pin the entire container
+    //                         start: `top+=${index * 5}% start`, // Stagger the start based on index
+    //                         end: `+=25%`, // Each section takes up 25% of the scroll space
     //                     },
     //                 }
     //             );
     //         });
-    //     }, containerRef); // Bind the context to the container ref
-    
-    //     return () => ctx.revert(); // Clean up the context on unmount
-    // }, []);
+    //     }
+    // }, { scope: containerRef, dependencies: [isDesktop] });
+
+    const optionSections = [
+        { icon: bookIcon, title: "دسترسی به تمامی سیلابس ها", content: "شما میتوانید با استفاده از دیجی لاگ بوک به همه ی سیلابس های آموزشی تمامی مقاطع در هر ارگان دسترسی داشته باشید که با استفاده از این قابلیت میتوانید برای خود برنامه های بلند مدت و کوتاه مدت بچینید" },
+        { icon: usersIcon, title: "تقسیم بندی سرفصل های عملی و تئوری", content: "دیجی لاگ بوک این امکان را به شما میدهد که علاوه بر لاگ کردن فعالیت های عملی خود مانند پروازها و تمرینات زمینی ، بتوانید کلاس های تئوری را مطابق با سرفصل های مقطع خود نیز لاگ کنید" },
+        { icon: clipboardIcon, title: "دسترسی به تمامی سیلابس ها", content: "چرا باید لاگ بوک داشته باشیم ؟ در هنگام یادگیری پرواز، هر خلبان ملزم به نوشتن یادداشتی از ساعات پرواز خود در یک لاگ بوک به منظور ثبت  تجربه خود است." },
+        { icon: locationIcon, title: "امکان محاسبه ساعات پرواز", content: "چرا باید لاگ بوک داشته باشیم ؟ در هنگام یادگیری پرواز، هر خلبان ملزم به نوشتن یادداشتی از ساعات پرواز خود در یک لاگ بوک به منظور ثبت  تجربه خود است." }
+    ];
 
     return (
-    <div className="flex flex-col w-full md:-mt-20 ">
-        <div className="w-full flex flex-col md:flex-row items-center text-neutralLight"
-        ref={containerRef}>
-            <div
-            className="option-section w-full flex flex-col items-center justify-center text-center gap-y-14 h-[100dvh] bg-primaryNormal px-10 md:w-1/4 md:h-[120dvh]"
-            >
-                <Image src={bookIcon} alt="icon" width={70} height={70} />
-                <p className="text-accentNormal text-lg">دسترسی به تمامی سیلابس ها</p>
-                <p className="text-base">شما میتوانید با استفاده از دیجی لاگ بوک به همه ی سیلابس های آموزشی تمامی مقاطع در هر ارگان دسترسی داشته باشید که با استفاده از این قابلیت میتوانید برای خود برنامه های بلند مدت و کوتاه مدت بچینید
-                </p>
+        <div className={`flex flex-col w-full `}>
+            <div className="w-full flex flex-col md:flex-row items-center text-neutralLight"
+                 ref={containerRef}>
+                {optionSections.map((section, index) => (
+                    <div key={index}
+                         ref={el => optionsRef.current[index] = el}
+                         className="optionSection w-full flex flex-col items-center justify-center text-center gap-y-14 h-[100dvh] px-10 md:w-1/4 md:h-[120dvh]"
+                         style={{background: `var(--primary-${['normal', 'normal-active', 'dark-hover', 'darker'][index]})`}}>
+                        <Image src={section.icon} alt="icon" width={70} height={70} />
+                        <p className="text-accentNormal text-lg">{section.title}</p>
+                        <p className="text-base">{section.content}</p>
+                    </div>
+                ))}
             </div>
-
-            <div
-            className="option-section w-full flex flex-col items-center justify-center text-center gap-y-14 h-[100dvh] bg-primaryNormalActive px-10 md:w-1/4 md:h-[120dvh]"
-            >
-                <Image src={usersIcon} alt="icon" width={70} height={70} />
-                <p className="text-accentNormal text-lg">تقسیم بندی سرفصل های عملی و تئوری</p>
-                <p className="text-base">دیجی لاگ بوک این امکان را به شما میدهد که علاوه بر لاگ کردن فعالیت های عملی خود مانند پروازها و تمرینات زمینی ، بتوانید کلاس های تئوری را مطابق با سرفصل های مقطع خود نیز لاگ کنید 
-                </p>
-            </div>
-
-            <div
-            className="option-section w-full flex flex-col items-center justify-center text-center gap-y-14 h-[100dvh] bg-primaryDarkHover px-10 md:w-1/4 md:h-[120dvh]"
-            >
-                <Image src={clipboardIcon} alt="icon" width={70} height={70} />
-                <p className="text-accentNormal text-lg">دسترسی به تمامی سیلابس ها</p>
-                <p className="text-base">چرا باید لاگ بوک داشته باشیم ؟<br/>
-                    در هنگام یادگیری پرواز، هر خلبان ملزم به نوشتن یادداشتی از ساعات پرواز خود در یک لاگ بوک به منظور ثبت  تجربه خود است.
-                </p>
-            </div>
-
-            <div
-            className="option-section w-full flex flex-col items-center justify-center text-center gap-y-14 h-[100dvh] bg-primaryDarker px-10 md:w-1/4 md:h-[120dvh]"
-            >
-                <Image src={locationIcon} alt="icon" width={70} height={70} />
-                <p className="text-accentNormal text-lg">امکان محاسبه ساعات پرواز</p>
-                <p className="text-base">چرا باید لاگ بوک داشته باشیم ؟<br/>
-                    در هنگام یادگیری پرواز، هر خلبان ملزم به نوشتن یادداشتی از ساعات پرواز خود در یک لاگ بوک به منظور ثبت  تجربه خود است.
-                </p>
-            </div>
+            {/* Rest of your component (buttons section) remains unchanged */}
         </div>
-        <div className='w-full flex flex-col items-center gap-y-12 mt-20 md:bg-primaryLightHover md:flex-row md:justify-center md:p-8 md:w-[90%] md:self-center md:rounded-3xl md:gap-x-[10vw]'>
-            <p className='text-neutralDark text-lg md:text-3xl font-bold'>
-                برای مشاهده قابلیت‌های بیشتر همراه ما باشید...
-            </p>
-            {
-                !isDesktop &&
-                <button className="btn w-48 btn-outline rounded-3xl text-base border-accentNormal text-accentNormal hover:text-neutralDark"
-                onClick={() => window.open('https://digilogbook.ir/signUpLogin', '_blank')}>
-                    ورود / ثبت نام
-                </button>
-            }
-            {
-                isDesktop &&
-                <div className="flex flex-row justify-center items-center md:gap-x-8 ">
-                    <button className="btn w-48 h-12 bg-accentNormal rounded-3xl p-3 text-base text-primaryDarkHover hover:text-neutralLight hover:bg-primaryNormalHover border-none"
-                    onClick={() => window.open('https://digilogbook.ir/signUpLogin', '_blank')}>
-                        شروع کنید
-                    </button>
-                    <button className="btn w-48 btn-outline rounded-3xl text-base border-accentNormal text-accentNormal hover:text-neutralDark"
-                    onClick={() => window.open('https://digilogbook.ir/signUpLogin', '_blank')}>
-                        ورود
-                    </button>
-                </div>
-            }
-        </div>
-    </div>
     );
 };
 

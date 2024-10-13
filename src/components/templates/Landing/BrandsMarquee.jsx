@@ -90,7 +90,7 @@ const ReviewCard = ({name,id,image}) => {
 export default function BrandsMarquee() {
   return (
     <div className="relative flex h-[200px] md:h-[300px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-primaryLight my-6">
-      <Marquee pauseOnHover className="[--duration:15s]">
+      <Marquee pauseOnHover className="[--duration:25s]">
         {brands.data.map((brand) => (
           <ReviewCard key={brand.id} {...brand} />
         ))}
