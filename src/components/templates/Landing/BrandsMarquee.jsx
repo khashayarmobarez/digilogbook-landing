@@ -87,8 +87,6 @@ const ReviewCard = ({name,id,image}) => {
     );
   };
 
-  
-
 export default function BrandsMarquee() {
   return (
     <div className="relative flex h-[200px] md:h-[300px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-primaryLight my-6">
