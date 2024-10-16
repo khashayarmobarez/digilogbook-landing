@@ -23,8 +23,6 @@ const ArticleSlider = ({blogsData}) => {
 
     const dataToDisplay = blogsData?.data || fakeApi?.data || [];
 
-    console.log(blogsData)
-
     return (
         <div className='w-full py-10 flex flex-col items-center gap-y-8'>
             <Swiper
