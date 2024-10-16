@@ -1,4 +1,4 @@
-
+'use client'
 // Dependencies
 import { useState } from "react";
 

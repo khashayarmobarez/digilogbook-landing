@@ -1,3 +1,4 @@
+'use client'
 // Introduction.js
 import { useEffect, useState } from 'react';
 import bg from '@/../public/pics/testWebBackground.png';
