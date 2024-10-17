@@ -23,6 +23,12 @@ const nextConfig = {
         },
         {
           protocol: 'https',
+          hostname: 'app.digilogbook.ir',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
           hostname: 'digilogbook.ir',
           port: '',
           pathname: '/**',

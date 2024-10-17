@@ -171,7 +171,7 @@ export const brands = {
         "name": "پرباز",
         "image": {
           "name": "پرباز",
-          "path": "https://digilogbook.ir/static/media/parbazLogo.b1e3b863d33c2e346b28ff9f322a428c.svg"
+          "path": "https://app.digilogbook.ir/static/media/parbazLogo.b1e3b863d33c2e346b28ff9f322a428c.svg"
         }
       },
       {

@@ -50,7 +50,7 @@ const WhyDigi = () => {
 
                     <BoxReveal boxColor={"var(--accent-normal)"} duration={0.5}>
                         <button className="btn w-40 h-12 bg-accentNormal rounded-3xl p-3 text-primaryDarkHover hover:text-neutralLight hover:bg-primaryNormalHover border-none self-center md:self-end"
-                        onClick={() => window.open('https://digilogbook.ir/whyUs', '_blank')}>
+                        onClick={() => window.open('https://app.digilogbook.ir/whyUs', '_blank')}>
                             مطالعه بیشتر
                         </button>
                     </BoxReveal>

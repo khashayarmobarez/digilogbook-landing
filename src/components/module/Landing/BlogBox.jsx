@@ -39,7 +39,7 @@ const BlogBox = ({blog}) => {
                     </div>
                     <div className='w-full flex items-center justify-center gap-x-1 text-accentNormal text-lg md:w-[40%]'>
                         <Image src={arrowIcon} alt="icon" />
-                        <Link href={`https://digilogbook.ir/blog/${id}`} className="link link-hover" passHref target="_blank">خواندن مقاله</Link>
+                        <Link href={`https://app.digilogbook.ir/blog/${id}`} className="link link-hover" passHref target="_blank">خواندن مقاله</Link>
                     </div>
                 </div>
             </div>

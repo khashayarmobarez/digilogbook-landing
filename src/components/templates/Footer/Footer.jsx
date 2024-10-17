@@ -52,13 +52,13 @@ const Footer = () => {
                 <nav className="w-full flex flex-col">
                     <Link href={'/'} className="link link-hover">خانه</Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'https://digilogbook.ir/blogs'} className="link link-hover" passHref target="_blank">
+                    <Link href={'https://app.digilogbook.ir/blogs'} className="link link-hover" passHref target="_blank">
                         بلاگ
                     </Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'https://digilogbook.ir/aboutUs'} className="link link-hover" passHref target="_blank">درباره ما</Link>
+                    <Link href={'https://app.digilogbook.ir/aboutUs'} className="link link-hover" passHref target="_blank">درباره ما</Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'https://digilogbook.ir/contactUs'} className="link link-hover" passHref target="_blank">تماس با ما</Link>
+                    <Link href={'https://app.digilogbook.ir/contactUs'} className="link link-hover" passHref target="_blank">تماس با ما</Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
                 </nav>
                 <nav className="flex justify-center gap-x-8 w-full items-center my-4 md:justify-between md:pl-[10vw]">
@@ -105,9 +105,6 @@ const Footer = () => {
                     </Link>
                 </div>
             </div>
-
-            <p className="w-full flex items-center justify-center p-2 text-center">تمام حقوق این وبسایت متعلق به شرکت بنیان پیشتازان پرباز (دیجی لاگ بوک) می باشد&copy;</p>
-
         </footer>
     );
 };
