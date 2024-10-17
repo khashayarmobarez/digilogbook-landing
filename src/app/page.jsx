@@ -42,7 +42,7 @@ export default async function Home() {
           <WhyDigi />      
           <Options />
           <ArticleSlider blogsData={blogsData} />
-          <BrandsMarquee />
+          {/* <BrandsMarquee /> */}
           <ContactUsBox />
           {/* <div>
             <p>Current theme: {theme}</p>

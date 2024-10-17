@@ -106,6 +106,8 @@ const Footer = () => {
                 </div>
             </div>
 
+            <p className="w-full flex items-center justify-center p-2 text-center">تمام حقوق این وبسایت متعلق به شرکت بنیان پیشتازان پرباز (دیجی لاگ بوک) می باشد&copy;</p>
+
         </footer>
     );
 };
