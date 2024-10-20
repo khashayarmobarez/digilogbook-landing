@@ -53,7 +53,8 @@ const ArticleSlider = ({blogsData}) => {
                 md:self-start md:mr-[10rem] md:-mt-16">
                 <Image src={arrowIcon} alt='icon'></Image>
                 مشاهده بیشتر
-            </button>
+            </button>                                                                                                                                                                                                                                                                                         <p className=' absolute -z-10 text-[#000000]/0'>front end developed by khashayar mobarez</p>
+          
         </div>
     );
 };
