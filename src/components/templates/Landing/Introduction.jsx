@@ -5,6 +5,7 @@ import bg from '@/../public/pics/testWebBackground.png';
 import digilogbookNoFeatherLogo from '@/Assets/Logos/DigilogbookNoFeatherLogo.png';
 import Image from 'next/image';
 import 'animate.css';
+import Link from 'next/link';
 
 const Introduction = () => {
     const [loading, setLoading] = useState(true);
@@ -54,7 +55,11 @@ const Introduction = () => {
                     <p className='text-neutralLight text-sm w-4/5 mt-4 text-center md:text-xl md:w-3/6 md:mt-8'>
                         دیجی لاگ بوک به شما کمک می‌کند تا پیشرفت خود را به طور دقیق دنبال کنید و با مشاهده میزان ساعات پروازی خود و انواع تجهیزات پروازی استفاده شده و چالش‌هایی که با آنها روبرو شده‌اید ، می‌توانید ارزیابی دقیقی از توانایی‌ها و نیازهای آموزشی خود داشته باشد 
                     </p>
-                    <button className="btn btn-outline btn-accentNormal text-neutralLight w-5/6 rounded-3xl mt-8 text-base md:w-1/4">شروع کنید</button>
+                        <button className="btn btn-outline btn-accentNormal text-neutralLight w-5/6 rounded-3xl mt-8 text-base md:w-1/4">
+                            <Link href={'https://app.digilogbook.ir/'} passHref target="_blank" className='w-full h-full flex justify-center items-center'>
+                            شروع کنید
+                            </Link>
+                        </button>
                 </div>
             </div>
             <style jsx>{`

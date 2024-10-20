@@ -50,7 +50,7 @@ const Header = () => {
     const NavItems = () => (
         <ul className="flex flex-col md:flex-row gap-y-6 md:gap-x-20 justify-center items-start text-sm ">
             <li className="btn btn-ghost font-light text-white flex gap-x-2"
-            onClick={() => window.open('https://app.digilogbook.ir/signUpLogin', '_blank')}>
+            onClick={() => window.open('https://app.digilogbook.ir/', '_blank')}>
                 {!isDesktop && <Image alt="icon" src={homeIcon} />}
                 <p>صفحه اصلی</p>
             </li>
@@ -80,11 +80,11 @@ const Header = () => {
     const AuthButtons = () => (
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-x-8">
             <button className="btn w-32 h-12 bg-accentNormal rounded-3xl p-3 text-primaryDarkHover hover:text-neutralLight hover:bg-primaryNormalHover"
-            onClick={() => window.open('https://app.digilogbook.ir/signUpLogin', '_blank')}>
+            onClick={() => window.open('https://app.digilogbook.ir/', '_blank')}>
                 شروع کنید
             </button>
             <button className="btn btn-ghost text-accentNormal rounded-2xl"
-            onClick={() => window.open('https://app.digilogbook.ir/signUpLogin', '_blank')}>
+            onClick={() => window.open('https://app.digilogbook.ir/', '_blank')}>
                 ورود
             </button>
         </div>
