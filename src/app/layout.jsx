@@ -37,8 +37,36 @@ const iranSans = localFont({
 });
 
 export const metadata = {
-  title: "DigiLogBook",
-  description: "developed by pishtazane parbaz",
+  title: "DigiLogBook | سامانه ثبت پرواز",
+  description: "دیجی لاگ بوک به شما کمک می‌کند تا پرواز خود را به طور دقیق دنبال کنید.",
+  keywords: "ثبت پرواز, وسیله پرواز, لاگ بوک, دیجی لاگ بوک",
+  author: "khashayar mobarez",
+  openGraph: {
+    type: 'website',
+    url: 'https://digilogbook.ir',  // Update with your actual URL
+    title: 'DigiLogBook | پرواز خود را ثبت کنید"',
+    description: 'دیجی لاگ بوک بهترین راه برای ثبت اطلاعات پرواز.',
+    images: [
+      {
+        url: '/Assets/Logos/DigilogbookMainLogo.svg',
+        width: 1200,
+        height: 630,
+        alt: 'DigiLogBook - ثبت پرواز',
+      },
+    ],
+  },
+  // twitter: {
+  //   card: 'summary_large_image',
+  //   site: '@DigiLogBook',  // Your Twitter handle if available
+  //   title: 'DigiLogBook - Track Your Flights',
+  //   description: 'DigiLogBook helps you track and manage all your flights efficiently.',
+  //   image: '/Assets/images/twitter-card.jpg',  // Image for Twitter card
+  // },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 
