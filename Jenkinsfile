@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        WEBSITE_NAME = 'DigiLogBook.Landing'
+    }
+
     stages {
         
         stage('Install') {
@@ -15,6 +19,12 @@ pipeline {
                 bat 'pnpm build'
             }
         }
+        stage('Restart IIS Website') {
+            steps {
+                bat "powershell.exe -Command "Start-Website -Name '$env.WEBSITE_NAME'""
+                bat "powershell.exe -Command "Stop-Website -Name '$env.WEBSITE_NAME'""
+            }
+        } 
     }
     
     post {
