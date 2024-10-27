@@ -76,7 +76,7 @@ const ContactUs = () => {
 
                 </div>
 
-                <div className="md:w-[40vw] md:pl-[8vw]">
+                <div className="w-full md:w-[40vw] md:pl-[8vw]">
                     <UserOpinion />
 
                 </div>
