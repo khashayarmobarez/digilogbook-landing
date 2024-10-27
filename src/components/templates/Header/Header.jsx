@@ -12,6 +12,7 @@ import usersIcon from '@/Assets/Icons/users.svg';
 // import attentionIcon from '@/Assets/Icons/attention.svg';
 import phoneIcon from '@/Assets/Icons/phone.svg';
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 
 const Header = () => {
@@ -49,10 +50,9 @@ const Header = () => {
 
     const NavItems = () => (
         <ul className="flex flex-col md:flex-row gap-y-6 md:gap-x-20 justify-center items-start text-sm ">
-            <li className="btn btn-ghost font-light text-white flex gap-x-2"
-            onClick={() => window.open('https://app.digilogbook.ir/', '_blank')}>
+            <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={homeIcon} />}
-                <p>صفحه لندینگ</p>
+                <Link href={'/'}>صفحه لندینگ</Link>
             </li>
             <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://app.digilogbook.ir/blogs', '_blank')}>
@@ -69,10 +69,9 @@ const Header = () => {
                 {!isDesktop && <Image alt="icon" src={attentionIcon} />}
                 <p>راهنما</p>
             </li> */}
-            <li className="btn btn-ghost font-light text-white flex gap-x-2"
-            onClick={() => window.open('https://app.digilogbook.ir/contactUs', '_blank')}>
+            <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
-                <p>تماس با ما</p>
+                <Link href={'/contactUs'}>تماس با ما</Link>
             </li>
         </ul>
     );

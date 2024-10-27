@@ -46,14 +46,14 @@ export const metadata = {
     url: 'https://digilogbook.ir',  // Update with your actual URL
     title: 'DigiLogBook | پرواز خود را ثبت کنید"',
     description: 'دیجی لاگ بوک بهترین راه برای ثبت اطلاعات پرواز.',
-    images: [
-      {
-        url: '/Assets/Logos/DigilogbookMainLogo.svg',
-        width: 1200,
-        height: 630,
-        alt: 'DigiLogBook - ثبت پرواز',
-      },
-    ],
+    // images: [
+    //   {
+    //     url: '/faveicon.ico',  // Update with your actual URL
+    //     width: 1200,
+    //     height: 630,
+    //     alt: 'DigiLogBook - ثبت پرواز',
+    //   },
+    // ],
   },
   // twitter: {
   //   card: 'summary_large_image',
