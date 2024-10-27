@@ -52,7 +52,7 @@ const Header = () => {
             <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://app.digilogbook.ir/', '_blank')}>
                 {!isDesktop && <Image alt="icon" src={homeIcon} />}
-                <p>صفحه اصلی</p>
+                <p>صفحه لندینگ</p>
             </li>
             <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://app.digilogbook.ir/blogs', '_blank')}>
