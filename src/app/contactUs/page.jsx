@@ -10,7 +10,7 @@ import PhoneIcon from "@/Assets/Icons/PhoneIcon";
 import MailIcon from "@/Assets/Icons/MailIcon";
 import TicketIcon from "@/Assets/Icons/TicketIcon";
 import { UserIcon } from "lucide-react";
-import UserOpinion from "@/components/module/Landing/contactUs/UserOpinion";
+import UserOpinion from "@/components/module/contactUs/UserOpinion";
 
 
 const ContactUs = () => {

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // assets
 import Logo from "@/Assets/Logos/DigilogbookMainLogo.svg";
-import InputWithButton from "@/components/module/Landing/Inputs/InputWithButton";
+import InputWithButton from "@/components/module/Inputs/InputWithButton";
 import Image from "next/image";
 import EmailIcon from "@/Assets/Icons/email.svg";
 

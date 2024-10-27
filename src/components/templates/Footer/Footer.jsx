@@ -15,7 +15,7 @@ import { useState } from "react";
 
 // assets
 import Logo from "@/Assets/Logos/DigilogbookMainLogo.svg";
-import InputWithButton from "@/components/module/Landing/Inputs/InputWithButton";
+import InputWithButton from "@/components/module/Inputs/InputWithButton";
 
 const Footer = () => {
 
@@ -33,7 +33,7 @@ const Footer = () => {
 
     const handlePhoneClick = (e) => {
         e.preventDefault();
-        window.location.href = 'tel:021-77788899';
+        window.location.href = 'tel:09965089408';
     };
 
     const showEmptyAlert = () => {
@@ -68,7 +68,7 @@ const Footer = () => {
                     </a>
                     <a href='#' onClick={handlePhoneClick} className="link link-hover flex gap-x-2 justify-center items-center">
                         <Image src={phoneIcon} alt="logo" width={20} height={20} />
-                        <p className="mt-1">021-77788899</p>
+                        <p className="mt-1">09965089408</p>
                     </a>
                 </nav>
             </div>
