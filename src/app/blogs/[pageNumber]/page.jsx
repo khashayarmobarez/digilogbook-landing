@@ -7,6 +7,7 @@ import Link from 'next/link';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
+import Pagination from '@/components/module/blogs/Pagination';
 
 export async function generateStaticParams() {
   const pageSize = 4;
@@ -43,20 +44,20 @@ export default async function BlogsPage({ params }) {
             <ul className='w-full grid grid-cols-1 gap-4 md:grid-cols-2 '>
                 {blogs.map((blog) => (
                 <li key={blog.id} className=' border border-1 border-neutralDark flex flex-col items-center justify-center p-4 rounded-2xl'>
-                    <Link href={`/blogs/${blog.id}`} className='w-full'>
-                        <div className='w-full text-start flex flex-col items-start gap-y-1'>
-                            <Image src={blog.image.path} alt={blog.image.name} 
+                    <Link href={`/blogs/blog/${blog.id}`} className='w-full'>
+                        <div className='w-full text-start flex flex-col items-start gap-y-1 text-neutralDark'>
+                            <Image src={blog.image.path} alt={'image'}  // Image path
                             width={100} // Set a base width; will be overridden by CSS
                             height={80} // Fixed height
                             className='w-full h-56'  />
 
-                            <h2 className='text-xl font-semibold text-accentNormal'>{blog.title}</h2>
+                            <h2 className='text-xl font-semibold text-accentNormal mt-4'>{blog.title}</h2>
 
-                            <p>{blog.authorName}</p>
+                            <p className='md:text-lg'>{blog.authorName}</p>
 
-                            <p className=' text-right text-base mt-2'>{blog.blogSections[0].htmlContent.slice(0,110)} ...</p>
+                            <p className=' text-right text-base my-3'>{blog.blogSections[0].htmlContent.slice(0,130)} ...</p>
 
-                            <div className='w-full flex flex-col gap-y-4 md:flex-row items-center mt-2 md:justify-between'>
+                            <div className='w-full flex flex-col gap-y-6 md:flex-row items-center mt-2 md:justify-between'>
 
                                 <div className='w-full flex justify-between md:w-[61%]'>
 
@@ -72,10 +73,10 @@ export default async function BlogsPage({ params }) {
 
                                 </div>
 
-                                <Link href={`/blog/${blog.id}`} className=' gap-x-2 rounded-3xl link link-hover flex text-accentNormal'>
+                                <div  className=' gap-x-2 rounded-3xl link link-hover flex text-lg text-accentNormal'>
                                     <ArrowForwardIcon />
                                     <p>خواندن مقاله</p>
-                                </Link>
+                                </div>
 
                             </div>
                         </div>
@@ -91,14 +92,3 @@ export default async function BlogsPage({ params }) {
   );
 }
 
-function Pagination({ pageNumber, totalPages }) {
-  return (
-    <div className="pagination">
-      {Array.from({ length: totalPages }, (_, i) => (
-        <Link key={i} href={`/blogs/${i + 1}`} prefetch={false}>
-          <p className={i + 1 === pageNumber ? 'active' : ''}>{i + 1}</p>
-        </Link>
-      ))}
-    </div>
-  );
-}
