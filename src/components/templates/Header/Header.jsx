@@ -52,17 +52,16 @@ const Header = () => {
         <ul className="flex flex-col md:flex-row gap-y-6 md:gap-x-20 justify-center items-start text-sm ">
             <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={homeIcon} />}
-                <Link href={'/'}>صفحه لندینگ</Link>
+                <Link href={'/'}>صفحه اصلی</Link>
             </li>
             <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://app.digilogbook.ir/blogs', '_blank')}>
                 {!isDesktop && <Image alt="icon" src={penIcon} />}
                 <p>بلاگ</p>
             </li>
-            <li className="btn btn-ghost font-light text-white flex gap-x-2"
-            onClick={() => window.open('https://app.digilogbook.ir/aboutUs', '_blank')}>
-                {!isDesktop && <Image alt="icon" src={usersIcon} />}
-                <p>درباره ما</p>
+            <li className="btn btn-ghost font-light text-white flex gap-x-2">
+                {!isDesktop && <Image alt="icon" src={phoneIcon} />}
+                <Link href={'/aboutUs'}>درباره ما</Link>
             </li>
             {/* <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://app.digilogbook.ir/contactUs', '_blank')}>
