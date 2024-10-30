@@ -46,8 +46,6 @@ export default async function BlogDetailsPage({ params }) {
     return null;
   }
 
-  console.log(data);
-
 return (
     <div className='w-full flex justify-center min-h-[70dvh]'>
             <div className='w-[90%] flex flex-col pt-12 md:w-[60%]'>
