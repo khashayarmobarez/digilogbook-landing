@@ -52,13 +52,13 @@ const Footer = () => {
                 <nav className="w-full flex flex-col">
                     <Link href={'/'} className="link link-hover">خانه</Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'https://app.digilogbook.ir/blogs'} className="link link-hover" passHref target="_blank">
+                    <Link href={'/blogs/1'} className="link link-hover" >
                         بلاگ
                     </Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'https://app.digilogbook.ir/aboutUs'} className="link link-hover" passHref target="_blank">درباره ما</Link>
+                    <Link href={'/aboutUs'} className="link link-hover" >درباره ما</Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'https://app.digilogbook.ir/contactUs'} className="link link-hover" passHref target="_blank">تماس با ما</Link>
+                    <Link href={'/contactUs'} className="link link-hover" >تماس با ما</Link>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
                 </nav>
                 <nav className="flex justify-center gap-x-8 w-full items-center my-4 md:justify-between md:pl-[10vw]">
