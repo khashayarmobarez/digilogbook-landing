@@ -45,8 +45,8 @@ export default async function BlogsPage({ params }) {
                   <p className='md:text-lg'>{blog.authorName}</p>
                   <p className='text-right text-base my-3'>{blog.blogSections[0].htmlContent.slice(0, 130)} ...</p>
 
-                  <div className='w-full flex flex-col gap-y-6 md:flex-row items-center mt-2 md:justify-between'>
-                    <div className='w-full flex justify-between md:w-[61%]'>
+                  <div className='w-full flex flex-col gap-y-6 xl:flex-row items-center mt-2 xl:justify-between'>
+                    <div className='w-full flex justify-between xl:w-[61%]'>
                       <div className='flex items-center justify-center gap-x-2'>
                         <AccessTimeOutlinedIcon fontSize='8px' />
                         <p className='text-xs'>در {blog.timeToReadInMinutes} دقیقه بخوانید</p>

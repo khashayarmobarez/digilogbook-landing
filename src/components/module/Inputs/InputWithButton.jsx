@@ -5,7 +5,7 @@
 import Image from "next/image";
 
 
-const InputWithButton = ({icon, buttonText, placeH, Type, onSubmit, value, onChange, id, isLoading}) => {
+const InputWithButton = ({icon, buttonText, placeH, Type, onSubmit, value, onChange, id, isLoading, inputClassName}) => {
 
     return (
             <div className={` flex relative w-[100%] h-12 px-2`}>
@@ -21,7 +21,7 @@ const InputWithButton = ({icon, buttonText, placeH, Type, onSubmit, value, onCha
                     onChange={onChange}
                     id={id}
                     placeholder={placeH}
-                    className={`w-[100%] text-xs font-medium pr-8 rounded-r-2xl rounded-l-none bg-primaryLight border border-primaryLightActive shadow-lg`}
+                    className={`w-[100%] text-xs font-medium pr-8 rounded-r-2xl rounded-l-none bg-primaryLight border border-primaryLightActive shadow-lg ${inputClassName}`}
                 />
                 <button disabled={isLoading} onClick={onSubmit} className={` ${isLoading && 'opacity-50'} 
                 w-24 h-12 flex items-center justify-center rounded-l-2xl px-2 text-sm whitespace-nowrap backdrop-blur-lg bg-primaryLight border border-primaryLightActive shadow-lg`}>
