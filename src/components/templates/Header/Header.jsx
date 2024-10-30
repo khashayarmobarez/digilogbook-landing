@@ -52,7 +52,7 @@ const Header = () => {
         <ul className="flex flex-col md:flex-row gap-y-6 md:gap-x-20 justify-center items-start text-sm ">
             <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={homeIcon} />}
-                <Link href={'/'}>صفحه اصلی</Link>
+                <Link href={'/'} className="w-full h-full flex justify-center items-center">صفحه اصلی</Link>
             </li>
             <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://app.digilogbook.ir/blogs', '_blank')}>
@@ -61,7 +61,7 @@ const Header = () => {
             </li>
             <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
-                <Link href={'/aboutUs'}>درباره ما</Link>
+                <Link href={'/aboutUs'} className="w-full h-full flex justify-center items-center">درباره ما</Link>
             </li>
             {/* <li className="btn btn-ghost font-light text-white flex gap-x-2"
             onClick={() => window.open('https://app.digilogbook.ir/contactUs', '_blank')}>
@@ -70,7 +70,7 @@ const Header = () => {
             </li> */}
             <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
-                <Link href={'/contactUs'}>تماس با ما</Link>
+                <Link href={'/contactUs'} className="w-full h-full flex justify-center items-center">تماس با ما</Link>
             </li>
         </ul>
     );
