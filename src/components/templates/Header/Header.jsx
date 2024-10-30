@@ -18,7 +18,7 @@ import Link from "next/link";
 const Header = () => {
 
     const isDesktop = useMediaQuery('(min-width:720px)');
-    const logoSize = isDesktop ? 140 : 100;
+    const logoSize = isDesktop ? 140 : 120;
     const router = useRouter();
 
     
@@ -49,35 +49,33 @@ const Header = () => {
     }, [navbarIsOpen]);
 
     const NavItems = () => (
-        <ul className="flex flex-col md:flex-row gap-y-6 md:gap-x-20 justify-center items-start text-sm ">
+        <ul className="flex flex-col md:w-[50%] md:flex-row gap-y-6 justify-center items-start text-sm md:justify-between">
             <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={homeIcon} />}
-                <Link href={'/'} className="w-full h-full flex justify-center items-center">صفحه اصلی</Link>
+                <Link href={'/'} className="md:w-full md:h-full flex justify-center items-center">صفحه اصلی</Link>
             </li>
-            <li className="btn btn-ghost font-light text-white flex gap-x-2"
-            onClick={() => window.open('https://app.digilogbook.ir/blogs', '_blank')}>
+            <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={penIcon} />}
-                <p>بلاگ</p>
+                <Link href={'/blogs/1'} className="md:w-full md:h-full flex justify-center items-center">بلاگ</Link>
             </li>
             <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
-                <Link href={'/aboutUs'} className="w-full h-full flex justify-center items-center">درباره ما</Link>
+                <Link href={'/aboutUs'} className="md:w-full md:h-full flex justify-center items-center">درباره ما</Link>
             </li>
-            {/* <li className="btn btn-ghost font-light text-white flex gap-x-2"
-            onClick={() => window.open('https://app.digilogbook.ir/contactUs', '_blank')}>
+            {/* <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={attentionIcon} />}
-                <p>راهنما</p>
+                <Link href={'/'} className="md:w-full md:h-full flex justify-center items-center">راهنما</Link>
             </li> */}
             <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
-                <Link href={'/contactUs'} className="w-full h-full flex justify-center items-center">تماس با ما</Link>
+                <Link href={'/contactUs'} className="md:w-full md:h-full flex justify-center items-center">تماس با ما</Link>
             </li>
         </ul>
     );
 
     const AuthButtons = () => (
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-x-8">
-            <button className="btn w-32 h-12 bg-accentNormal rounded-3xl p-3 text-primaryDarkHover hover:text-neutralLight hover:bg-primaryNormalHover"
+            <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-primaryDarkHover hover:text-neutralLight hover:bg-primaryNormalHover"
             onClick={() => window.open('https://app.digilogbook.ir/', '_blank')}>
                 شروع کنید
             </button>
@@ -91,8 +89,8 @@ const Header = () => {
     return (
         <header className="w-full">
             <nav className="bg-primaryDarkHover h-14 md:h-20 w-full flex justify-between items-center px-4 md:px-8">
-                <div className="flex w-full h-full gap-x-12 items-center">
-                    <Image src={Logo} alt='logo' width={logoSize} height={logoSize} className="btn btn-ghost"
+                <div className="flex w-[70%] h-full gap-x-4 lg:gap-x-8 items-center">
+                    <Image src={Logo} alt='logo' width={logoSize} height={logoSize} className="btn btn-ghost -mr-4"
                     onClick={() => router.push('/')} />
                     {isDesktop && <NavItems />}
                 </div>

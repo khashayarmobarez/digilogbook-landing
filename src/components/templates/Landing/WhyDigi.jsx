@@ -30,7 +30,7 @@ const WhyDigi = () => {
     ];
 
     return (
-        <div className='w-full flex flex-col items-center justify-around py-10 gap-y-20 md:py-32'>
+        <div className='w-full flex flex-col items-center justify-around py-10 gap-y-20 md:pt-32 md:pb-20'>
 
             <div className={`w-[90%] min-h-10 flex flex-col gap-y-8 md:w-7/12 md:bg-primaryLightHover md:p-8 transition-all `}>
 
