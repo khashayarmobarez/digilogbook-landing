@@ -4,14 +4,15 @@ import { ThemeContext } from '@/utils/ThemeContext';
 // import { useContext } from 'react';
 
 // comps
-import Introduction from '@/components/templates/Landing/Introduction';
-import WhyDigi from "@/components/templates/Landing/WhyDigi";
-import Options from "@/components/templates/Landing/Options";
-import ArticleSlider from "@/components/templates/Landing/ArticleSlider";
-import BrandsMarquee from "@/components/templates/Landing/BrandsMarquee";
+import Introduction from '@/components/module/Landing/Introduction';
+import WhyDigi from "@/components/module/Landing/WhyDigi";
+import Options from "@/components/module/Landing/Options";
+import ArticleSlider from "@/components/module/Landing/ArticleSlider";
+import BrandsMarquee from "@/components/module/Landing/BrandsMarquee";
 
 // react query
 import ContactUsBox from "@/components/module/Landing/ContactUsBox";
+import JoinUs from "@/components/module/Landing/JoinUs";
 
 async function getBlogs() {
   const pageSize = 10;
@@ -41,6 +42,7 @@ export default async function Home() {
           <Introduction />
           <WhyDigi />      
           <Options />
+          <JoinUs />
           <ArticleSlider blogsData={blogsData} />
           {/* <BrandsMarquee /> */}
           <ContactUsBox />

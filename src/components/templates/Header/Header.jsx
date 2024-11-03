@@ -75,7 +75,7 @@ const Header = () => {
 
     const AuthButtons = () => (
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-x-8">
-            <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-primaryDarkHover hover:text-neutralLight hover:bg-primaryNormalHover"
+            <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-primaryNormalHover"
             onClick={() => window.open('https://app.digilogbook.ir/', '_blank')}>
                 شروع کنید
             </button>
