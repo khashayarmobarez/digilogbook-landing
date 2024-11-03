@@ -21,7 +21,9 @@ pipeline {
         }
         stage('Restart IIS Website') {
             steps {
+                sleep(time: 2, unit: "SECONDS")
                 bat "powershell.exe -Command \"Stop-Website -Name $env.WEBSITE_NAME\""
+                sleep(time: 4, unit: "SECONDS")
                 bat "powershell.exe -Command \"Start-Website -Name $env.WEBSITE_NAME\""
             }
         } 
