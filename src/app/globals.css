@@ -28,6 +28,10 @@
   --foreground: #ededed; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--primary-light);
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */

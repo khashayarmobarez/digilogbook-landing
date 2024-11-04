@@ -37,8 +37,7 @@ export default async function Home() {
 
   return (
     <>
-        <main className="pb-10">
-
+      <main className="pb-10">
           <Introduction />
           <WhyDigi />      
           <Options />
@@ -49,8 +48,8 @@ export default async function Home() {
           {/* <div>
             <p>Current theme: {theme}</p>
             <button onClick={toggleTheme}>Toggle Theme</button>
-          </div> */}
-        </main>
+            </div> */}
+      </main>
     </>
   );
 }
