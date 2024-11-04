@@ -89,10 +89,19 @@ return (
                     </div>
 
                     <div className='w-full mb-10'>
-                            <p>{data.data.blogSections[0].htmlContent}</p>
+                          {
+                            data.data.blogSections.map(section => 
+                              <div className='w-full flex flex-col items-start' key={section.order}>
+                                <h1>{section.title}</h1>
+                                <p className=''>{section.htmlContent}</p>
+                                <br/>
+                              </div>
+                            )
+                          }
+                            {/* <p>{data.data.blogSections[0].htmlContent}</p> */}
                     </div>
 
-                    <CommentSection blogId={data.data.id} />
+                    {/* <CommentSection blogId={data.data.id} /> */}
 
             </div>
     </div>
