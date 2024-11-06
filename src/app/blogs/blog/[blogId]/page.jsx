@@ -47,7 +47,7 @@ export default async function BlogDetailsPage({ params }) {
   }
 
 return (
-    <div className='w-full flex justify-center min-h-[70dvh]'>
+    <article className='w-full flex justify-center min-h-[70dvh]'>
             <div className='w-[90%] flex flex-col pt-12 md:w-[60%]'>
 
                     <h1 className=' text-xl md:text-2xl font-semibold text-accentNormal'>{data.data.title}</h1>
@@ -104,6 +104,6 @@ return (
                     {/* <CommentSection blogId={data.data.id} /> */}
 
             </div>
-    </div>
+    </article>
 );
 }

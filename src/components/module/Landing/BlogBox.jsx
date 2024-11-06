@@ -11,7 +11,7 @@ const BlogBox = ({blog}) => {
 
     const { title, authorName, image, createDate, id, blogSections, timeToReadInMinutes, blogVisitCount} = blog;
     return (
-        <div className='w-[80vw] h-[36rem] bg-primaryNormal rounded-3xl flex flex-col items-center justify-between py-6 text-primaryLight
+        <article className='w-[80vw] h-[36rem] bg-primaryNormal rounded-3xl flex flex-col items-center justify-between py-6 text-primaryLight
         md:flex-row md:h-[30rem]'>
             <div className="w-full h-[14rem] px-4
             md:h-full md:py-2 md:px-8 md:w-[80%]">
@@ -56,7 +56,7 @@ const BlogBox = ({blog}) => {
                     }
                 }
             `}</style>
-        </div>
+        </article>
     );
 };
 
