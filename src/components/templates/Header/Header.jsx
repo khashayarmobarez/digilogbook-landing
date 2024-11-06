@@ -49,7 +49,7 @@ const Header = () => {
     }, [navbarIsOpen]);
 
     const NavItems = () => (
-        <ul className="flex flex-col md:w-[50%] md:flex-row gap-y-6 justify-center items-start text-sm md:justify-between">
+        <nav className="flex flex-col md:w-[50%] md:flex-row gap-y-6 justify-center items-start text-sm md:justify-between">
             <li className="btn btn-ghost font-light text-white flex gap-x-2">
                 {!isDesktop && <Image alt="icon" src={homeIcon} />}
                 <Link href={'/'} className="md:w-full md:h-full flex justify-center items-center">صفحه اصلی</Link>
@@ -70,7 +70,7 @@ const Header = () => {
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
                 <Link href={'/contactUs'} className="md:w-full md:h-full flex justify-center items-center">تماس با ما</Link>
             </li>
-        </ul>
+        </nav>
     );
 
     const AuthButtons = () => (
