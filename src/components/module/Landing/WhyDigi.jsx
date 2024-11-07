@@ -61,42 +61,36 @@ const WhyDigi = () => {
 
             </div>
 
-            <div className='w-full flex flex-col items-center h-[4000px] justify-end'>
-                
-                <div className={`w-[90%] min-h-10 flex flex-col gap-y-8 md:w-7/12 fixed transition-all
-                    ${scrollPosition > 1150 && scrollPosition < 4400 ? 'top-32': '-top-[500px] '}`}>
+            <div className='w-[90%] min-h-10 flex flex-col gap-y-8 md:w-7/12 '>
 
-                    <p className={`text-neutralDark font-bold text-xl md:text-3xl md:text-center ${scrollPosition > 1100 ? 'animate__animated animate__bounceInUp' : 'invisible'}`}>
-                        چرا بسیاری از خلبانان خیلی زود از نوشتن <span className='text-accentNormal'>لاگ بوک</span> خود منصرف میشوند ؟
-                    </p>
+                <p className={`text-neutralDark font-bold text-xl md:text-3xl md:text-center ${scrollPosition > 600 ? 'animate__animated animate__bounceInUp' : 'invisible'}`}>
+                    چرا بسیاری از خلبانان خیلی زود از نوشتن <span className='text-accentNormal'>لاگ بوک</span> خود منصرف میشوند ؟
+                </p>
 
-                    <ul className="flex flex-col gap-y-6 min-h-[30rem] transition-all">
-                        {listItems.map((text, index) => (
-                            <li
-                                key={index}
-                                className={` ${styles.itemConstClass}
-                                    ${(scrollPosition >= 1200 + ((index + 1) * 500) && scrollPosition < 1200 + ((index + 2) * 500)) ? 
-                                        styles.activeItem 
-                                        : 
-                                        scrollPosition >= 1200 + ((index + 2) * 500) ?
-                                            styles.normalVisibleItem
-                                            :
-                                            styles.invisibleItem
-                                    } flex gap-x-4`}
-                            >
-                                <span className="number">{index + 1}</span>
-                                <p>{text}</p>
-                                <div/>
-                            </li>
-                        ))}
-                    </ul>
-
-                </div>
+                <ul className="flex flex-col gap-y-6 min-h-[30rem]">
+                    {listItems.map((text, index) => (
+                        <li
+                            key={index}
+                            className={` ${styles.itemConstClass}
+                                ${(scrollPosition >= 650 + ((index + 1) * 100) && scrollPosition < 650 + ((index + 2) * 100)) ? 
+                                    styles.activeItem 
+                                    : 
+                                    scrollPosition >= 650 + ((index + 2) * 100) ?
+                                        styles.normalVisibleItem
+                                        :
+                                        styles.invisibleItem
+                                } flex gap-x-4`}
+                        >
+                            <span className="number">{index + 1}</span>
+                            <p>{text}</p>
+                            <div/>
+                        </li>
+                    ))}
+                </ul>
 
             </div>
 
-            <p className={`w-[90%] flex justify-center text-center bg-primaryNormalHover p-6 text-neutralLight rounded-3xl font-bold text-xl -mt-60 md:mt-0 md:text-3xl 
-                ${scrollPosition > 4000 ? 'animate__animated animate__fadeIn' : 'invisible'}`}>
+            <p className={`w-[90%] flex justify-center text-center bg-primaryNormalHover p-6 text-neutralLight rounded-3xl font-bold text-xl -mt-20 md:mt-0 md:text-3xl ${scrollPosition > 1300 ? 'animate__animated animate__flipInX' : 'invisible'}`}>
                 با دیجی لاگ بوک شما میتوانید<br/> 
                 لاگ خود را راحت تر و سریع تر توسط تلفن همراه خود ثبت کنید و در هر زمان و مکان به آن دسترسی داشته باشید
             </p>
