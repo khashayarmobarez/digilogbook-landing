@@ -16,6 +16,7 @@ import { useState } from "react";
 // assets
 import Logo from "@/Assets/Logos/DigilogbookMainLogo.svg";
 import InputWithButton from "@/components/module/Inputs/InputWithButton";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Footer = () => {
 
@@ -50,15 +51,33 @@ const Footer = () => {
 
             <div className="flex flex-col w-full items-center justify-between md:items-center md:pr-10 md:mt-4">
                 <nav className="w-full flex flex-col">
-                    <Link href={'/'} className="link link-hover">خانه</Link>
+                        <div className="w-full flex gap-x-4">
+                            <ArrowForwardIcon />
+                            <Link href={'/'} className="link link-hover">
+                                خانه
+                            </Link>
+                        </div>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'/blogs/1'} className="link link-hover" >
-                        بلاگ
-                    </Link>
+                        <div className="w-full flex gap-x-4">
+                            <ArrowForwardIcon />
+                            <Link href={'/blogs/1'} className="link link-hover" >
+                                بلاگ
+                            </Link>
+                        </div>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'/aboutUs'} className="link link-hover" >درباره ما</Link>
+                        <div className="w-full flex gap-x-4">
+                            <ArrowForwardIcon />
+                            <Link href={'/aboutUs'} className="link link-hover" >
+                                درباره ما
+                            </Link>
+                        </div>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
-                    <Link href={'/contactUs'} className="link link-hover" >تماس با ما</Link>
+                        <div className="w-full flex gap-x-4">
+                            <ArrowForwardIcon />
+                            <Link href={'/contactUs'} className="link link-hover" >
+                                تماس با ما
+                            </Link>
+                        </div>
                     <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
                 </nav>
                 <nav className="flex justify-center gap-x-8 w-full items-center my-4 md:justify-between md:pl-[10vw]">

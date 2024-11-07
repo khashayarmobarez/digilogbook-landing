@@ -50,7 +50,7 @@ const ArticleSlider = ({blogsData}) => {
                 ))}
             </Swiper>
             <button className="btn w-48 btn-outline rounded-3xl text-base border-accentNormal text-accentNormal hover:bg-primaryNormal hover:text-accentNormal self-center
-                md:self-start md:mr-[10rem] md:-mt-16">
+            md:self-start md:mr-[10rem] md:-mt-16">
                 <Image src={arrowIcon} alt='icon'></Image>
                 مشاهده بیشتر
             </button>                                                                                                                                                                                                                                                                                         <p className=' absolute -z-10 text-[#000000]/0'>front end developed by khashayar mobarez</p>

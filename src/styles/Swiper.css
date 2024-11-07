@@ -32,6 +32,7 @@
     color: var(--primary-light); /* Set the arrow color */
     font-size: 20px; /* Set the arrow size */
     background-color: var(--primary-normal); /* Add background with opacity */
+    box-shadow: var(--shadow-button-dark), var(--shadow-button-white); /* Add a shadow */
     border-radius: 50%; /* Optional: add a shadow for style */
     padding:40px;
     margin: -4rem -1.5rem 0 -1.5rem ; /* Add some margin */

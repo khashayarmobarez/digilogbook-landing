@@ -63,7 +63,7 @@ const WhyDigi = () => {
 
             <div className='w-[90%] min-h-10 flex flex-col gap-y-8 md:w-7/12 '>
 
-                <p className={`text-neutralDark font-bold text-xl md:text-3xl md:text-center ${scrollPosition > 600 ? 'animate__animated animate__bounceInUp' : 'invisible'}`}>
+                <p className={`text-neutralDark font-bold text-xl md:text-3xl md:text-center ${scrollPosition > 600 ? 'animate__animated animate__fadeIn animate__slow' : 'invisible'}`}>
                     چرا بسیاری از خلبانان خیلی زود از نوشتن <span className='text-accentNormal'>لاگ بوک</span> خود منصرف میشوند ؟
                 </p>
 
@@ -90,7 +90,7 @@ const WhyDigi = () => {
 
             </div>
 
-            <p className={`w-[90%] flex justify-center text-center bg-primaryNormalHover p-6 text-neutralLight rounded-3xl font-bold text-xl -mt-20 md:mt-0 md:text-3xl ${scrollPosition > 1300 ? 'animate__animated animate__flipInX' : 'invisible'}`}>
+            <p className={`w-[90%] flex justify-center text-center bg-primaryNormalHover p-6 text-neutralLight rounded-3xl font-bold text-xl -mt-20 md:mt-0 md:text-3xl ${scrollPosition > 1300 ? 'animate__animated animate__fadeIn' : 'invisible'}`}>
                 با دیجی لاگ بوک شما میتوانید<br/> 
                 لاگ خود را راحت تر و سریع تر توسط تلفن همراه خود ثبت کنید و در هر زمان و مکان به آن دسترسی داشته باشید
             </p>

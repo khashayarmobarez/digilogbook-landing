@@ -75,7 +75,7 @@ const Header = () => {
 
     const AuthButtons = () => (
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-x-8">
-            <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-primaryNormalHover"
+            <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
             onClick={() => window.open('https://app.digilogbook.ir/', '_blank')}>
                 شروع کنید
             </button>
@@ -87,7 +87,7 @@ const Header = () => {
     );
 
     return (
-        <header className="w-full">
+        <header className="w-full" style={{boxShadow:'var(--shadow-all)'}}>
             <nav className="bg-primaryDarkHover h-14 md:h-20 w-full flex justify-between items-center px-4 md:px-8">
                 <div className="flex w-[70%] h-full gap-x-4 lg:gap-x-8 items-center">
                     <Image src={Logo} alt='logo' width={logoSize} height={logoSize} className="btn btn-ghost -mr-4"
