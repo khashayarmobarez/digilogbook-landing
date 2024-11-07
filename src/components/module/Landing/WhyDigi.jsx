@@ -71,7 +71,7 @@ const WhyDigi = () => {
                     {listItems.map((text, index) => (
                         <li
                             key={index}
-                            className={` ${styles.itemConstClass}
+                            className={` ${styles.itemConstClass} py-4 px-8
                                 ${(scrollPosition >= 650 + ((index + 1) * 100) && scrollPosition < 650 + ((index + 2) * 100)) ? 
                                     styles.activeItem 
                                     : 
