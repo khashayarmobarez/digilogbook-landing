@@ -44,10 +44,10 @@ const ContactUsBox = () => {
 
     return (
         <div className="w-full flex flex-col items-center -mb-28 md:-mb-48 md:-mr-[5vw]">
-            <div className="  bg-primaryLightHover phone-1 w-[90%] h-[333px] rounded-3xl flex flex-col items-center justify-between py-12 px-4 md:w-1/3 md:self-end md:mx-10 z-20">
+            <div className="  bg-primaryLightHover phone-1 w-[90%] h-[333px] rounded-3xl flex flex-col items-center justify-between py-14 px-6 md:w-1/3 lg:w-1/4 md:self-end md:mx-10 z-20">
                 <Image src={Logo} alt="logo" width={170} height={170} />
                 <p className="font-bold">عضویت در خبرنامه</p>
-                <p className="">ما هرزنامه ارسال نمی کنیم، پس نگران نباشید</p>
+                <p className=" ">ما هرزنامه ارسال نمی کنیم، پس نگران نباشید</p>
                 <InputWithButton
                     id={'Email'}
                     onSubmit={showAlert}
