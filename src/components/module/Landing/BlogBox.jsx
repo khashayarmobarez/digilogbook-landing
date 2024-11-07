@@ -11,11 +11,11 @@ const BlogBox = ({blog}) => {
 
     const { title, authorName, image, createDate, id, blogSections, timeToReadInMinutes, blogVisitCount} = blog;
     return (
-        <article className='w-[80vw] h-[36rem] bg-primaryNormal rounded-3xl flex flex-col items-center justify-between py-6 text-primaryLight
+        <article className='w-[80vw] h-[36rem] bg-primaryNormal rounded-[34px] flex flex-col items-center justify-between py-6 text-primaryLight
         md:flex-row md:h-[30rem]'>
             <div className="w-full h-[14rem] px-4
             md:h-full md:py-2 md:px-8 md:w-[80%]">
-                <img src={image?.path} alt={image?.name || 'picture'} className="w-full h-full"  />
+                <img src={image?.path} alt={image?.name || 'picture'} className="w-full h-full rounded-[34px]"  />
             </div>
             <div className='w-full h-[18rem] flex flex-col items-center justify-between px-4 pt-2 md:h-full '>
 
