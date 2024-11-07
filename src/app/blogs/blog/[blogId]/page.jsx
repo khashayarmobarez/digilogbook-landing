@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 
 // Fetch blog details by ID
 async function fetchBlogData(blogId) {
+
   try {
     const res = await fetch(`${Api_BASE_URL}/Blog/GetBlog?Id=${blogId}`);
     if (!res.ok) throw new Error('Failed to fetch data');
@@ -15,6 +16,7 @@ async function fetchBlogData(blogId) {
     console.error('Failed to fetch blog data:', error);
     return null; // Return null if fetching fails
   }
+  
 }
 
 // Generate static paths for the first few blog posts
