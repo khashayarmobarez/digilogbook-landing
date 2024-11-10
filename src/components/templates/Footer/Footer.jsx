@@ -47,9 +47,11 @@ const Footer = () => {
     }
 
     return (
-        <footer className="footer bg-primaryDarkHover text-neutral-content p-6 flex flex-col-reverse md:flex-row md:items-center">
+        <footer className="footer bg-primaryDarkHover text-neutral-content p-6 flex flex-col-reverse md:grid md:grid-cols-10 md:flex-row md:items-center">
 
-            <div className="flex flex-col w-full items-center justify-between md:items-center md:pr-10 md:mt-4">
+            <div className=" invisible md:visible col-span-1"></div>
+
+            <div className="flex flex-col w-full items-center justify-between md:items-center md:pr-0 md:mt-4 md:col-span-4">
                 <nav className="w-full flex flex-col">
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
@@ -57,30 +59,30 @@ const Footer = () => {
                                 خانه
                             </Link>
                         </div>
-                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
+                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[100%] " />
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
                             <Link href={'/blogs/1'} className="link link-hover" >
                                 بلاگ
                             </Link>
                         </div>
-                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
+                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[100%] " />
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
                             <Link href={'/aboutUs'} className="link link-hover" >
                                 درباره ما
                             </Link>
                         </div>
-                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
+                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[100%] " />
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
                             <Link href={'/contactUs'} className="link link-hover" >
                                 تماس با ما
                             </Link>
                         </div>
-                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[80%] " />
+                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[100%] " />
                 </nav>
-                <nav className="flex justify-center gap-x-8 w-full items-center my-4 md:justify-between md:pl-[10vw]">
+                <nav className="flex justify-center gap-x-8 w-full items-center my-4 md:justify-between md:pl-[8vw]">
                     <a href="#" onClick={handleEmailClick} className="link link-hover flex gap-x-2 justify-center items-center">
                         <Image src={EmailIcon} alt="logo" width={20} height={20} />
                         <p className="mt-1">info@digilogbook.ir</p>
@@ -92,7 +94,9 @@ const Footer = () => {
                 </nav>
             </div>
 
-            <div className="w-full flex flex-col items-center justify-between">
+            <div className=" invisible md:visible col-span-1 "></div>
+
+            <div className="w-full flex flex-col items-center justify-between md:col-span-4">
                 {
                     pathname !== '/' ?
                         <div className=" w-full md:w-[50%] h-auto rounded-3xl flex flex-col items-center justify-between py-4 px-4 gap-y-4">
@@ -112,7 +116,7 @@ const Footer = () => {
                         :
                         <div className="h-16 md:h-20" />
                 }
-                <div className="flex gap-x-16 w-full justify-center">
+                <div className="flex gap-x-8 w-full justify-center">
                     <Link onClick={showEmptyAlert} href={'/'} className="link link-hover bg-primaryNormalActive shadow-xl rounded-full p-4 hover:bg-primaryNormalHover">
                         <InstagramIcon sx={{color: 'var(--accent-normal)'}} />
                     </Link>

@@ -21,12 +21,13 @@ import { fakeApi } from '@/utils/FakeApiBackup';
 const ArticleSlider = ({blogsData}) => {
 
 
+    const isDesktop = useMediaQuery('(min-width:720px)');
     const dataToDisplay = blogsData?.data || fakeApi?.data || [];
 
     return (
         <div className='w-full py-10 flex flex-col items-center gap-y-8'>
             <Swiper
-                spaceBetween={50}
+                spaceBetween={isDesktop ? 50 : 0}
                 slidesPerView={1}
                 scrollbar={{
                     hide: false,
@@ -39,7 +40,7 @@ const ArticleSlider = ({blogsData}) => {
                     pauseOnMouseEnter: true,
                     reverseDirection: true
                 }}
-                navigation={true}
+                navigation={isDesktop}
                 modules={[Scrollbar, Navigation, Autoplay]}
                 className="mySwiper"
             >

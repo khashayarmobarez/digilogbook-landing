@@ -1,7 +1,7 @@
 .mySwiper {
     width: 100%; /* Full width */
     height: 39rem; /* Adjust the height based on your needs */
-    padding: 10px 10vw 10px 10px; /* Add some vertical padding */
+    padding: 10px 5vw 10px 10px; /* Add some vertical padding */
 }
 
 .swiper-scrollbar {
@@ -49,6 +49,7 @@
 
     .mySwiper {
       height: 34rem; /* Adjust the height based on your needs */
+      padding: 10px 10vw 10px 10px; /* Add some vertical padding */
     }
 
     .swiper-scrollbar {
