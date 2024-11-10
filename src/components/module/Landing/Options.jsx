@@ -69,11 +69,11 @@ const Options = () => {
                 {optionSections.map((section, index) => (
                     <div key={index}
                     ref={el => optionsRef.current[index] = el}
-                    className="optionSection w-full flex flex-col items-center justify-start text-center pt-[30dvh] md:pt-[22dvh] gap-y-10 h-[100dvh] px-10 md:w-1/4 md:h-[640px]"
+                    className="optionSection w-full flex flex-col items-center justify-start text-center pt-[30dvh] md:pt-[22dvh] h-[100dvh] px-10 md:w-1/4 md:h-[640px]"
                     style={{background: `var(--primary-${['normal', 'normal-active', 'dark-hover', 'darker'][index]})`}}>
                         <Image src={section.icon} alt="icon" width={70} height={70} />
-                        <p className="text-accentNormal text-lg">{section.title}</p>
-                        <p className="text-base">{section.content}</p>
+                        <p className="text-accentNormal text-lg mt-11">{section.title}</p>
+                        <p className="text-base mt-9">{section.content}</p>
                     </div>
                 ))}
             </div>
