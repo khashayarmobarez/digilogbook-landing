@@ -7,7 +7,7 @@ import Link from "next/link";
 
 
 
-const BlogBox = ({blog}) => {
+const LandingBlogBox = ({blog}) => {
 
     const { title, authorName, image, createDate, id, blogSections, timeToReadInMinutes, blogVisitCount} = blog;
     return (
@@ -60,4 +60,4 @@ const BlogBox = ({blog}) => {
     );
 };
 
-export default BlogBox;
+export default LandingBlogBox;

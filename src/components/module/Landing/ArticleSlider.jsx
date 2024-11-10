@@ -13,7 +13,7 @@ import '@/styles/Swiper.css';
 
 // Import required modules
 import { Scrollbar, Navigation, Autoplay } from 'swiper/modules';
-import BlogBox from '@/components/module/Landing/BlogBox';
+import LandingBlogBox from '@/components/module/Landing/LandingBlogBox';
 import { useMediaQuery } from "@mui/material";
 import Image from 'next/image';
 import { fakeApi } from '@/utils/FakeApiBackup';
@@ -46,7 +46,7 @@ const ArticleSlider = ({blogsData}) => {
             >
                 {dataToDisplay.map((blog) => (
                     <SwiperSlide key={blog.id}>
-                        <BlogBox blog={blog} />
+                        <LandingBlogBox blog={blog} />
                     </SwiperSlide>
                 ))}
             </Swiper>

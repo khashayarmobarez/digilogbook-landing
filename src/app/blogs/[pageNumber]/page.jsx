@@ -31,16 +31,16 @@ export default async function BlogsPage({ params }) {
 
   return (
     <div className='w-full flex justify-center'>
-      <div className='w-[90%] flex flex-col gap-y-10 my-10 md:w-[60%]'>
+      <div className='w-[90%] flex flex-col gap-y-10 my-16 md:w-[60%]'>
 
         <h1 className='text-lg text-accentNormal md:text-3xl font-semibold'>بلاگ و مقالات</h1>
 
         <ul className='w-full grid grid-cols-1 gap-4 md:grid-cols-2'>
           {blogs.map((blog) => (
-            <li key={blog.id} className='border border-1 border-neutralDark flex flex-col items-center justify-center p-4 rounded-2xl'>
+            <li key={blog.id} className='border border-1 border-neutralDark flex flex-col items-center justify-center p-4 rounded-[24px]'>
               <Link href={`/blogs/blog/${blog.id}`} className='w-full'>
                 <div className='w-full text-start flex flex-col items-start gap-y-1 text-neutralDark'>
-                  <Image src={blog.image.path} alt={'image'} width={100} height={80} className='w-full h-56' />
+                  <Image src={blog.image.path} alt={'image'} width={100} height={80} className='w-full h-56 rounded-[24px]' />
                   <h2 className='text-xl font-semibold text-accentNormal mt-4'>{blog.title}</h2>
                   <p className='md:text-lg'>{blog.authorName}</p>
                   <p className='text-right text-base my-3'>{blog.blogSections[0].htmlContent.slice(0, 130)} ...</p>
@@ -56,7 +56,7 @@ export default async function BlogsPage({ params }) {
                         <p className='text-xs'>تاریخ: {blog.createDate}</p>
                       </div>
                     </div>
-                    <div className='gap-x-2 rounded-3xl link link-hover flex text-lg text-accentNormal'>
+                    <div className='gap-x-2 rounded-3xl link link-hover flex text-lg text-accentNormal items-center'>
                       <ArrowForwardIcon />
                       <p>خواندن مقاله</p>
                     </div>
