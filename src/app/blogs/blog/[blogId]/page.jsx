@@ -4,6 +4,10 @@ import { Api_BASE_URL } from '@/utils/resuableVars';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+// comps
+import BlogPage from '@/components/templates/BlogPage';
+
+
 // Fetch blog details by ID
 async function fetchBlogData(blogId) {
 
@@ -11,6 +15,7 @@ async function fetchBlogData(blogId) {
     const res = await fetch(`${Api_BASE_URL}/Blog/GetBlog?Id=${blogId}`);
     if (!res.ok) throw new Error('Failed to fetch data');
     const data = await res.json();
+    console.log(data.data.blogSections)
     return data;
   } catch (error) {
     console.error('Failed to fetch blog data:', error);
@@ -50,62 +55,9 @@ export default async function BlogDetailsPage({ params }) {
 
 return (
     <article className='w-full flex justify-center min-h-[70dvh]'>
-            <div className='w-[90%] flex flex-col pt-12 md:w-[60%]'>
 
-                    <h1 className=' text-xl md:text-2xl font-semibold text-accentNormal'>{data.data.title}</h1>
-
-                    <p className=' text-base md:text-lg  '>{data.data.authorName}</p>
-
-                    <Image src={data.data.image.path} alt={'image'} width={100} height={80} className='w-full h-56 lg:h-80 rounded-3xl border mt-4' />
-
-                    <div className='w-full grid grid-cols-2 md:grid-cols-4 gap-4 text-xs my-6'>
-
-                            <div className='flex justify-center items-center gap-x-2'>
-                                    <span className='w-4 h-4'>
-                                         <MailIcon color={'var(--neutral-dark)'} />
-                                    </span>
-                                    <p>{data.data.timeToReadInMinutes} دقیقه مطالعه</p>
-                            </div>
-
-                            <div className='flex justify-center items-center gap-x-2'>
-                                    <span className='w-4 h-4'>
-                                         <MailIcon color={'var(--neutral-dark)'} />
-                                    </span>
-                                    <p>{data.data.createDate} بارگزاری</p>
-                            </div>
-
-                            <div className='flex justify-center items-center gap-x-2'>
-                                    <span className='w-4 h-4'>
-                                         <MailIcon color={'var(--neutral-dark)'} />
-                                    </span>
-                                    <p>{data.data.blogComments.length} نظر</p>
-                            </div>
-
-                            <div className='flex justify-center items-center gap-x-2'>
-                                    <span className='w-4 h-4'>
-                                         <MailIcon color={'var(--neutral-dark)'} />
-                                    </span>
-                                    <p>{data.data.blogVisitCount} بازدید</p>
-                            </div>
-
-                    </div>
-
-                    <div className='w-full mb-10'>
-                          {
-                            data.data.blogSections.map(section => 
-                              <div className='w-full flex flex-col items-start' key={section.order}>
-                                <h1>{section.title}</h1>
-                                <p className=''>{section.htmlContent}</p>
-                                <br/>
-                              </div>
-                            )
-                          }
-                            {/* <p>{data.data.blogSections[0].htmlContent}</p> */}
-                    </div>
-
-                    {/* <CommentSection blogId={data.data.id} /> */}
-
-            </div>
+        <BlogPage blogData={data.data} />
+        
     </article>
 );
 }
