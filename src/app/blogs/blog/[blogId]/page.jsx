@@ -15,7 +15,6 @@ async function fetchBlogData(blogId) {
     const res = await fetch(`${Api_BASE_URL}/Blog/GetBlog?Id=${blogId}`);
     if (!res.ok) throw new Error('Failed to fetch data');
     const data = await res.json();
-    console.log(data.data.blogSections)
     return data;
   } catch (error) {
     console.error('Failed to fetch blog data:', error);
