@@ -14,7 +14,7 @@ const BlogPage = ({blogData}) => {
 
             <p className=' text-base md:text-lg mt-2 '>{blogData.authorName}</p>
 
-            <Image src={blogData.image.path} alt={'image'} width={100} height={80} className='w-full h-56 lg:h-80 rounded-3xl border mt-4 object-cover' />
+            <Image src={blogData.image.path} alt={'image'} width={100} height={80} className='w-full h-40 lg:h-80 rounded-3xl border mt-4 object-cover' />
 
             <div className='w-full grid grid-cols-2 md:grid-cols-4 gap-4 text-xs my-6'>
 
@@ -55,7 +55,7 @@ const BlogPage = ({blogData}) => {
                             <h1>{section.title}</h1>
                             {
                                 section.image &&
-                                    <Image src={section.image.path} alt={section.image.name} width={100} height={100} className='w-full h-96 rounded-3xl object-cover' />
+                                    <Image src={section.image.path} alt={section.image.name} width={100} height={100} className='w-full h-40 rounded-3xl object-cover mt-2' />
                             }
                             <p className=''>{section.htmlContent}</p>
                             <br/>
