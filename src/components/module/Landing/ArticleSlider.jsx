@@ -1,7 +1,7 @@
 'use client'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import arrowIcon from '@/Assets/Icons/arrowGreen.svg';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -48,11 +48,12 @@ const ArticleSlider = ({blogsData}) => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <button className="btn w-48 btn-outline rounded-3xl text-base border-accentNormal text-accentNormal hover:bg-primaryNormal hover:text-accentNormal self-center
+            <button className="btn w-48 btn-outline rounded-3xl text-base border-accentNormal text-accentNormal hover:bg-accentNormal hover:text-primaryLightHover hover:border-none self-center
             md:self-start md:mr-[10rem] md:-mt-16">
-                <Image src={arrowIcon} alt='icon'></Image>
+                <ArrowForwardIcon />
                 مشاهده بیشتر
             </button>
+            
             <style jsx>{`
                 .mySwiper .swiper {
                     height: 10px; /* Adjust the height of the scrollbar */

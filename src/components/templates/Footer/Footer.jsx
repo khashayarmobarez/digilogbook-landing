@@ -59,28 +59,28 @@ const Footer = () => {
                                 خانه
                             </Link>
                         </div>
-                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[100%] " />
+                    <hr className="my-3 border-t border-neutral-content w-full " />
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
                             <Link href={'/blogs/1'} className="link link-hover" >
                                 بلاگ
                             </Link>
                         </div>
-                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[100%] " />
+                    <hr className="my-3 border-t border-neutral-content w-full " />
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
                             <Link href={'/aboutUs'} className="link link-hover" >
                                 درباره ما
                             </Link>
                         </div>
-                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[100%] " />
+                    <hr className="my-3 border-t border-neutral-content w-full " />
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
                             <Link href={'/contactUs'} className="link link-hover" >
                                 تماس با ما
                             </Link>
                         </div>
-                    <hr className="my-3 border-t border-neutral-content w-[80vw] md:w-[100%] " />
+                    <hr className="my-3 border-t border-neutral-content w-full " />
                 </nav>
                 <nav className="flex justify-center gap-x-8 w-full items-center my-4 md:justify-between md:pl-[8vw]">
                     <a href="#" onClick={handleEmailClick} className="link link-hover flex gap-x-2 justify-center items-center">

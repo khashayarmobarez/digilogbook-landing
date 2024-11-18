@@ -16,7 +16,7 @@ const BlogPage = ({blogData}) => {
 
             <Image src={blogData.image.path} alt={'image'} width={100} height={80} className='w-full h-40 lg:h-80 rounded-3xl border mt-5 md:mt-8 object-cover' />
 
-            <div className='w-full grid grid-cols-2 md:grid-cols-4 gap-4 text-xs my-4 text-left'>
+            <div className='w-full grid grid-cols-2 md:grid-cols-4 gap-4 text-xs my-4'>
 
                     <div className='flex justify-start items-center gap-x-2'>
                         <span className='w-4 h-4'>
