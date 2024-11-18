@@ -16,21 +16,21 @@ import UserOpinion from "@/components/module/contactUs/UserOpinion";
 const ContactUs = () => {
     return (
         <div className="w-full flex justify-center py-10">
-            <div className="w-[90%] flex flex-col justify-start items-center md:flex-row md:justify-between">
+            <div className="w-[90%] flex flex-col justify-start items-center md:w-full md:grid md:grid-cols-12 md:justify-between">
                 
                 {/* test comment */}
-                <div className="w-full flex flex-col items-start pt-4 md:w-[40vw] md:px-[8vw]">
+                <div className="w-full flex flex-col items-start md:pt-4  md:col-span-3 md:col-start-3">
 
                     <h1 className="text-lg font-semibold text-accentNormal md:text-3xl ">تماس با ما</h1>
 
-                    <a href="tel:09965089408" className="w-full flex justify-start text-start items-center gap-x-6 link link-hover mt-6 md:mt-16">
+                    <a href="tel:09965089408" className="w-full flex justify-start text-start items-center gap-x-6 link link-hover mt-5 md:mt-16">
                         <span className="w-6">
                             <PhoneIcon color={'var(--neutral-dark)'}  />
                         </span>
                         <p>09965089408</p>
                     </a>
 
-                    <div className="w-full h-[2px] bg-neutralLightActive my-5 rounded-full"></div>
+                    <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>
 
                     <a href="mailto: info@digilogbook.ir" className="w-full flex justify-start text-start items-center gap-x-6 link link-hover ">
                         <span className="w-6">
@@ -39,7 +39,7 @@ const ContactUs = () => {
                         <p>info@digilogbook.ir</p>
                     </a>
 
-                    <div className="w-full h-[2px] bg-neutralLightActive my-5 rounded-full"></div>
+                    <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>
 
                     <a href="/" className="w-full flex justify-start text-start items-center gap-x-6 link link-hover ">
                         <span className="w-6">
@@ -48,7 +48,7 @@ const ContactUs = () => {
                         <p>تیکت</p>
                     </a>
 
-                    <div className="w-full h-[2px] bg-neutralLightActive my-5 rounded-full"></div>
+                    <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>
 
                     <a href="https://t.me/digilogbook" target="_blank" rel="noopener noreferrer" 
                     className="w-full flex justify-start text-start items-center gap-x-6 link link-info ">
@@ -56,7 +56,7 @@ const ContactUs = () => {
                         <p>@digilogbook</p>
                     </a>
 
-                    <div className="w-full h-[2px] bg-neutralLightActive my-5 rounded-full"></div>
+                    <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>
 
                     <div 
                     className="w-full flex justify-start text-start items-center gap-x-6 link link-info ">
@@ -64,22 +64,22 @@ const ContactUs = () => {
                         <p>@digilogbook</p>
                     </div>
 
-                    <div className="w-full h-[2px] bg-neutralLightActive my-5 rounded-full"></div>
+                    <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>
 
                     <div  className="w-full flex justify-start text-start items-center gap-x-6 link link-info ">
                         <XIcon sx={{color: 'var(--neutral-dark)'}} />
                         <p>@digilogbook</p>
                     </div>
 
-                    <div className="w-full h-[2px] bg-neutralLightActive my-5 rounded-full"></div>
+                    <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>
 
                     
 
                 </div>
 
-                <div className="w-full md:w-[40vw] md:pl-[8vw] -mb-14">
+                <div className="w-full mt-4 md:-mb-16  md:col-span-4 md:col-start-7">
 
-                    <UserOpinion />
+                    <UserOpinion className={''} />
 
                 </div>
 

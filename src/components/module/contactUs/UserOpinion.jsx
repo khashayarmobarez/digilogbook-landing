@@ -10,7 +10,7 @@ import InputWithIcon from "../Inputs/InputWithIcon";
 import MailIcon from "@/Assets/Icons/MailIcon";
 import TextArea from "@/components/module/Inputs/TextArea";
 
-const UserOpinion = () => {
+const UserOpinion = ({className}) => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [comment, setComment] = useState('');
@@ -101,8 +101,8 @@ const UserOpinion = () => {
     };
 
     return (
-        <div className="flex w-full h-full flex-col gap-y-6 text-primaryDarker">
-            <p>نظرات خود را با ما در میان بگذارید</p>
+        <div className={`flex w-full h-full flex-col gap-y-6 text-primaryDarker ${className}`}>
+            <p >نظرات خود را با ما در میان بگذارید</p>
             
             {error && (
                 <div className="text-red-500 text-sm">
@@ -111,6 +111,7 @@ const UserOpinion = () => {
             )}
 
             <InputWithIcon 
+                containerClassName={'md:mt-4'}
                 placeHolder={'نام'} 
                 value={username} 
                 onChange={handleUsernameChange}
@@ -130,7 +131,7 @@ const UserOpinion = () => {
                 disabled={isSubmitting}
             />
             <button 
-                className={`btn btn-success text-primaryLight rounded-3xl bg-accentNormal ${
+                className={`btn btn-success text-primaryLight rounded-3xl bg-accentNormal md:mt-4 ${
                     isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
                 onClick={handleSubmit}
