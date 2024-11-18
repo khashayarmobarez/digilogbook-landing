@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Restart IIS App Pool') {
             steps {
-                bat 'C:/Windows/System32/inetsrv/appcmd.exe recycle apppool /apppool.name:"$env.WEBSITE_NAME"'
+                bat "C:/Windows/System32/inetsrv/appcmd.exe recycle apppool /apppool.name:\"$env.WEBSITE_NAME\""
             }
         }
         // stage('Restart IIS Website') {
