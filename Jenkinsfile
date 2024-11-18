@@ -19,7 +19,7 @@ pipeline {
                 bat 'pnpm build'
             }
         }
-        stage('Build') {
+        stage('Restart IIS App Pool') {
             steps {
                 bat 'C:/Windows/System32/inetsrv/appcmd.exe recycle apppool /apppool.name:"$env.WEBSITE_NAME"'
             }
