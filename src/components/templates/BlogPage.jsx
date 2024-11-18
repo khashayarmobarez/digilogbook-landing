@@ -8,7 +8,7 @@ import CommentSection from '@/components/module/blogs/CommentSection';
 
 const BlogPage = ({blogData}) => {
     return (
-        <div className='w-[90%] flex flex-col mt-10 md:pt-[60px] md:w-[60%]'>
+        <div className='w-[90%] flex flex-col mt-10 md:pt-[20px] md:w-[60%]'>
 
             <h1 className=' text-xl md:text-2xl font-semibold text-accentNormal'>{blogData.title}</h1>
 
