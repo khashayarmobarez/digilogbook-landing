@@ -90,8 +90,9 @@ const WhyDigi = () => {
 
             </div>
 
-            <p className={`w-[90%] flex justify-center bg-primaryNormalHover p-6 text-neutralLight rounded-3xl font-bold text-base -mt-24 md:-mt-10 md:text-3xl  ${scrollPosition > 1300 ? 'animate__animated animate__fadeIn' : 'invisible'}`}>
-                با <span className="inline-block whitespace-nowrap">دیجی‌لاگ‌‌‌بوک</span>شما میتوانید لاگ خود را راحت تر و سریع تر توسط تلفن همراه خود ثبت کنید و در هر زمان و مکان به آن دسترسی داشته باشید
+            <p className={`w-[90%] flex justify-center bg-primaryNormalHover p-6 text-neutralLight rounded-3xl font-bold text-base -mt-24 md:-mt-10 md:text-3xl ${scrollPosition > 1300 ? 'animate__animated animate__fadeIn' : 'invisible'}`}>
+                با{' '}<span className="inline-block whitespace-nowrap">دیجی‌لاگ‌‌‌بوک</span>{' '}
+                شما میتوانید لاگ خود را راحت تر و سریع تر توسط تلفن همراه خود ثبت کنید و در هر زمان و مکان به آن دسترسی داشته باشید
             </p>
 
         </div>
