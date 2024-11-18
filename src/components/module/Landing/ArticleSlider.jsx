@@ -19,8 +19,6 @@ import Image from 'next/image';
 import { fakeApi } from '@/utils/FakeApiBackup';
 
 const ArticleSlider = ({blogsData}) => {
-
-
     const isDesktop = useMediaQuery('(min-width:720px)');
     const dataToDisplay = blogsData?.data || fakeApi?.data || [];
 
@@ -32,10 +30,10 @@ const ArticleSlider = ({blogsData}) => {
                 scrollbar={{
                     hide: false,
                     draggable: true,
-                    dragSize: 50 ,
+                    dragSize: 50,
                 }}
                 autoplay={{
-                    delay: 2000, 
+                    delay: 2000,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                     reverseDirection: true
@@ -54,8 +52,13 @@ const ArticleSlider = ({blogsData}) => {
             md:self-start md:mr-[10rem] md:-mt-16">
                 <Image src={arrowIcon} alt='icon'></Image>
                 مشاهده بیشتر
-            </button>                                                                                                                                                                                                                                                                                         <p className=' absolute -z-10 text-[#000000]/0'>front end developed by khashayar mobarez</p>
-          
+            </button>
+            <style jsx>{`
+                .mySwiper .swiper {
+                    height: 10px; /* Adjust the height of the scrollbar */
+                    margin-bottom: -200px; /* Adjust the margin to move the scrollbar lower */
+                }
+            `}</style>
         </div>
     );
 };

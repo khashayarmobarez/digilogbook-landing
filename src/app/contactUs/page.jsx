@@ -77,7 +77,7 @@ const ContactUs = () => {
 
                 </div>
 
-                <div className="w-full mt-4 md:-mb-16  md:col-span-4 md:col-start-7">
+                <div className="w-full mt-4 md:-mb-16 md:col-span-4 md:col-start-7">
 
                     <UserOpinion className={''} />
 
