@@ -50,7 +50,7 @@ const WhyDigi = () => {
                     </BoxReveal>
 
                     <BoxReveal boxColor={"var(--accent-normal)"} duration={0.5}>
-                        <Link href={'/whyLogbook'} className="btn w-40 h-12 bg-accentNormal rounded-3xl p-3 text-primaryDarkHover hover:text-neutralLight hover:bg-primaryNormalHover border-none self-center md:self-end">
+                        <Link href={'/whyLogbook'} className="btn w-40 h-12 bg-accentNormal rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive border-none self-center md:self-end">
                             مطالعه بیشتر
                         </Link>
                     </BoxReveal>
@@ -91,8 +91,7 @@ const WhyDigi = () => {
             </div>
 
             <p className={`w-[90%] text-center bg-primaryNormalHover p-6 text-neutralLight rounded-3xl font-bold text-base -mt-24 md:-mt-10 md:text-3xl ${scrollPosition > 1300 ? 'animate__animated animate__fadeIn' : 'invisible'}`}>
-                با <span className='text-accentNormal'>دیجی‌ لاگ‌ بوک</span> شما میتوانید<br/>
-                لاگ خود را راحت تر و سریع تر توسط تلفن همراه خود ثبت کنید و در هر زمان و مکان به آن دسترسی داشته باشید
+                با <span className='text-accentNormal'>دیجی‌ لاگ‌ بوک</span> شما میتوانید لاگ خود را راحت تر و سریع تر توسط تلفن همراه خود ثبت کنید و در هر زمان و مکان به آن دسترسی داشته باشید
             </p>
 
         </div>

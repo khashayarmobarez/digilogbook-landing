@@ -53,7 +53,7 @@ const ContactUs = () => {
                     <a href="https://t.me/digilogbook" target="_blank" rel="noopener noreferrer" 
                     className="w-full flex justify-start text-start items-center gap-x-6 link link-info ">
                         <TelegramIcon sx={{color: 'var(--neutral-dark)'}} />
-                        <p>@digilogbook</p>
+                        <p>digilogbook</p>
                     </a>
 
                     <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>
@@ -61,14 +61,14 @@ const ContactUs = () => {
                     <div 
                     className="w-full flex justify-start text-start items-center gap-x-6 link link-info ">
                         <InstagramIcon sx={{color: 'var(--neutral-dark)'}} />
-                        <p>@digilogbook</p>
+                        <p>digilogbook</p>
                     </div>
 
                     <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>
 
                     <div  className="w-full flex justify-start text-start items-center gap-x-6 link link-info ">
                         <XIcon sx={{color: 'var(--neutral-dark)'}} />
-                        <p>@digilogbook</p>
+                        <p>digilogbook</p>
                     </div>
 
                     <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>
