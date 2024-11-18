@@ -11,10 +11,10 @@ const BlogsBlogBoxes = ({blogsData}) => {
     return (
         <ul className='w-full grid grid-cols-1 gap-4 md:grid-cols-2'>
           {blogsData.map((blog) => (
-            <li key={blog.id} className='border border-1 border-neutralDark flex flex-col items-center justify-center p-4 rounded-[24px]'>
+            <li key={blog.id} className='border border-1 border-neutralDark flex flex-col items-center justify-center p-4 rounded-3xl'>
               <Link href={`/blogs/blog/${blog.id}`} className='w-full'>
                 <div className='w-full text-start flex flex-col items-start gap-y-1 text-neutralDark'>
-                  <Image src={blog.image.path} alt={'image'} width={100} height={80} className='w-full h-56 rounded-[24px]' />
+                  <Image src={blog.image.path} alt={'image'} width={100} height={80} className='w-full h-56 rounded-3xl' />
                   <h2 className='text-xl font-semibold text-accentNormal mt-4'>{blog.title}</h2>
                   <p className='md:text-lg'>{blog.authorName}</p>
                   <p className='text-right text-base my-3'>{blog.blogSections[0].htmlContent.slice(0, 130)} ...</p>

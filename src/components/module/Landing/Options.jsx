@@ -71,7 +71,7 @@ const Options = () => {
                     ref={el => optionsRef.current[index] = el}
                     className="optionSection w-full flex flex-col items-center justify-start text-center pt-[30dvh] md:pt-[22dvh] h-[100dvh] px-10 md:w-1/4 md:h-[640px]"
                     style={{background: `var(--primary-${['normal', 'normal-active', 'dark-hover', 'darker'][index]})`}}>
-                        <Image src={section.icon} alt="icon" width={70} height={70} />
+                        <Image src={section.icon} alt="icon" width={100} height={100} className='w-16 h-16 ' />
                         <p className="text-accentNormal text-lg mt-11">{section.title}</p>
                         <p className="text-base mt-9">{section.content}</p>
                     </div>
