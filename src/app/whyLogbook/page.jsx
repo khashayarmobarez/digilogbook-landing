@@ -5,11 +5,11 @@ import blogPic from '@/../public/pics/someoneWriting(reduced size).png'
 
 const WhyLogbook = () => {
     return (
-        <div className="w-full flex justify-center py-10 md:py-16">
+        <div className="w-full flex justify-center py-10 md:py-[60px]">
             <div className=" w-[90%] md:w-[60%] flex flex-col ">
 
-                <h1 className=" font-bold text-lg md:text-3xl text-accentNormal mb-5 md:mb-16">چرا باید لاگ‌ بوک داشته باشیم؟</h1>
-                <span className=" w-full h-40 md:h-96 md:px-0 flex justify-center mb-5 md:mb-10">
+                <h1 className=" font-bold text-lg md:text-3xl text-accentNormal mb-5 md:mb-8">چرا باید لاگ‌ بوک داشته باشیم؟</h1>
+                <span className=" w-full h-40 md:h-96 md:px-0 flex justify-center mb-4">
                     <Image src={blogPic} alt="someone writing" className="h-full w-full"  />
                 </span>
                 <p>
