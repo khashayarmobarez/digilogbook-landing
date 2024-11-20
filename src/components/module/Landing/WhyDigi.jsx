@@ -1,11 +1,14 @@
 'use client'
 // why digilogbook
+import Link from 'next/link';
 import { useEffect, useState } from 'react';   
 // import { Button } from "@/components/ui/button";
 import BoxReveal from "@/components/ui/box-reveal";
 import styles from '@/styles/WhyDigi.module.scss';
 import { useMediaQuery } from "@mui/material";
-import Link from 'next/link';
+
+// assets
+import EastRoundedIcon from '@mui/icons-material/EastRounded';
 
 const WhyDigi = () => {
 
@@ -50,8 +53,9 @@ const WhyDigi = () => {
                     </BoxReveal>
 
                     <BoxReveal boxColor={"var(--accent-normal)"} duration={0.5}>
-                        <Link href={'/whyLogbook'} className="btn w-40 h-12 bg-accentNormal rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive border-none self-center md:self-end">
-                            مطالعه بیشتر
+                        <Link href={'/whyLogbook'} className=" w-40 h-12 flex gap-x-2 self-center md:self-end text-accentNormal">
+                            <EastRoundedIcon />
+                            <p className='hover:underline underline-offset-2'>مطالعه بیشتر</p>
                         </Link>
                     </BoxReveal>
                 </>
