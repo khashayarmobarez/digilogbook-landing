@@ -11,7 +11,7 @@ import penIcon from '@/Assets/Icons/pen.svg';
 import usersIcon from '@/Assets/Icons/users.svg';
 // import attentionIcon from '@/Assets/Icons/attention.svg';
 import phoneIcon from '@/Assets/Icons/phone.svg';
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 
@@ -20,6 +20,7 @@ const Header = () => {
     const isDesktop = useMediaQuery('(min-width:720px)');
     const logoSize = isDesktop ? 140 : 120;
     const router = useRouter();
+    const pathname = usePathname();
 
     
     const [navbarIsOpen, setNavbarIsOpen] = useState(false);
@@ -50,23 +51,28 @@ const Header = () => {
 
     const NavItems = () => (
         <nav className="flex flex-col md:w-[50%] md:flex-row gap-y-6 justify-center items-start text-sm md:justify-between">
-            <li className="btn btn-ghost font-light text-white flex gap-x-2">
+            <li className={`btn btn-ghost hover:bg-none hover:underline underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
+            ${pathname === '/' ? 'underline underline-offset-8 text-accentNormal' : 'text-white'} `}>
                 {!isDesktop && <Image alt="icon" src={homeIcon} />}
                 <Link href={'/'} className="md:w-full md:h-full flex justify-center items-center">صفحه اصلی</Link>
             </li>
-            <li className="btn btn-ghost font-light text-white flex gap-x-2">
+            <li className={`btn btn-ghost hover:bg-none hover:underline underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
+                ${pathname.includes('/blogs') ? 'underline underline-offset-8 text-accentNormal' : 'text-white'}`}>
                 {!isDesktop && <Image alt="icon" src={penIcon} />}
                 <Link href={'/blogs/1'} className="md:w-full md:h-full flex justify-center items-center">بلاگ</Link>
             </li>
-            <li className="btn btn-ghost font-light text-white flex gap-x-2">
+            <li className={`btn btn-ghost hover:bg-none hover:underline underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
+                ${pathname.includes('/aboutUs') ? 'underline underline-offset-8 text-accentNormal' : 'text-white'}`}>
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
                 <Link href={'/aboutUs'} className="md:w-full md:h-full flex justify-center items-center">درباره ما</Link>
             </li>
-            {/* <li className="btn btn-ghost font-light text-white flex gap-x-2">
+            {/* <li className={`btn btn-ghost hover:bg-none hover:underline underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
+            ${pathname.includes('/guide') ? 'underline underline-offset-8 text-accentNormal' : 'text-white'}`}>
                 {!isDesktop && <Image alt="icon" src={attentionIcon} />}
                 <Link href={'/'} className="md:w-full md:h-full flex justify-center items-center">راهنما</Link>
             </li> */}
-            <li className="btn btn-ghost font-light text-white flex gap-x-2">
+            <li className={`btn btn-ghost hover:bg-none hover:underline underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
+                ${pathname.includes('/contactUs') ? 'underline underline-offset-8 text-accentNormal' : 'text-white'}`}>
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
                 <Link href={'/contactUs'} className="md:w-full md:h-full flex justify-center items-center">تماس با ما</Link>
             </li>
@@ -75,13 +81,13 @@ const Header = () => {
 
     const AuthButtons = () => (
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-x-8">
-            <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
-            onClick={() => window.open('https://app.digilogbook.ir/signUp', '_blank')}>
-                شروع کنید
-            </button>
             <button className="btn btn-ghost text-accentNormal rounded-2xl"
             onClick={() => window.open('https://app.digilogbook.ir/login', '_blank')}>
                 ورود
+            </button>
+            <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
+            onClick={() => window.open('https://app.digilogbook.ir/signUp', '_blank')}>
+                شروع کنید
             </button>
         </div>
     );
