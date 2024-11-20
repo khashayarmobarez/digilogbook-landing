@@ -1,8 +1,4 @@
-.mySwiper {
-    width: 100%; /* Full width */
-    height: 39rem; /* Adjust the height based on your needs */
-    padding: 10px 5vw 10px 10px; /* Add some vertical padding */
-}
+
 
 .swiper-scrollbar {
     background-color: var(--primary-light-active);
@@ -45,6 +41,8 @@
 }
 
 
+
+
 @media (min-width: 1024px) {
 
     .mySwiper {
@@ -55,7 +53,7 @@
     .swiper-scrollbar {
       margin-top: 14px;
       max-width: 600px;
-      transform: translateX(25%);
+      /* transform: translateX(25%); */
     }
 
     .swiper-button-next, .swiper-button-prev {

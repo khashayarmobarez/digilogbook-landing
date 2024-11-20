@@ -15,7 +15,7 @@ import ContactUsBox from "@/components/module/Landing/ContactUsBox";
 import JoinUs from "@/components/module/Landing/JoinUs";
 
 async function getBlogs() {
-  const pageSize = 10;
+  const pageSize = 5;
   const pageNumber = 1;
   
   try {

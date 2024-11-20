@@ -11,8 +11,9 @@ const LandingBlogBox = ({blog}) => {
 
     const { title, authorName, image, createDate, id, blogSections, timeToReadInMinutes, blogVisitCount} = blog;
     return (
-        <article className='w-[90vw] h-auto bg-primaryNormal rounded-3xl flex flex-col items-center justify-center gap-y-8 py-4 text-primaryLight -mt-2
-        md:flex-row md:w-[80vw] md:h-[30rem]'>
+        <article className='w-full h-full bg-primaryNormal rounded-3xl flex flex-col items-center justify-center gap-y-8 py-4 text-primaryLight
+        md:flex-row md:w-[100%] md:h-full md:mt-0'
+        style={{boxShadow:'inset 0 0 2px 1px rgba(255, 255, 255, 0.2)'}}>
             <div className="w-full h-[14rem] px-4
             md:h-full md:py-2 md:px-8 md:w-[80%]">
                 <img src={image?.path} alt={image?.name || 'picture'} className="w-full h-full rounded-3xl" />
