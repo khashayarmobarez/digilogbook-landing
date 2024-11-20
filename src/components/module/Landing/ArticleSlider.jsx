@@ -63,7 +63,7 @@ const ArticleSlider = ({blogsData}) => {
                     ))}
                 </Swiper>
                 <button className="btn w-48 btn-outline rounded-3xl text-base border-accentNormal text-accentNormal hover:bg-accentNormal hover:text-primaryLightHover hover:border-none self-center mb-16
-                md:self-center md:mr-[10rem] md:-mt-20">
+                md:self-center md:-mt-20">
                     <ArrowForwardIcon />
                     مشاهده بیشتر
                 </button>
