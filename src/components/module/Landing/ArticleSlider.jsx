@@ -46,10 +46,10 @@ const ArticleSlider = ({blogsData}) => {
                     modules={[Scrollbar, Navigation, Autoplay, EffectCards]} // Ensure EffectCube is included
                     className="mySwiper"
                     style={{
-                        margin: isDesktop && '0 -7vw 5rem 0',
-                        width: '80%', // Adjust based on your container
+                        margin: isDesktop && '0 -7.5vw 5rem 0',
+                        width: isDesktop ? '90%' : '80%', // Adjust based on your container
                         maxWidth: !isDesktop && '400px', // Restrict size to fit the design
-                        height:isDesktop ? '31rem' : '37rem',
+                        height:isDesktop ? '75dvh' : '37rem',
                     }}
                 >
                     {dataToDisplay.map((blog) => (
@@ -63,7 +63,7 @@ const ArticleSlider = ({blogsData}) => {
                     ))}
                 </Swiper>
                 <button className="btn w-48 btn-outline rounded-3xl text-base border-accentNormal text-accentNormal hover:bg-accentNormal hover:text-primaryLightHover hover:border-none self-center mb-16
-                md:self-start md:mr-[10rem] md:-mt-14">
+                md:self-center md:mr-[10rem] md:-mt-20">
                     <ArrowForwardIcon />
                     مشاهده بیشتر
                 </button>
