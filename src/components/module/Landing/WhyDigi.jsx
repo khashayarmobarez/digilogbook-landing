@@ -53,7 +53,7 @@ const WhyDigi = () => {
                     </BoxReveal>
 
                     <BoxReveal boxColor={"var(--accent-normal)"} duration={0.5}>
-                        <Link href={'/whyLogbook'} className=" w-40 h-12 flex gap-x-2 self-center md:self-end text-accentNormal">
+                        <Link href={'/whyLogbook'} className=" w-40 h-12 flex gap-x-2 self-center md:self-end text-accentNormal text-[18px]">
                             <EastRoundedIcon />
                             <p className='hover:underline underline-offset-2'>مطالعه بیشتر</p>
                         </Link>
