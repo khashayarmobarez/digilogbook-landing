@@ -3,7 +3,6 @@ import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import Image from "next/image";
 
 // assets
-import TelegramIcon from '@mui/icons-material/Telegram';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
 import PhoneIcon from "@/Assets/Icons/PhoneIcon";
@@ -11,6 +10,7 @@ import MailIcon from "@/Assets/Icons/MailIcon";
 import TicketIcon from "@/Assets/Icons/TicketIcon";
 import { UserIcon } from "lucide-react";
 import UserOpinion from "@/components/module/contactUs/UserOpinion";
+import TelegramIcon from "@/components/icons/TelegramIcon";
 
 
 const ContactUs = () => {
@@ -52,7 +52,9 @@ const ContactUs = () => {
 
                     <a href="https://t.me/digilogbook" target="_blank" rel="noopener noreferrer" 
                     className="w-full flex justify-start text-start items-center gap-x-6 link link-info ">
-                        <TelegramIcon sx={{color: 'var(--neutral-dark)'}} />
+                        <span className="w-6">
+                            <TelegramIcon />
+                        </span>
                         <p>digilogbook</p>
                     </a>
 

@@ -101,7 +101,7 @@ const UserOpinion = ({className}) => {
     };
 
     return (
-        <div className={`flex w-full h-full flex-col gap-y-6 text-primaryDarker ${className}`}>
+        <div className={`flex w-full h-full flex-col gap-y-4 text-primaryDarker ${className}`}>
             <p >نظرات خود را با ما در میان بگذارید</p>
             
             {error && (
@@ -111,7 +111,7 @@ const UserOpinion = ({className}) => {
             )}
 
             <InputWithIcon 
-                containerClassName={'md:mt-4'}
+                containerClassName={''}
                 placeHolder={'نام'} 
                 value={username} 
                 onChange={handleUsernameChange}
@@ -131,7 +131,7 @@ const UserOpinion = ({className}) => {
                 disabled={isSubmitting}
             />
             <button 
-                className={`btn btn-success text-primaryLight rounded-3xl bg-accentNormal md:mt-4 ${
+                className={`btn btn-success text-primaryLight rounded-3xl bg-accentNormal md:mt-[14px] ${
                     isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
                 onClick={handleSubmit}

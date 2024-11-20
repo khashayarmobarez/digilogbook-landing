@@ -40,10 +40,10 @@ const BlogPage = ({blogData}) => {
                     </div>
 
                     <div className='flex justify-start items-center gap-x-2'>
-                            <span className='w-4 h-4'>
-                                    <MailIcon color={'var(--neutral-dark)'} />
-                            </span>
-                            <p>{blogData.blogVisitCount} بازدید</p>
+                        <span className='w-4 h-4'>
+                                <MailIcon color={'var(--neutral-dark)'} />
+                        </span>
+                        <p>{blogData.blogVisitCount} بازدید</p>
                     </div>
 
             </div>
