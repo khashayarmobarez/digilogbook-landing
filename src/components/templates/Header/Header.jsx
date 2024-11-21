@@ -82,11 +82,11 @@ const Header = () => {
     const AuthButtons = () => (
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-x-8">
             <button className="btn btn-ghost text-accentNormal rounded-2xl"
-            onClick={() => window.open('https://app.digilogbook.ir/login', '_blank')}>
+            onClick={() => router.push('https://app.digilogbook.ir/login')}>
                 ورود
             </button>
             <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
-            onClick={() => window.open('https://app.digilogbook.ir/signUp', '_blank')}>
+            onClick={() => router.push('https://app.digilogbook.ir/signUp')}>
                 شروع کنید
             </button>
         </div>
