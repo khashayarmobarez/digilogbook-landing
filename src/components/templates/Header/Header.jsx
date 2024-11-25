@@ -27,6 +27,16 @@ const Header = () => {
     const menuRef = useRef(null);
     const burgerRef = useRef(null);
 
+    const setCookie = (name, value, days) => {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; domain=.digilogbook.com; path=/`;
+    };
+
+    useEffect(() => {
+        setCookie('visited', 'true', 7);
+        console.log('cookie set');
+    }, []);
+
     const toggleNavbar = () => {
         setNavbarIsOpen(!navbarIsOpen);
     };
