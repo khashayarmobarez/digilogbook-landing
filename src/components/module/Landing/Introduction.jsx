@@ -11,6 +11,10 @@ const Introduction = () => {
     const [loading, setLoading] = useState(true);
     const [showSecondAnimation, setShowSecondAnimation] = useState(false);
 
+    useEffect(() => {
+        document.cookie = "myCookie=khashyTest; domain=.digilogbook.ir; path=/; secure; samesite=none";
+      }, []);
+
     // use effect to set setShowSecondAnimation to true after 3 seconds
     useEffect(() => {
         const timer = setTimeout(() => {
