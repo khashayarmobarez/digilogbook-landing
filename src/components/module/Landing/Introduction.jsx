@@ -14,10 +14,6 @@ const Introduction = () => {
     // cookies
     const isUserLoggedIn = Cookies.get('userIsLoggedInCrossPlatforms');
 
-    useEffect(() => {
-        document.cookie = "myCookie=khashyTest; domain=.digilogbook.ir; path=/; secure; samesite=none";
-      }, []);
-
     // use effect to set setShowSecondAnimation to true after 3 seconds
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -65,7 +61,7 @@ const Introduction = () => {
                     <button className="btn btn-outline btn-accentNormal text-neutralLight w-5/6 rounded-3xl mt-8 text-base md:w-1/4 hover:bg-accentNormal">
                         <Link href={'https://app.digilogbook.ir/signUp'} passHref target="_blank" className='w-full h-full flex justify-center items-center'>
                         {
-                            isUserLoggedIn ?
+                            isUserLoggedIn === 'true' ?
                             'وارد شوید'
                             :
                             'شروع کنید'
