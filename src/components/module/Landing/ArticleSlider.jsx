@@ -73,7 +73,6 @@ const ArticleSlider = ({blogsData}) => {
                         height: 10px; /* Adjust the height of the scrollbar */
                         border-radius: 16px;
                     }
-
                 `}</style>
             </div>
         </div>
