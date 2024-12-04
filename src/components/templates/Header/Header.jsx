@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect, useRef } from "react";
+import Cookies from "js-cookie";
 import Image from "next/image";
 import Logo from "@/Assets/Logos/DigilogbookMainLogo.svg";
 import { useMediaQuery } from "@mui/material";
@@ -21,6 +22,11 @@ const Header = () => {
     const logoSize = isDesktop ? 140 : 120;
     const router = useRouter();
     const pathname = usePathname();
+
+    // cookies
+    const isUserLoggedIn = Cookies.get('userIsLoggedInCrossPlatforms');
+
+    console.log(isUserLoggedIn);
 
     
     const [navbarIsOpen, setNavbarIsOpen] = useState(false);
@@ -81,14 +87,24 @@ const Header = () => {
 
     const AuthButtons = () => (
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-x-8">
-            <button className="btn btn-ghost text-accentNormal rounded-2xl"
-            onClick={() => router.push('https://app.digilogbook.ir/login')}>
-                ورود
-            </button>
-            <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
-            onClick={() => router.push('https://app.digilogbook.ir/signUp')}>
-                شروع کنید
-            </button>
+            {
+                isUserLoggedIn ?
+                <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
+                onClick={() => router.push('https://app.digilogbook.ir/profile')}>
+                    وارد شوید
+                </button>
+                :
+                <>
+                    <button className="btn btn-ghost text-accentNormal rounded-2xl"
+                    onClick={() => router.push('https://app.digilogbook.ir/login')}>
+                        ورود
+                    </button>
+                    <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
+                    onClick={() => router.push('https://app.digilogbook.ir/signUp')}>
+                        شروع کنید
+                    </button>
+                </>
+            }
         </div>
     );
 
