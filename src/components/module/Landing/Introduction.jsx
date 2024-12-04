@@ -1,6 +1,7 @@
 'use client'
 // Introduction.js
 import { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 import bg from '@/../public/pics/testWebBackground.png';
 import digilogbookNoFeatherLogo from '@/Assets/Logos/DigilogbookNoFeatherLogo.png';
 import Image from 'next/image';
