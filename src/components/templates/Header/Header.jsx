@@ -26,8 +26,6 @@ const Header = () => {
     // cookies
     const isUserLoggedIn = Cookies.get('userIsLoggedInCrossPlatforms');
 
-    console.log(isUserLoggedIn);
-
     
     const [navbarIsOpen, setNavbarIsOpen] = useState(false);
     const menuRef = useRef(null);
