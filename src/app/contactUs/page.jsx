@@ -32,11 +32,11 @@ const ContactUs = () => {
 
                     <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>
 
-                    <a href="mailto: info@digilogbook.ir" className="w-full flex justify-start text-start items-center gap-x-6 link link-hover ">
+                    <a href="mailto: info@digilogbook.app" className="w-full flex justify-start text-start items-center gap-x-6 link link-hover ">
                         <span className="w-6">
                             <MailIcon color={'var(--neutral-dark)'}  />
                         </span>
-                        <p>info@digilogbook.ir</p>
+                        <p>info@digilogbook.app</p>
                     </a>
 
                     <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>

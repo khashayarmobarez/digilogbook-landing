@@ -40,7 +40,7 @@ const LandingBlogBox = ({blog}) => {
                     </div>
                     <div className='w-full flex items-center justify-center gap-x-2 text-accentNormal text-lg md:w-[42%] md:justify-end'>
                         <Image src={arrowIcon} alt="icon" />
-                        <Link href={`https://digilogbook.ir/blogs/blog/${id}`} className="link link-hover" passHref target="_blank">خواندن مقاله</Link>
+                        <Link href={`https://digilogbook.app/blogs/blog/${id}`} className="link link-hover" passHref target="_blank">خواندن مقاله</Link>
                     </div>
                 </div>
             </div>

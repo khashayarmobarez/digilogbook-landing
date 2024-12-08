@@ -5,7 +5,7 @@ const nextConfig = {
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: 'file.digilogbook.ir',
+          hostname: 'file.digilogbook.app',
           port: '',
           pathname: '/**',
         },
@@ -23,13 +23,13 @@ const nextConfig = {
         },
         {
           protocol: 'https',
-          hostname: 'app.digilogbook.ir',
+          hostname: 'webapp.digilogbook.app',
           port: '',
           pathname: '/**',
         },
         {
           protocol: 'https',
-          hostname: 'digilogbook.ir',
+          hostname: 'digilogbook.app',
           port: '',
           pathname: '/**',
         },

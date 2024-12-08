@@ -88,17 +88,17 @@ const Header = () => {
             {
                 isUserLoggedIn === 'true' ?
                 <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
-                onClick={() => router.push('https://app.digilogbook.ir/profile')}>
+                onClick={() => router.push('https://webapp.digilogbook.app/profile')}>
                     وارد شوید
                 </button>
                 :
                 <>
                     <button className="btn btn-ghost text-accentNormal rounded-2xl"
-                    onClick={() => router.push('https://app.digilogbook.ir/login')}>
+                    onClick={() => router.push('https://webapp.digilogbook.app/login')}>
                         ورود
                     </button>
                     <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
-                    onClick={() => router.push('https://app.digilogbook.ir/signUp')}>
+                    onClick={() => router.push('https://webapp.digilogbook.app/signUp')}>
                         شروع کنید
                     </button>
                 </>

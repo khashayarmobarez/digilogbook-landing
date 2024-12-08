@@ -19,7 +19,7 @@ async function getBlogs() {
   const pageNumber = 1;
   
   try {
-      const res = await fetch(`https://api.digilogbook.ir/api/Blog/GetBlogs?pageSize=${pageSize}&pageNumber=${pageNumber}`, {
+      const res = await fetch(`${Api_BASE_URL}/Blog/GetBlogs?pageSize=${pageSize}&pageNumber=${pageNumber}`, {
           next: { revalidate: 3600 }, // Revalidate every hour (for ISR)
       });
       if (!res.ok) throw new Error('Failed to fetch data');

@@ -43,7 +43,7 @@ export const metadata = {
   author: "khashayar mobarez",
   openGraph: {
     type: 'website',
-    url: 'https://digilogbook.ir',  // Update with your actual URL
+    url: 'https://digilogbook.app',  // Update with your actual URL
     title: 'DigiLogBook | پرواز خود را ثبت کنید"',
     description: 'دیجی لاگ بوک بهترین راه برای ثبت اطلاعات پرواز.',
     // images: [

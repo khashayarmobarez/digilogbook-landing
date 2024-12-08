@@ -29,7 +29,7 @@ const Footer = () => {
     }
     const handleEmailClick = (e) => {
         e.preventDefault();
-        window.location.href = 'mailto:info@digilogbook.ir';
+        window.location.href = 'mailto:info@digilogbook.app';
     };
 
     const handlePhoneClick = (e) => {
@@ -85,7 +85,7 @@ const Footer = () => {
                 <nav className="flex justify-center gap-x-8 w-full items-center my-4 md:justify-between md:pl-[8vw]">
                     <a href="#" onClick={handleEmailClick} className="link link-hover flex gap-x-2 justify-center items-center">
                         <Image src={EmailIcon} alt="logo" width={20} height={20} />
-                        <p className="mt-1">info@digilogbook.ir</p>
+                        <p className="mt-1">info@digilogbook.app</p>
                     </a>
                     <a href='#' onClick={handlePhoneClick} className="link link-hover flex gap-x-2 justify-center items-center">
                         <Image src={phoneIcon} alt="logo" width={20} height={20} />

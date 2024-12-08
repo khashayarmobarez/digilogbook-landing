@@ -60,7 +60,7 @@ const Introduction = () => {
                         دیجی لاگ بوک به شما کمک می‌کند تا پیشرفت خود را به طور دقیق دنبال کنید و با مشاهده میزان ساعات پروازی خود و انواع تجهیزات پروازی استفاده شده و چالش‌هایی که با آنها روبرو شده‌اید ، می‌توانید ارزیابی دقیقی از توانایی‌ها و نیازهای آموزشی خود داشته باشد 
                     </p>
                     <button className="btn btn-outline btn-accentNormal text-neutralLight w-5/6 rounded-3xl mt-8 text-base md:w-1/4 hover:bg-accentNormal">
-                        <Link href={'https://app.digilogbook.ir/signUp'} passHref target="_blank" className='w-full h-full flex justify-center items-center'>
+                        <Link href={'https://webapp.digilogbook.app/signUp'} passHref target="_blank" className='w-full h-full flex justify-center items-center'>
                         {
                             isUserLoggedIn === 'true' ?
                             'وارد شوید'
