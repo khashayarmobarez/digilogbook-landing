@@ -13,6 +13,7 @@ import BrandsMarquee from "@/components/module/Landing/BrandsMarquee";
 // react query
 import ContactUsBox from "@/components/module/Landing/ContactUsBox";
 import JoinUs from "@/components/module/Landing/JoinUs";
+import { Api_BASE_URL } from "@/utils/resuableVars";
 
 async function getBlogs() {
   const pageSize = 5;

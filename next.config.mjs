@@ -11,6 +11,12 @@ const nextConfig = {
         },
         {
           protocol: 'https',
+          hostname: 'file.digilogbook.ir',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
           hostname: 'via.placeholder.com',
           port: '',
           pathname: '/**',
