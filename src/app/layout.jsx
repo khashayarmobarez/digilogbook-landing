@@ -40,7 +40,7 @@ const iranSans = localFont({
 export const metadata = {
   title: "DigiLogBook | سامانه ثبت پرواز",
   description: "دیجی لاگ بوک به شما کمک می‌کند تا پرواز خود را به طور دقیق دنبال کنید.",
-  keywords: "سامانه ثبت پرواز , وسیله پرواز , لاگ بوک , دیجی لاگ بوک ، ثبت پرواز",
+  keywords: ['سامانه ثبت پرواز' , 'وسیله پرواز' , 'لاگ بوک' , 'دیجی لاگ بوک' , 'ثبت پرواز'],
   author: "khashayar mobarez",
   openGraph: {
     type: 'website',
@@ -56,13 +56,17 @@ export const metadata = {
     //   },
     // ],
   },
-  // twitter: {
-  //   card: 'summary_large_image',
-  //   site: '@DigiLogBook',  // Your Twitter handle if available
-  //   title: 'DigiLogBook - Track Your Flights',
-  //   description: 'DigiLogBook helps you track and manage all your flights efficiently.',
-  //   image: '/Assets/images/twitter-card.jpg',  // Image for Twitter card
-  // },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export const viewport = {
