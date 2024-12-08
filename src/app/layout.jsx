@@ -40,7 +40,7 @@ const iranSans = localFont({
 export const metadata = {
   title: "DigiLogBook | سامانه ثبت پرواز",
   description: "دیجی لاگ بوک به شما کمک می‌کند تا پرواز خود را به طور دقیق دنبال کنید.",
-  keywords: ['سامانه ثبت پرواز' , 'وسیله پرواز' , 'لاگ بوک' , 'دیجی لاگ بوک' , 'ثبت پرواز'],
+  keywords: ['سامانه ثبت پرواز' , 'وسیله پرواز' , 'لاگ بوک' , 'دیجی لاگ بوک' , 'ثبت پرواز', 'لاگ'],
   author: "khashayar mobarez",
   openGraph: {
     type: 'website',
