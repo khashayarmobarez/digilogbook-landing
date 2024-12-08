@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from '@/utils/ThemeContext';
 import Header from "@/components/templates/Header/Header";
 import Footer from "@/components/templates/Footer/Footer";
+import CustomHead from "@/components/module/customHead/CustomHead";
 
 
 
@@ -39,7 +40,7 @@ const iranSans = localFont({
 export const metadata = {
   title: "DigiLogBook | سامانه ثبت پرواز",
   description: "دیجی لاگ بوک به شما کمک می‌کند تا پرواز خود را به طور دقیق دنبال کنید.",
-  keywords: "سامانه ثبت پرواز, وسیله پرواز, لاگ بوک, دیجی لاگ بوک",
+  keywords: "سامانه ثبت پرواز , وسیله پرواز , لاگ بوک , دیجی لاگ بوک ، ثبت پرواز",
   author: "khashayar mobarez",
   openGraph: {
     type: 'website',
@@ -77,6 +78,7 @@ export default function RootLayout({ children }) {
     dir="rtl"
     className={iranSans.className}
     >
+      <CustomHead />
       {/* ThemeProvider implemented so it can be used later if needed */}
       <ThemeProvider>
         {/* <QueryClientProvider client={queryClient}> */}
