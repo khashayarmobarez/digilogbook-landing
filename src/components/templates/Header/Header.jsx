@@ -46,42 +46,67 @@ const Header = () => {
                 setNavbarIsOpen(false);
             }
         };
-
+    
+        const handleScroll = () => {
+            if (navbarIsOpen) {
+                setNavbarIsOpen(false);
+            }
+        };
+    
         document.addEventListener('mousedown', handleClickOutside);
+        window.addEventListener('scroll', handleScroll);
+    
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, [navbarIsOpen]);
+
+
 
     const NavItems = () => (
         <nav className="flex flex-col md:w-[50%] md:flex-row gap-y-6 justify-center items-start text-sm md:justify-between">
             <li className={`btn btn-ghost hover:bg-none hover:underline decoration-2 underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
             ${pathname === '/' ? 'underline underline-offset-8 text-accentNormal' : 'text-white'} `}>
                 {!isDesktop && <Image alt="icon" src={homeIcon} />}
-                <Link href={'/'} className="md:w-full md:h-full flex justify-center items-center">صفحه اصلی</Link>
+                <Link 
+                href={'/'} 
+                className="md:w-full md:h-full flex justify-center items-center"
+                onClick={() => setNavbarIsOpen(false)}>
+                    صفحه اصلی
+                </Link>
             </li>
             <li className={`btn btn-ghost hover:bg-none hover:underline decoration-2 underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
                 ${pathname.includes('/blogs') ? 'underline underline-offset-8 text-accentNormal' : 'text-white'}`}>
                 {!isDesktop && <Image alt="icon" src={penIcon} />}
-                <Link href={'/blogs/1'} className="md:w-full md:h-full flex justify-center items-center">بلاگ</Link>
+                <Link 
+                href={'/blogs/1'} 
+                className="md:w-full md:h-full flex justify-center items-center"
+                onClick={() => setNavbarIsOpen(false)}>
+                    بلاگ
+                </Link>
             </li>
             <li className={`btn btn-ghost hover:bg-none hover:underline decoration-2 underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
                 ${pathname.includes('/aboutUs') ? 'underline underline-offset-8 text-accentNormal' : 'text-white'}`}>
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
-                <Link href={'/aboutUs'} className="md:w-full md:h-full flex justify-center items-center">درباره ما</Link>
+                <Link href={'/aboutUs'} 
+                className="md:w-full md:h-full flex justify-center items-center"
+                onClick={() => setNavbarIsOpen(false)}>
+                    درباره ما
+                </Link>
             </li>
-            {/* <li className={`btn btn-ghost hover:bg-none hover:underline decoration-2 underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
-            ${pathname.includes('/guide') ? 'underline underline-offset-8 text-accentNormal' : 'text-white'}`}>
-                {!isDesktop && <Image alt="icon" src={attentionIcon} />}
-                <Link href={'/'} className="md:w-full md:h-full flex justify-center items-center">راهنما</Link>
-            </li> */}
             <li className={`btn btn-ghost hover:bg-none hover:underline decoration-2 underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
                 ${pathname.includes('/contactUs') ? 'underline underline-offset-8 text-accentNormal' : 'text-white'}`}>
                 {!isDesktop && <Image alt="icon" src={phoneIcon} />}
-                <Link href={'/contactUs'} className="md:w-full md:h-full flex justify-center items-center">تماس با ما</Link>
+                <Link href={'/contactUs'} 
+                className="md:w-full md:h-full flex justify-center items-center"
+                onClick={() => setNavbarIsOpen(false)}>
+                تماس با ما
+                </Link>
             </li>
         </nav>
     );
+
 
     const AuthButtons = () => (
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-x-8">
@@ -106,30 +131,46 @@ const Header = () => {
         </div>
     );
 
+
     return (
         <header className="w-full" style={{boxShadow:'var(--shadow-all)'}}>
+            
             <nav className="bg-primaryDarkHover h-14 md:h-20 w-full flex justify-between items-center px-4 md:px-8">
+
                 <div className="flex w-[70%] h-full gap-x-4 lg:gap-x-8 items-center">
+
+                    {
+                        !isDesktop &&
+                        <label className="burger z-50" htmlFor="burger" ref={burgerRef}>
+                            <input type="checkbox" id="burger" checked={navbarIsOpen} onChange={toggleNavbar} />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    }
+
                     <Image src={Logo} alt='logo' width={logoSize} height={logoSize} className="btn btn-ghost -mr-4"
                     onClick={() => router.push('/')} />
-                    {isDesktop && <NavItems />}
+
+                    {
+                        isDesktop &&
+                        <NavItems />
+                    }
+
                 </div>
+
 
                 {isDesktop ? (
                     <AuthButtons />
                 ) : (
-                    <label className="burger z-50" htmlFor="burger" ref={burgerRef}>
-                        <input type="checkbox" id="burger" checked={navbarIsOpen} onChange={toggleNavbar} />
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
+                    <div/>
                 )}
+
             </nav>
 
             {!isDesktop && (
-                <div className={`fixed inset-0 w-full flex justify-end z-40 transform ${navbarIsOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
-                    <div className="flex flex-col w-2/3  bg-primaryDarkHover h-full justify-center items-center gap-y-8 p-4 rounded-r-3xl"
+                <div className={`fixed inset-0 w-full flex justify-start z-40 transform ${navbarIsOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
+                    <div className="flex flex-col w-2/3  bg-primaryDarkHover h-full justify-center items-center gap-y-8 p-4 rounded-l-3xl"
                     ref={menuRef} >
                         <NavItems />
                         <AuthButtons />
@@ -177,15 +218,16 @@ const Header = () => {
 
                 .burger span:nth-of-type(3) {
                     top: 100%;
-                    transform-origin: left center;
+                    transform-origin: right center;
                     transform: translateY(-100%);
                     width: 50%;
+                    right: 0;
                 }
 
                 .burger input:checked ~ span:nth-of-type(1) {
                     transform: rotate(45deg);
-                    top: 0px;
-                    left: 5px;
+                    top: -1px;
+                    left: 8px;
                 }
 
                 .burger input:checked ~ span:nth-of-type(2) {
@@ -195,8 +237,8 @@ const Header = () => {
 
                 .burger input:checked ~ span:nth-of-type(3) {
                     transform: rotate(-45deg);
-                    top: 17px;
-                    left: 5px;
+                    top: -1px;
+                    left: 0px;
                     width: 100%;
                 }
 
