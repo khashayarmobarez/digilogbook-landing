@@ -118,13 +118,13 @@ const Header = () => {
                 </button>
                 :
                 <>
-                    <button className="btn btn-ghost text-accentNormal rounded-2xl"
-                    onClick={() => router.push('https://webapp.digilogbook.app/login')}>
-                        ورود
-                    </button>
                     <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
                     onClick={() => router.push('https://webapp.digilogbook.app/signUp')}>
                         شروع کنید
+                    </button>
+                    <button className="btn btn-ghost text-accentNormal rounded-2xl"
+                    onClick={() => router.push('https://webapp.digilogbook.app/login')}>
+                        ورود
                     </button>
                 </>
             }
