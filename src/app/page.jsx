@@ -41,7 +41,7 @@ export default async function Home() {
     <>
       <main className="pb-10">
           <Introduction />
-          <WhyDigi />      
+          <WhyDigi />
           <Options />
           <JoinUs />
           <ArticleSlider blogsData={blogsData} />
