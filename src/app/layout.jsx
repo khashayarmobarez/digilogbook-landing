@@ -79,7 +79,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" 
-    dir="rtl"
+    dir="ltr"
     className={iranSans.className}
     >
       <CustomHead />

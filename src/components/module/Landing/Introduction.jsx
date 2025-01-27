@@ -44,7 +44,6 @@ const Introduction = () => {
         <section className='introductionContainer'>
             <div className='scrollingBackground'></div>
             <div className='z-10 w-full flex flex-col justify-center items-center -mt-20'>
-                {/* <div className="logoContainer animate__animated animate__zoomInDown animate__slow"> */}
                 <div className="logoContainer animate__animated animate__slideInUp">
                     <Image
                         src={digilogbookNoFeatherLogo}
@@ -55,17 +54,17 @@ const Introduction = () => {
                     />
                 </div>
                 <div className={`w-full flex flex-col items-center transition-all duration-1000  ${showSecondAnimation ? ' opacity-100' : 'opacity-0'}`}>
-                    <figcaption className='text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl '>سامانه ثبت اطلاعات و پروازهای روزانه</figcaption>
+                    <figcaption className='text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl '>Daily Flight and Information Logging System</figcaption>
                     <p className='text-neutralLight text-sm w-4/5 mt-4 text-center md:text-xl md:w-3/6 md:mt-8'>
-                        دیجی لاگ بوک به شما کمک می‌کند تا پیشرفت خود را به طور دقیق دنبال کنید و با مشاهده میزان ساعات پروازی خود و انواع تجهیزات پروازی استفاده شده و چالش‌هایی که با آنها روبرو شده‌اید ، می‌توانید ارزیابی دقیقی از توانایی‌ها و نیازهای آموزشی خود داشته باشد 
+                        DigiLogBook helps you accurately track your progress. By viewing your flight hours, the types of flight equipment used, and the challenges you have faced, you can have an accurate assessment of your abilities and training needs.
                     </p>
                     <button className="btn btn-outline btn-accentNormal text-neutralLight w-5/6 rounded-3xl mt-8 text-base md:w-1/4 hover:bg-accentNormal">
                         <Link href={'https://webapp.digilogbook.app/signUp'} passHref target="_blank" className='w-full h-full flex justify-center items-center'>
                         {
                             isUserLoggedIn === 'true' ?
-                            'وارد شوید'
+                            'Log In'
                             :
-                            'شروع کنید'
+                            'Get Started'
                         }
                         </Link>
                     </button>
