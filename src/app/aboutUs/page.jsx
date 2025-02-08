@@ -1,26 +1,25 @@
 import Link from "next/link";
 
-
 const AboutUs = () => {
     return (
         <div className="w-full flex justify-center">
             <div className="w-[90%] flex flex-col items-start justify-between gap-y-5 my-10 md:min-h-[40dvh] md:w-[60%] md:gap-y-[30px] md:my-[60px]">
 
-                <h1 className=" font-bold text-lg md:text-3xl text-accentNormal">درباره ما</h1>
+                <h1 className="font-bold text-lg md:text-3xl text-accentNormal">About Us</h1>
 
-                <p className="text-start ">
-                    یک لاگ بوک دیجیتال طراحی کرده ایم تا شما بتوانید به راحتی با ثبت پروازهای خود طبق سیلابس های آموزشی به آموزشتان نظم بیشتری دهید و دسترسی سریع به سوابق خود برای آگاهی از پیشرفتتان داشته باشید. علاوه بر این ، به شما امکان این را می دهد که بدانید از چه مرحله ایی آغاز کرده اید ، تا بتوانید برای خود دقیق تر و راحت تر هدف گذاری کنید ، همچنین نقاط قوت و ضعف خود را یادداشت کرده و در راستای بهبود آن ها تلاش بیشتری کنید.
-                    <br/>ما اینجا با توجه به نیاز های جامعه ی هوشمند ، دیجی لاگ بوک را طراحی کردیم تا نه تنها هزینه های خرید و چاپ را حذف کنیم ، بلکه از مصرف کاغذ کاسته ایم تا آسیب به محیط زیست را کاهش و از آن محافظت کنیم.
-                    <br/>به امید پرواز های ایمن ، رشد و پیشرفت این رشته جذاب در میهن عزیزمان ایران
-                    <br/>و این فقط بخشی از خدمات دیجی لاگ بوک است …
-                    <br/>همراه ما باشید.
+                <p className="text-start">
+                    We have designed a digital logbook so that you can easily organize your training by recording your flights according to the training syllabuses and have quick access to your records to be aware of your progress. In addition, it allows you to know from which stage you started, so you can set goals more accurately and easily for yourself, and also note your strengths and weaknesses and make more efforts to improve them.
+                    <br/>Here, considering the needs of the smart community, we designed Digi Logbook not only to eliminate the costs of purchase and printing but also to reduce paper consumption to minimize environmental damage and protect it.
+                    <br/>Hoping for safe flights, growth, and progress of this fascinating field in our dear homeland Iran.
+                    <br/>And this is just a part of Digi Logbook&apos;s services...
+                    <br/>Stay with us.
                 </p>
 
                 <Link 
                     className={`btn btn-success text-primaryLight rounded-3xl bg-accentNormal w-40 self-center`}
                     href={'/contactUs'}
                 >
-                    تماس با ما
+                    Contact Us
                 </Link>
 
             </div>

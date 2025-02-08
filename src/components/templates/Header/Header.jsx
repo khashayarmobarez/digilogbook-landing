@@ -73,7 +73,7 @@ const Header = () => {
                 href={'/'} 
                 className="md:w-full md:h-full flex justify-center items-center"
                 onClick={() => setNavbarIsOpen(false)}>
-                    صفحه اصلی
+                    Home
                 </Link>
             </li>
             <li className={`btn btn-ghost hover:bg-none hover:underline decoration-2 underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
@@ -83,7 +83,7 @@ const Header = () => {
                 href={'/blogs/1'} 
                 className="md:w-full md:h-full flex justify-center items-center"
                 onClick={() => setNavbarIsOpen(false)}>
-                    بلاگ
+                    Blog
                 </Link>
             </li>
             <li className={`btn btn-ghost hover:bg-none hover:underline decoration-2 underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
@@ -92,7 +92,7 @@ const Header = () => {
                 <Link href={'/aboutUs'} 
                 className="md:w-full md:h-full flex justify-center items-center"
                 onClick={() => setNavbarIsOpen(false)}>
-                    درباره ما
+                    About Us
                 </Link>
             </li>
             <li className={`btn btn-ghost hover:bg-none hover:underline decoration-2 underline-offset-8 hover:text-neutralLight active:text-accentNormal font-light  flex gap-x-2
@@ -101,7 +101,7 @@ const Header = () => {
                 <Link href={'/contactUs'} 
                 className="md:w-full md:h-full flex justify-center items-center"
                 onClick={() => setNavbarIsOpen(false)}>
-                تماس با ما
+                Contact Us
                 </Link>
             </li>
         </nav>
@@ -114,17 +114,17 @@ const Header = () => {
                 isUserLoggedIn === 'true' ?
                 <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
                 onClick={() => router.push('https://webapp.digilogbook.app/profile')}>
-                    وارد شوید
+                    Enter
                 </button>
                 :
                 <>
                     <button className="btn w-32 h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-accentNormalActive"
                     onClick={() => router.push('https://webapp.digilogbook.app/signUp')}>
-                        شروع کنید
+                        let&apos;s start
                     </button>
                     <button className="btn btn-ghost text-accentNormal rounded-2xl"
                     onClick={() => router.push('https://webapp.digilogbook.app/login')}>
-                        ورود
+                        Log in
                     </button>
                 </>
             }
