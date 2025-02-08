@@ -25,11 +25,11 @@ const WhyDigi = () => {
     }, []);
 
     const listItems = [
-        "در دسترس نبودن همیشگی آن یا فراموشی",
-        "زمان بر بودن نوشتن درست آن",
-        "امکان خطا در نوشتن و جمع بندی",
-        "زمان بر بودن بررسی و آنالیز پروازها",
-        "و موارد دیگر..."
+        "Not always being available or forgetting",
+        "Time-consuming to write it correctly",
+        "Possibility of errors in writing and summarizing",
+        "Time-consuming to review and analyze flights",
+        "And other reasons..."
     ];
 
     return (
@@ -42,20 +42,20 @@ const WhyDigi = () => {
                 <>
                     <BoxReveal boxColor={"var(--accent-normal)"} duration={0.5}>
                         <p className={`text-neutralDark font-bold text-xl md:text-3xl `}>
-                            چرا باید <span className='text-accentNormal'>لاگ بوک</span> داشته باشیم ؟
+                            Why should we have a <span className='text-accentNormal'>logbook</span>?
                         </p>
                     </BoxReveal>
 
                     <BoxReveal boxColor={"var(--accent-normal)"} duration={0.5}>
                         <p className='text-neutralDark'>
-                            در هنگام یادگیری پرواز، هر خلبان ملزم به نوشتن یادداشتی از ساعات پرواز خود در یک لاگ بوک به منظور ثبت  تجربه خود است. بسیاری از خلبانان خیلی زود از نوشتن  لاگ بوک خود منصرف میشوند ، چرا که بعد از مدتی این کار بیهوده به نظر میرسد ، اما این یک اشتباه است. پس چرا نگه داشتن  لاگ بوک ایده خوبی است؟
+                            During flight training, every pilot is required to write a note of their flight hours in a logbook to record their experience. Many pilots soon give up writing their logbook because it seems pointless after a while, but this is a mistake. So why is keeping a logbook a good idea?
                         </p>
                     </BoxReveal>
 
                     <BoxReveal boxColor={"var(--accent-normal)"} duration={0.5}>
                         <Link href={'/whyLogbook'} className=" w-40 h-12 flex gap-x-2 self-center md:self-end text-accentNormal text-[18px]">
                             <EastRoundedIcon />
-                            <p className='hover:underline underline-offset-2'>مطالعه بیشتر</p>
+                            <p className='hover:underline underline-offset-2'>Read more</p>
                         </Link>
                     </BoxReveal>
                 </>
@@ -68,7 +68,7 @@ const WhyDigi = () => {
             <div className='w-[90%] min-h-10 flex flex-col gap-y-8 md:w-7/12 '>
 
                 <p className={`text-neutralDark font-bold text-xl md:text-3xl md:text-center ${scrollPosition > 600 ? 'animate__animated animate__fadeIn animate__slow' : 'invisible'}`}>
-                    چرا بسیاری از خلبانان خیلی زود از نوشتن <span className='text-accentNormal'>لاگ بوک</span> خود منصرف میشوند ؟
+                    Why do many pilots soon give up writing their <span className='text-accentNormal'>logbook</span>?
                 </p>
 
                 <ul className="flex flex-col gap-y-6 min-h-[30rem]">
@@ -95,7 +95,7 @@ const WhyDigi = () => {
             </div>
 
             <p className={`w-[90%] text-center bg-primaryNormalHover p-6 text-neutralLight rounded-3xl font-bold text-base -mt-24 md:-mt-10 md:text-3xl ${scrollPosition > 1300 ? 'animate__animated animate__fadeIn' : 'invisible'}`}>
-                با <span className='text-accentNormal'>دیجی‌ لاگ‌ بوک</span> شما میتوانید لاگ خود را راحت تر و سریع تر توسط تلفن همراه خود ثبت کنید و در هر زمان و مکان به آن دسترسی داشته باشید
+                With <span className='text-accentNormal'>Digi Logbook</span> you can record your log more easily and quickly using your mobile phone and access it anytime, anywhere.
             </p>
 
         </div>
