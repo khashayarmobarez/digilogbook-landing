@@ -40,9 +40,9 @@ const Footer = () => {
     const showEmptyAlert = () => {
         Swal.fire({ 
             icon: "error",
-            title: "اماده نیست!",
-            text: "تیم ما در حال توسعه این بخش است و به زودی اماده میشود",
-            confirmButtonText: 'مشکلی نیست'
+            title: "Not Ready!",
+            text: "Our team is developing this section and it will be ready soon",
+            confirmButtonText: 'No problem'
         });
     }
 
@@ -56,28 +56,28 @@ const Footer = () => {
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
                             <Link href={'/'} className="link link-hover">
-                                خانه
+                                Home
                             </Link>
                         </div>
                     <hr className="my-3 border-t border-neutral-content w-full " />
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
                             <Link href={'/blogs/1'} className="link link-hover" >
-                                بلاگ
+                                Blog
                             </Link>
                         </div>
                     <hr className="my-3 border-t border-neutral-content w-full " />
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
                             <Link href={'/aboutUs'} className="link link-hover" >
-                                درباره ما
+                                About Us
                             </Link>
                         </div>
                     <hr className="my-3 border-t border-neutral-content w-full " />
                         <div className="w-full flex gap-x-4">
                             <ArrowForwardIcon />
                             <Link href={'/contactUs'} className="link link-hover" >
-                                تماس با ما
+                                Contact Us
                             </Link>
                         </div>
                     <hr className="my-3 border-t border-neutral-content w-full " />
@@ -101,14 +101,14 @@ const Footer = () => {
                     pathname !== '/' ?
                         <div className=" w-full md:w-[50%] h-auto rounded-3xl flex flex-col items-center justify-between py-4 px-4 gap-y-4">
                             <Image src={Logo} alt="logo" width={170} height={170} />
-                            <p className="font-bold">عضویت در خبرنامه</p>
-                            <p className="">ما هرزنامه ارسال نمی کنیم، پس نگران نباشید</p>
+                            <p className="font-bold">Subscribe to Newsletter</p>
+                            <p className="">We do not send spam, so don&apos;t worry</p>
                             <InputWithButton
                                 id={'Email'}
                                 // onSubmit={sendCodeHandler}
                                 icon={EmailIcon}
-                                buttonText={'ارسال'}
-                                placeH={'ایمیل خود را وارد کنید'}
+                                buttonText={'Send'}
+                                placeH={'Enter your email'}
                                 onChange={EmailInputHandler}
                                 value={input}
                             />
