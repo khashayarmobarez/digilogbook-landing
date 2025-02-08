@@ -5,8 +5,6 @@ import calenderIcon from '@/Assets/Icons/calender.svg'
 import arrowIcon from '@/Assets/Icons/arrowGreen.svg'
 import Link from "next/link";
 
-
-
 const LandingBlogBox = ({blog}) => {
 
     const { title, authorName, image, createDate, id, blogSections, timeToReadInMinutes, blogVisitCount} = blog;
@@ -31,16 +29,16 @@ const LandingBlogBox = ({blog}) => {
                     <div className='w-full h-full flex items-center justify-between text-xs text-neutralLightActive md:w-[58%]'>
                         <div className='w-full flex items-center justify-start gap-x-1 '>
                             <Image src={watchIcon} alt="icon" />
-                            <p>در {timeToReadInMinutes} دقیقه بخوانید</p>
+                            <p>Read in {timeToReadInMinutes} minutes</p>
                         </div>
                         <div className='w-full flex items-center justify-end gap-x-1'>
                             <Image src={calenderIcon} alt="icon" />
-                            <p>تاریخ: {createDate}</p>
+                            <p>Date: {createDate}</p>
                         </div>
                     </div>
                     <div className='w-full flex items-center justify-center gap-x-2 text-accentNormal text-lg md:w-[42%] md:justify-end'>
                         <Image src={arrowIcon} alt="icon" />
-                        <Link href={`https://digilogbook.app/blogs/blog/${id}`} className="link link-hover" passHref target="_blank">خواندن مقاله</Link>
+                        <Link href={`https://digilogbook.app/blogs/blog/${id}`} className="link link-hover" passHref target="_blank">Read Article</Link>
                     </div>
                 </div>
             </div>

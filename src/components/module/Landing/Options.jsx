@@ -18,10 +18,10 @@ const Options = () => {
     const optionsRef = useRef([]);
     
     const optionSections = [
-        { icon: bookIcon, title: "دسترسی به تمامی سیلابس ها", content: "شما میتوانید با استفاده از دیجی لاگ بوک به همه ی سیلابس های آموزشی تمامی مقاطع در هر ارگان دسترسی داشته باشید که با استفاده از این قابلیت میتوانید برای خود برنامه های بلند مدت و کوتاه مدت بچینید" },
-        { icon: usersIcon, title: "تقسیم بندی سرفصل های عملی و تئوری", content: "دیجی لاگ بوک این امکان را به شما میدهد که علاوه بر لاگ کردن فعالیت های عملی خود مانند پروازها و تمرینات زمینی ، بتوانید کلاس های تئوری را مطابق با سرفصل های مقطع خود نیز لاگ کنید" },
-        { icon: clipboardIcon, title: "ثبت لاگ با تاییدیه ی مربی", content: "چرا باید لاگ بوک داشته باشیم ؟ در هنگام یادگیری پرواز، هر خلبان ملزم به نوشتن یادداشتی از ساعات پرواز خود در یک لاگ بوک به منظور ثبت  تجربه خود است." },
-        { icon: locationIcon, title: "امکان محاسبه ساعات پرواز", content: "در دیجی لاگ بوک شما میتوانید مسیر پیشرفت خود را بررسی کنید و با مرور لاگ های خود نسبت به نقاط قوت و ضعف خود آگاهی بیشتری پیدا کنید همچنین شما میتوانید تعداد پرواز های انجام شده ، میزان ساعت پرواز ، میزان ساعت مربیگری ، تعداد هنرجویان خود و درصد پیشرفت هر هنرجو را به راحتی مشاهده کنید که در روند برنامه ریزی ، بررسی و آنالیز پیشرفت شما بسیار کمک کننده است." }
+        { icon: bookIcon, title: "Access to all syllabuses", content: "With Digilogbook, you can access all educational syllabuses for all levels in any organization. This feature allows you to plan long-term and short-term programs for yourself." },
+        { icon: usersIcon, title: "Division of practical and theoretical topics", content: "Digilogbook allows you to log not only your practical activities such as flights and ground exercises but also your theoretical classes according to your level's syllabus." },
+        { icon: clipboardIcon, title: "Log registration with instructor approval", content: "Why should we have a logbook? During flight training, every pilot is required to write a note of their flight hours in a logbook to record their experience." },
+        { icon: locationIcon, title: "Flight hours calculation capability", content: "In Digilogbook, you can review your progress and become more aware of your strengths and weaknesses by reviewing your logs. You can also easily see the number of flights performed, flight hours, instructor hours, number of students, and the progress percentage of each student, which is very helpful in planning, reviewing, and analyzing your progress." }
     ];
 
     useEffect(() => {

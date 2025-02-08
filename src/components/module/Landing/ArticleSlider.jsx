@@ -65,7 +65,7 @@ const ArticleSlider = ({blogsData}) => {
                 <button className="btn w-48 btn-outline rounded-3xl text-base border-accentNormal text-accentNormal hover:bg-accentNormal hover:text-primaryLightHover hover:border-none self-center mb-16
                 md:self-center md:-mt-20">
                     <ArrowForwardIcon />
-                    مشاهده بیشتر
+                    View More
                 </button>
                 
                 <style jsx>{`

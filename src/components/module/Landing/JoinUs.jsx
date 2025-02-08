@@ -5,18 +5,18 @@ const JoinUs = () => {
         <div className="w-full flex justify-center mt-10 mb-4">
             <div className="w-[90%] flex flex-col justify-between items-center rounded-3xl p-4 gap-y-4 md:px-16 md:py-9 bg-primaryLightHover md:flex-row">
 
-                <p className=" font-bold text-base md:text-3xl text-neutralDark">برای مشاهده قابلیت‌های بیشتر همراه ما باشید...</p>
+                <p className=" font-bold text-base md:text-3xl text-neutralDark">Stay with us to see more features...</p>
 
                 <div className="w-full flex flex-row justify-between items-center md:gap-x-8 md:w-[30%] ">
                     <button className="btn btn-outline w-[44%] text-accentNormal rounded-3xl
                     md:w-[45%]"
                     onClick={() => window.open('https://webapp.digilogbook.app/login', '_blank')}>
-                        ورود
+                        Login
                     </button>
                     <button className="btn w-[44%]  h-12 bg-accentNormal border-none rounded-3xl p-3 text-neutralLight hover:text-neutralLight hover:bg-primaryNormalHover
                     md:w-[45%]"
                     onClick={() => window.open('https://webapp.digilogbook.app/signUp', '_blank')}>
-                        شروع کنید
+                        Get Started
                     </button>
                 </div>
 
