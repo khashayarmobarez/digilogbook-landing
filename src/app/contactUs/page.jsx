@@ -21,7 +21,7 @@ const ContactUs = () => {
                 {/* test comment */}
                 <div className="w-full flex flex-col items-start md:pt-4  md:col-span-3 md:col-start-3">
 
-                    <h1 className="text-lg font-semibold text-accentNormal md:text-3xl ">تماس با ما</h1>
+                    <h1 className="text-lg font-semibold text-accentNormal md:text-3xl ">Contact Us</h1>
 
                     <a href="tel:09965089408" className="w-full flex justify-start text-start items-center gap-x-6 link link-hover mt-5 md:mt-16">
                         <span className="w-6">
@@ -45,7 +45,7 @@ const ContactUs = () => {
                         <span className="w-6">
                             <TicketIcon color={'var(--neutral-dark)'}  />
                         </span>
-                        <p>تیکت</p>
+                        <p>Ticket</p>
                     </a>
 
                     <div className="w-full h-[2px] bg-neutralLightActive my-4 rounded-full"></div>

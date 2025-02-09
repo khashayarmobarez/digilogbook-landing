@@ -43,9 +43,8 @@ const UserOpinion = ({className}) => {
         if (!username.trim() || !email.trim() || !comment.trim()) {
             Swal.fire({
                 icon: "error",
-                title: "لطفا همه فیلدها را پر کنید",
-                // text: "لطفا ایمیل خود را وارد کنید",
-                confirmButtonText: 'مشکلی نیست'
+                title: "Please fill out all fields",
+                confirmButtonText: 'OK'
             });
             return;
         }
@@ -55,9 +54,8 @@ const UserOpinion = ({className}) => {
         if (!emailRegex.test(email)) {
             Swal.fire({
                 icon: "error",
-                title: "لطفا یک ایمیل معتبر وارد کنید",
-                // text: "لطفا ایمیل خود را وارد کنید",
-                confirmButtonText: 'مشکلی نیست'
+                title: "Please enter a valid email",
+                confirmButtonText: 'OK'
               });
             return;
         }
@@ -81,19 +79,19 @@ const UserOpinion = ({className}) => {
             
             // You might want to show a success message
             Swal.fire({
-                title: 'ثبت شد!',
-                text: 'نظر شما با موفقیت ثبت شد.',
+                title: 'Submitted!',
+                text: 'Your comment has been successfully submitted.',
                 icon: 'success',
-                confirmButtonText: 'باشه'
+                confirmButtonText: 'OK'
             });
 
         } catch (err) {
-            setError(err.response?.data?.message || 'خطا در ارسال نظر');
+            setError(err.response?.data?.message || 'Error submitting comment');
             Swal.fire({
                 icon: "error",
-                title: "خطا در ارسال نظر",
-                text: err.response?.data?.message || 'خطا در ارسال نظر',
-                confirmButtonText: 'مشکلی نیست'
+                title: "Error submitting comment",
+                text: err.response?.data?.message || 'Error submitting comment',
+                confirmButtonText: 'OK'
             });
         } finally {
             setIsSubmitting(false);
@@ -102,7 +100,7 @@ const UserOpinion = ({className}) => {
 
     return (
         <div className={`flex w-full h-full flex-col gap-y-4 text-primaryDarker ${className}`}>
-            <p >نظرات خود را با ما در میان بگذارید</p>
+            <p>Share your opinions with us</p>
             
             {error && (
                 <div className="text-red-500 text-sm">
@@ -112,13 +110,13 @@ const UserOpinion = ({className}) => {
 
             <InputWithIcon 
                 containerClassName={''}
-                placeHolder={'نام'} 
+                placeHolder={'Name'} 
                 value={username} 
                 onChange={handleUsernameChange}
                 disabled={isSubmitting}
             />
             <InputWithIcon 
-                placeHolder={'ایمیل'} 
+                placeHolder={'Email'} 
                 value={email} 
                 onChange={handleEmailChange}
                 disabled={isSubmitting}
@@ -126,7 +124,7 @@ const UserOpinion = ({className}) => {
             />
             <TextArea 
                 value={comment} 
-                placeholder={'نظر شما...'} 
+                placeholder={'Your comment...'} 
                 onChange={handleCommentChange}
                 disabled={isSubmitting}
             />
@@ -137,7 +135,7 @@ const UserOpinion = ({className}) => {
                 onClick={handleSubmit}
                 disabled={isSubmitting}
             >
-                {isSubmitting ? 'در حال ارسال...' : 'ارسال'}
+                {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
         </div>
     );

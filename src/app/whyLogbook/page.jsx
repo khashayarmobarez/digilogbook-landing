@@ -2,30 +2,27 @@ import Image from "next/image";
 
 import blogPic from '@/../public/pics/someoneWriting(reduced size).png'
 
-
 const WhyLogbook = () => {
     return (
         <div className="w-full flex justify-center py-10 md:py-[60px]">
             <div className=" w-[90%] md:w-[60%] flex flex-col ">
 
-                <h1 className=" font-bold text-lg md:text-3xl text-accentNormal mb-5 md:mb-8">چرا باید لاگ‌ بوک داشته باشیم؟</h1>
+                <h1 className=" font-bold text-lg md:text-3xl text-accentNormal mb-5 md:mb-8">Why should we have a logbook?</h1>
                 <span className=" w-full h-40 md:h-96 md:px-0 flex justify-center mb-4">
                     <Image src={blogPic} alt="someone writing" className="h-full w-full"  />
                 </span>
                 <p>
-                    در هنگام یادگیری پرواز، هر خلبان ملزم به نوشتن یادداشتی از ساعات پرواز خود در یک لاگ بوک به منظور ثبت  تجربه خود است.<br/>
-                     بسیاری از خلبانان خیلی زود از نوشتن  لاگ بوک خود منصرف میشوند ، چرا که بعد از مدتی این کار بیهوده به نظر میرسد ، اما این یک اشتباه است.<br/>
-                     پس چرا نگه داشتن  لاگ بوک ایده خوبی است؟
-                    <br/> 1) ارزیابی دقیقی از ساعاتی که در پرواز داشته اید را فراهم می کند. اگر ارزیابی دقیقی از ساعات پرواز خود نداشته باشید فقط یک حدس اغراق آمیز راجب آن دارید 
-                    <br/> 2)  log book به شما این امکان را می دهد حتی ساعات پرواز وسیله ی پروازی خود را محاسبه کنید . اگر ندانید وسیله پروازی شما چند ساعت پرواز کرده است زمان تریم وسیله پروازی خود را نمی توانید پیدا کنید و متوجه تغییر اندازه لاین ها نمی شوید . پر کردن log  به شما امکان ثبت تاریخ آخرین ریپک چتر کمکی را میدهد تا در تاریخ مشخص مجدد ریپک چتر کمکی انجام شود .
-                    بنابراین logbook  شما به عنوان یک دفترچه ی راهنما برای وسیله پروازی شما است.
-                    <br/>3)  هر شخص تا روز فروش وسیله پروازی خود میزان ساعات پرواز خود را بیش از حد تصور می کند. آیا شما در هنگام خرید وسیله پروازی دست دوم ، به کسی اعتماد می کنید که ساعت های پروازش را حدس میزند ، یا می خواهید بدانید که وسیله پروازی دقیقا ً چند ساعت پرواز دارد؟
-                    <br/>4) logbook به شما این امکان را می دهد تا پیشرفت خود را به عنوان خلبان ارزیابی کنید. یادگیری شما هیچ وقت متوقف نمی شود حتی زمانی که مدارک عالی این رشته را دریافت کرده باشید .هیچکس به عنوان یک خلبان نمی تواند ادعا کند که همه چیز را درباره ی پرواز می داند . با نوشتن آنچه را که از یک پرواز یاد گرفته اید ، کاری که انجام داده اید ، مناطقی که پرواز کرده اید و میزان درست یا نادرست بودن کار هایی که انجام داده اید ، به شما کمک می کند تا یادگیری و پیشرفت خود را در طول یک دوره ارزیابی کنید. 
-                    <br/>5) ثبت آموزش های خود در logbook  این امکان را به شما می دهد تا بدانید از چه مرحله ایی آغاز کرده اید و در حال حاضر در چه مرحله ایی قرار دارید و برای اینکه بدانید در چه مرحله ایی میخواهید قرار بگیرید برنامه ریزی کنید . 
-                    <br/>6 ) logbook به شما این امکان را میدهد که برای خود هدف گذاری کنید .
-                    <br/>7 ) شما میتوانید در logbook  خود نقاط ضعف را یادداشت کنید و در راستای بهبود آن ها تلاش کنید .
-                    <br/>8) logbook  به شما کمک می کند تا در مورد سایت های پروازی و آب و هوای مناسب پرواز اطلاعات بیشتری کسب کنید. 
-                    Logbook شما نیاز نیست خسته کننده باشد .  شما می توانید تصاویر، نقاشی های ساده و نقشه اضافه کنید ! خواندن در مورد پروازهای خود سال بعد می تواند ساعت ها سرگرم کننده باشد .
+                    When learning to fly, every pilot is required to write a note of their flight hours in a logbook to record their experience.<br/>
+                    Many pilots soon give up writing their logbook because it seems pointless after a while, but this is a mistake.<br/>
+                    So why is keeping a logbook a good idea?
+                    <br/> 1) It provides an accurate assessment of the hours you have flown. If you do not have an accurate assessment of your flight hours, you only have an exaggerated guess about it.
+                    <br/> 2) The logbook allows you to even calculate the flight hours of your aircraft. If you do not know how many hours your aircraft has flown, you cannot find the trim time of your aircraft and you will not notice the change in the size of the lines. Filling out the log allows you to record the date of the last reserve parachute repack so that it can be repacked again on the specified date. Therefore, your logbook serves as a guidebook for your aircraft.
+                    <br/> 3) Every person overestimates their flight hours until the day they sell their aircraft. Do you trust someone who guesses their flight hours when buying a second-hand aircraft, or do you want to know exactly how many hours the aircraft has flown?
+                    <br/> 4) The logbook allows you to evaluate your progress as a pilot. Your learning never stops, even when you have received the highest certificates in this field. No one can claim to know everything about flying. Writing down what you have learned from a flight, what you have done, the areas you have flown, and the correctness or incorrectness of your actions helps you evaluate your learning and progress over a period.
+                    <br/> 5) Recording your training in the logbook allows you to know where you started and where you are now, and to plan for where you want to be.
+                    <br/> 6) The logbook allows you to set goals for yourself.
+                    <br/> 7) You can note your weaknesses in the logbook and work towards improving them.
+                    <br/> 8) The logbook helps you gain more information about flight sites and suitable weather for flying. Your logbook does not need to be boring. You can add pictures, simple drawings, and maps! Reading about your flights next year can be hours of fun.
                 </p>
 
             </div>
