@@ -169,8 +169,8 @@ const Header = () => {
             </nav>
 
             {!isDesktop && (
-                <div className={`fixed inset-0 w-full flex justify-start z-40 transform ${navbarIsOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out`}>
-                    <div className="flex flex-col w-2/3  bg-primaryDarkHover h-full justify-center items-center gap-y-8 p-4 rounded-l-3xl"
+                <div className={`fixed inset-0 w-full flex justify-start z-40 transform ${navbarIsOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
+                    <div className="flex flex-col w-2/3  bg-primaryDarkHover h-full justify-center items-center gap-y-8 p-4 rounded-r-3xl"
                     ref={menuRef} >
                         <NavItems />
                         <AuthButtons />
