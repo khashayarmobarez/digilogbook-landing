@@ -25,10 +25,10 @@ const WhyDigi = () => {
     }, []);
 
     const listItems = [
-        "Not always being available or forgetting",
-        "Time-consuming to write it correctly",
-        "Possibility of errors in writing and summarizing",
-        "Time-consuming to review and analyze flights",
+        "Inaccessibility or forgetfulness.",
+        "Time-consuming to write",
+        "Prone to errors",
+        "Time-consuming analysis",
         "And other reasons..."
     ];
 
@@ -48,7 +48,7 @@ const WhyDigi = () => {
 
                     <BoxReveal boxColor={"var(--accent-normal)"} duration={0.5}>
                         <p className='text-neutralDark'>
-                            During flight training, every pilot is required to write a note of their flight hours in a logbook to record their experience. Many pilots soon give up writing their logbook because it seems pointless after a while, but this is a mistake. So why is keeping a logbook a good idea?
+                        Every pilot must keep a logbook to record their flight hours and document their experiences when learning to fly. While it may seem like a chore, a logbook is a valuable tool that will serve you throughout your flying career. Many pilots give up on writing in their logbooks early because it can seem pointless after a while, but this is a mistake. So why is keeping a logbook a good idea?
                         </p>
                     </BoxReveal>
 
@@ -68,7 +68,7 @@ const WhyDigi = () => {
             <div className='w-[90%] min-h-10 flex flex-col gap-y-8 md:w-7/12 '>
 
                 <p className={`text-neutralDark font-bold text-xl md:text-3xl md:text-center ${scrollPosition > 600 ? 'animate__animated animate__fadeIn animate__slow' : 'invisible'}`}>
-                    Why do many pilots soon give up writing their <span className='text-accentNormal'>logbook</span>?
+                Why do many pilots give up on writing in their <span className='text-accentNormal'>logbook</span> so early?
                 </p>
 
                 <ul className="flex flex-col gap-y-6 min-h-[30rem]">

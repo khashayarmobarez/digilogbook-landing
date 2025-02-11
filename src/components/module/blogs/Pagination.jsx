@@ -14,19 +14,19 @@ export default function Pagination({ pageNumber, totalPages, basePath = '/blogs'
         prefetch={false}
         className={`flex items-center ${!hasPreviousPage && 'opacity-50 pointer-events-none'}`}
       >
-        <ArrowForwardIosIcon fontSize="small" />
+        <ArrowBackIosIcon fontSize="small" />
       </Link>
 
       {/* Current Page Display */}
       <span className="text-lg font-semibold px-4">{pageNumber}</span>
 
       {/* Next Button */}
-      <Link 
-        href={`${basePath}/${pageNumber + 1}`} 
-        prefetch={false}
-        className={`flex items-center ${!hasNextPage && 'opacity-50 pointer-events-none'}`}
+      <Link
+      href={`${basePath}/${pageNumber + 1}`} 
+      prefetch={false}
+      className={`flex items-center ${!hasNextPage && 'opacity-50 pointer-events-none'}`}
       >
-        <ArrowBackIosIcon fontSize="small" />
+        <ArrowForwardIosIcon fontSize="small" />
       </Link>
     </div>
   );

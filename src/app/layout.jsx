@@ -13,23 +13,8 @@ import CustomHead from "@/components/module/customHead/CustomHead";
 const iranSans = localFont({
   src: [
     {
-      path: '../Assets/fonts/IRANSansXFaNum-Regular.ttf',
+      path: '../Assets/fonts/SF-Pro.ttf',
       weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../Assets/fonts/IRANSansXFaNum-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../Assets/fonts/IRANSansXFaNum-Light.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../Assets/fonts/IRANSansXFaNum-DemiBold.ttf',
-      weight: '600',
       style: 'normal',
     },
   ],
@@ -38,21 +23,21 @@ const iranSans = localFont({
 });
 
 export const metadata = {
-  title: "DigiLogBook | سامانه ثبت پرواز",
-  description: "دیجی لاگ بوک به شما کمک می‌کند تا پرواز خود را به طور دقیق دنبال کنید.",
-  keywords: ['سامانه ثبت پرواز' , 'وسیله پرواز' , 'لاگ بوک' , 'دیجی لاگ بوک' , 'ثبت پرواز', 'لاگ'],
-  author: "khashayar mobarez",
+  title: "DigiLogBook | Flight Logging System",
+  description: "DigiLogBook helps you accurately track your flights.",
+  keywords: ['Flight Logging System', 'Flight Device', 'Log Book', 'DigiLogBook', 'Flight Logging', 'Log'],
+  author: "Khashayar Mobarez",
   openGraph: {
     type: 'website',
     url: 'https://digilogbook.app',  // Update with your actual URL
-    title: 'DigiLogBook | پرواز خود را ثبت کنید"',
-    description: 'دیجی لاگ بوک بهترین راه برای ثبت اطلاعات پرواز.',
+    title: 'DigiLogBook | Log Your Flight',
+    description: 'DigiLogBook is the best way to log flight information.',
     // images: [
     //   {
     //     url: '/faveicon.ico',  // Update with your actual URL
     //     width: 1200,
     //     height: 630,
-    //     alt: 'DigiLogBook - ثبت پرواز',
+    //     alt: 'DigiLogBook - Flight Logging',
     //   },
     // ],
   },

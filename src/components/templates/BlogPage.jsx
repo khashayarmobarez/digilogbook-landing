@@ -5,7 +5,6 @@ import MailIcon from '@/Assets/Icons/MailIcon';
 // comps
 import CommentSection from '@/components/module/blogs/CommentSection';
 
-
 const BlogPage = ({blogData}) => {
     return (
         <div className='w-[90%] flex flex-col mt-10 md:pt-[20px] md:w-[60%]'>
@@ -22,28 +21,28 @@ const BlogPage = ({blogData}) => {
                         <span className='w-4 h-4'>
                                 <MailIcon color={'var(--neutral-dark)'} />
                         </span>
-                        <p>{blogData.timeToReadInMinutes} دقیقه مطالعه</p>
+                        <p>{blogData.timeToReadInMinutes} minutes read</p>
                     </div>
 
                     <div className='flex justify-start items-center gap-x-2'>
                         <span className='w-4 h-4'>
                                 <MailIcon color={'var(--neutral-dark)'} />
                         </span>
-                        <p>{blogData.createDate} بارگزاری</p>
+                        <p>{blogData.createDate} published</p>
                     </div>
 
                     <div className='flex justify-start items-center gap-x-2'>
                         <span className='w-4 h-4'>
                                 <MailIcon color={'var(--neutral-dark)'} />
                         </span>
-                        <p>{blogData.blogComments.length} نظر</p>
+                        <p>{blogData.blogComments.length} comments</p>
                     </div>
 
                     <div className='flex justify-start items-center gap-x-2'>
                         <span className='w-4 h-4'>
                                 <MailIcon color={'var(--neutral-dark)'} />
                         </span>
-                        <p>{blogData.blogVisitCount} بازدید</p>
+                        <p>{blogData.blogVisitCount} views</p>
                     </div>
 
             </div>
