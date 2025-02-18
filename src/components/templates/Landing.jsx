@@ -14,6 +14,7 @@ import BrandsMarquee from "@/components/module/Landing/BrandsMarquee";
 // react query
 import ContactUsBox from "@/components/module/Landing/ContactUsBox";
 import JoinUs from "@/components/module/Landing/JoinUs";
+import Head from "next/head";
 
 async function getBlogs() {
   
@@ -40,6 +41,9 @@ export default async function Landing() {
   return (
     <>
       <main className="pb-10">
+          <Head>
+            <title>My page title</title>
+          </Head>
           <Introduction />
           <WhyDigi />
           <Options />

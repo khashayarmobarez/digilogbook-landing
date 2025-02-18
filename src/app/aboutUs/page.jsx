@@ -8,3 +8,10 @@ const Index = () => {
 };
 
 export default Index;
+
+export const generateMetadata = () => {
+    return {
+        title: "About us | Digilogbook",
+        description: "about digilogbook.",
+    };
+};

@@ -8,3 +8,10 @@ const Index = () => {
 };
 
 export default Index;
+
+export const generateMetadata = () => {
+    return {
+        title: "Why use Digilogbook | Digilogbook",
+        description: "Discover why Digilogbook makes usage easier and more efficient.",
+    };
+};

@@ -2,15 +2,14 @@ import Head from 'next/head';
 
 
 const CustomHead = ({
-  title = "DigiLogBook | سامانه ثبت پرواز",
-  description = "دیجی لاگ بوک به شما کمک می‌کند تا پرواز خود را به طور دقیق دنبال کنید.",
-  keywords = "سامانه ثبت پرواز, وسیله پرواز, لاگ بوک, دیجی لاگ بوک، ثبت پرواز",
+  title = "DigiLogBook | Flight Logging System",
+  description = "DigiLogBook helps you accurately track your flights.",
+  keywords = "flight logging system, flight tool, log book, DigiLogBook, flight tracking",
   image = "../../../Assets/Logos/DigilogbookMainLogo.svg"
 }) => {
   return (
     <Head>
       {/* Primary Meta Tags */}
-      <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />

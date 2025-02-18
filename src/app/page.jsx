@@ -7,3 +7,11 @@ export default async function Index() {
   );
   
 }
+
+
+export const generateMetadata = () => {
+  return {
+    title: "digilogbook | Flight Logging System",
+    description: "Learn more about the vision and mission of digilogbook.",
+  };
+};
