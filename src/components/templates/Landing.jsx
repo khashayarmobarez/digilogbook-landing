@@ -41,9 +41,6 @@ export default async function Landing() {
   return (
     <>
       <main className="pb-10">
-          <Head>
-            <title>My page title</title>
-          </Head>
           <Introduction />
           <WhyDigi />
           <Options />

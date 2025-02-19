@@ -54,7 +54,7 @@ const Introduction = () => {
                     />
                 </div>
                 <div className={`w-full flex flex-col items-center transition-all duration-1000  ${showSecondAnimation ? ' opacity-100' : 'opacity-0'}`}>
-                    <figcaption className='text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl '>Daily Flight and Information Logging Platform</figcaption>
+                    <figcaption className='w-3/4 text-neutralLight font-extrabold text-xl mt-10 text-center md:text-4xl md:w-auto'>Daily Flight and Information Logging Platform</figcaption>
                     <p className='text-neutralLight text-sm w-4/5 mt-4 text-center md:text-xl md:w-3/6 md:mt-8'>
                         DigiLogBook helps you accurately track your progress. By viewing your flight hours, the types of flight equipment used, and the challenges you have encountered, you can have an accurate assessment of your abilities and training needs.
                     </p>
